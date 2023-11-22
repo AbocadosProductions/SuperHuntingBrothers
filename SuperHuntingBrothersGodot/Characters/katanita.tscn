@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8a5gceuocnf1"]
+
+[ext_resource type="Script" path="res://_Scripts/cat_controller.gd" id="1_labmj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jqlbi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mjmv"]
+
+[node name="Katanita" type="CharacterBody2D"]
+script = ExtResource("1_labmj")
+type_of_control = "arrowsa"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(100, 100)
+texture = SubResource("PlaceholderTexture2D_jqlbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0mjmv")

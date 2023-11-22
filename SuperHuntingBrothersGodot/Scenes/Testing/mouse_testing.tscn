@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj6dpcq6s4cus"]
+
+[ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_n1fgw"]
+[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="2_bpfh1"]
+
+[node name="mouse_testing" type="Node2D"]
+
+[node name="mouse" parent="." instance=ExtResource("1_n1fgw")]
+position = Vector2(568, 353)
+
+[node name="walls" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(460, 196)
+
+[node name="walls2" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(586, 198)
+
+[node name="walls3" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(718, 197)
+
+[node name="walls4" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(712, 561)
+
+[node name="walls5" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(587, 559)
+
+[node name="walls6" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(457, 563)
+
+[node name="walls7" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(344, 393)
+
+[node name="walls8" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(346, 291)
+
+[node name="walls9" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(346, 500)
+
+[node name="walls10" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(802, 479)
+
+[node name="walls11" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(805, 385)
+
+[node name="walls12" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(810, 289)

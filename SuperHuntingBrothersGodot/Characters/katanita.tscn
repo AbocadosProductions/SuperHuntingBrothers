@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8a5gceuocnf1"]
 
-[ext_resource type="Script" path="res://_Scripts/CatController.gd" id="1_labmj"]
+[ext_resource type="Script" path="res://_Scripts/cat_controller.gd" id="1_labmj"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jqlbi"]
 

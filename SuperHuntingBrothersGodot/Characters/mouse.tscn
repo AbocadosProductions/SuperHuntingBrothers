@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbg6ljp7m07t3"]
+[gd_scene load_steps=4 format=3 uid="uid://b1wrtriir6fy0"]
 
-[ext_resource type="Script" path="res://_Scripts/mouse_controller.gd" id="1_etxd6"]
+[ext_resource type="Script" path="res://0_Scripts/mouse_controller.gd" id="1_ie0hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn1m2"]
+size = Vector2(98, 98)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3d6an"]
 
 [node name="mouse" type="CharacterBody2D"]
-script = ExtResource("1_etxd6")
+script = ExtResource("1_ie0hl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bn1m2")

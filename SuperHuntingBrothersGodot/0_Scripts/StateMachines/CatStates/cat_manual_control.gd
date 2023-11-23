@@ -1,6 +1,7 @@
-extends CharacterBody2D
+extends State
 
 const SPEED = 300.0
+const MOUSE_NAME = "mouse"
 
 var character_controls = null
 var character_left = null
@@ -16,14 +17,8 @@ const CONTROLS = {
 
 @export var type_of_control: String
 
-func _ready():
-	check_controller_exist()
-	get_controllers()
+@export var cat : CharacterBody2D
 
-func _physics_process(delta):
-	direction = Input.get_vector(character_left, character_right, character_up, character_down)
-	velocity = direction * SPEED
-	move_and_slide()
 
 func check_controller_exist():
 	if type_of_control not in CONTROLS:
@@ -35,3 +30,16 @@ func get_controllers():
 	character_right = character_controls[1]
 	character_up = character_controls[2]
 	character_down = character_controls[3]
+
+func Enter():
+	check_controller_exist()
+	get_controllers()
+	cat.Collision.connect(on_collision_detected)
+
+func Physics_Update(_delta : float):
+	direction = Input.get_vector(character_left, character_right, character_up, character_down)
+	cat.velocity = direction * SPEED
+
+func on_collision_detected(collision_data):
+	if MOUSE_NAME == collision_data:
+		Transition.emit(self, "mouse_captured")

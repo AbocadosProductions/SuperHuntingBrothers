@@ -14,6 +14,10 @@ config/name="SuperHuntingBrothersGodot"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Constants="*res://0_Scripts/constants.gd"
+
 [input]
 
 keyboard_left={

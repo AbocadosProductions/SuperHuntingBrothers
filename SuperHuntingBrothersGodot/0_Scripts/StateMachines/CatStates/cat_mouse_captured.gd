@@ -9,6 +9,11 @@ var capture_time : float
 
 func Enter():
 	cat.velocity = Vector2(0, 0)
+	cat.Collision.connect(on_collision_detected)
+
+func Exit():
+	cat.Collision.disconnect(on_collision_detected)
+	capture_time = 0
 
 func Update(_delta : float):
 	if capture_time < MAX_CAPTURE_TIME:
@@ -16,6 +21,6 @@ func Update(_delta : float):
 	else:
 		Transition.emit(self, "manual_control")
 
-func Exit():
-	capture_time = 0
-
+func on_collision_detected(collision_data):
+	if "mice_captured" == collision_data:
+		Transition.emit(self, "mice_captured")

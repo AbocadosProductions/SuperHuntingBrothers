@@ -1,0 +1,217 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1r81jjc4inft"]
+
+[ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="1_87xxr"]
+[ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="2_qx38q"]
+[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="3_fj7uf"]
+[ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="4_wkkfp"]
+
+[node name="END_LEVEL" type="Node2D"]
+
+[node name="maze_1" type="Node2D" parent="."]
+
+[node name="cat" parent="maze_1" node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_87xxr")]
+position = Vector2(847, 284)
+scene_manager = NodePath("../../SceneManager")
+
+[node name="manual_control" parent="maze_1/cat/StateMachine" index="0"]
+type_of_control = "keyboard"
+
+[node name="mouse" parent="maze_1" node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_qx38q")]
+position = Vector2(568, 353)
+scene_manager = NodePath("../../SceneManager")
+
+[node name="walls13" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(73, 44)
+
+[node name="walls" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(75, 476)
+
+[node name="walls2" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(959, 611)
+
+[node name="walls3" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(850, 609)
+
+[node name="walls4" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(333, 614)
+
+[node name="walls5" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(202, 618)
+
+[node name="walls6" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(82, 564)
+
+[node name="walls7" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(74, 227)
+
+[node name="walls8" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(72, 137)
+
+[node name="walls9" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(70, 308)
+
+[node name="walls10" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(468, 612)
+
+[node name="walls11" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(601, 610)
+
+[node name="walls12" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(727, 607)
+
+[node name="walls14" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(72, 392)
+
+[node name="walls15" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(957, 35)
+
+[node name="walls16" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(848, 33)
+
+[node name="walls17" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(331, 38)
+
+[node name="walls18" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(200, 42)
+
+[node name="walls19" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(466, 36)
+
+[node name="walls20" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(599, 34)
+
+[node name="walls21" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(725, 31)
+
+[node name="walls22" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1078, 59)
+
+[node name="walls23" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1080, 491)
+
+[node name="walls24" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1087, 579)
+
+[node name="walls25" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1079, 242)
+
+[node name="walls26" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1077, 152)
+
+[node name="walls27" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1075, 323)
+
+[node name="walls28" parent="maze_1" instance=ExtResource("3_fj7uf")]
+position = Vector2(1077, 407)
+
+[node name="maze_2" type="Node2D" parent="."]
+position = Vector2(1500, 0)
+
+[node name="cat1" parent="maze_2" node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_87xxr")]
+position = Vector2(847, 284)
+scene_manager = NodePath("../../SceneManager")
+
+[node name="manual_control" parent="maze_2/cat1/StateMachine" index="0"]
+type_of_control = "arrows"
+
+[node name="mouse1" parent="maze_2" node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_qx38q")]
+position = Vector2(568, 353)
+scene_manager = NodePath("../../SceneManager")
+
+[node name="walls13" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(73, 44)
+
+[node name="walls" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(75, 476)
+
+[node name="walls2" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(959, 611)
+
+[node name="walls3" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(850, 609)
+
+[node name="walls4" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(333, 614)
+
+[node name="walls5" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(202, 618)
+
+[node name="walls6" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(82, 564)
+
+[node name="walls7" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(74, 227)
+
+[node name="walls8" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(72, 137)
+
+[node name="walls9" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(70, 308)
+
+[node name="walls10" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(468, 612)
+
+[node name="walls11" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(601, 610)
+
+[node name="walls12" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(727, 607)
+
+[node name="walls14" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(72, 392)
+
+[node name="walls15" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(957, 35)
+
+[node name="walls16" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(848, 33)
+
+[node name="walls17" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(331, 38)
+
+[node name="walls18" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(200, 42)
+
+[node name="walls19" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(466, 36)
+
+[node name="walls20" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(599, 34)
+
+[node name="walls21" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(725, 31)
+
+[node name="walls22" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1078, 59)
+
+[node name="walls23" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1080, 491)
+
+[node name="walls24" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1087, 579)
+
+[node name="walls25" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1079, 242)
+
+[node name="walls26" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1077, 152)
+
+[node name="walls27" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1075, 323)
+
+[node name="walls28" parent="maze_2" instance=ExtResource("3_fj7uf")]
+position = Vector2(1077, 407)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1345, 312)
+zoom = Vector2(0.4, 0.4)
+
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine") instance=ExtResource("4_wkkfp")]
+cat1_state_machine = NodePath("../maze_1/cat/StateMachine")
+cat2_state_machine = NodePath("../maze_2/cat1/StateMachine")
+
+[editable path="maze_1/cat"]
+[editable path="maze_1/mouse"]
+[editable path="maze_2/cat1"]
+[editable path="maze_2/mouse1"]
+[editable path="SceneManager"]

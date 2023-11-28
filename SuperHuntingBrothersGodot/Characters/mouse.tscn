@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1wrtriir6fy0"]
+[gd_scene load_steps=11 format=3 uid="uid://b1wrtriir6fy0"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/mouse_controller.gd" id="1_66pqi"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_rr5mu"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_idle.gd" id="3_jmsit"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_captured.gd" id="4_lbgor"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_flee.gd" id="5_ojtex"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_mice_captured.gd" id="6_qacun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn1m2"]
 size = Vector2(98, 98)
@@ -56,6 +57,10 @@ mouse = NodePath("../..")
 
 [node name="flee" type="Node" parent="StateMachine" node_paths=PackedStringArray("mouse")]
 script = ExtResource("5_ojtex")
+mouse = NodePath("../..")
+
+[node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("mouse")]
+script = ExtResource("6_qacun")
 mouse = NodePath("../..")
 
 [node name="Area2D" type="Area2D" parent="."]

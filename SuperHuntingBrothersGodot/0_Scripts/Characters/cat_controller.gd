@@ -13,6 +13,6 @@ func _physics_process(delta):
 func mouse_captured():
 	Collision.emit("mouse")
 
-func scene_manager_signal_detected(something):
-	print(something)
-	Collision.emit("mice_captured")
+func scene_manager_signal_detected(signal_emited):
+	if signal_emited == "mice_captured":
+		Collision.emit(signal_emited)

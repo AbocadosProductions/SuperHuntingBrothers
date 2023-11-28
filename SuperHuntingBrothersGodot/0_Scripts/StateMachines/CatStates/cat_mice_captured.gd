@@ -5,3 +5,4 @@ extends State
 
 func Enter():
 	cat.velocity = Vector2(0, 0)
+

@@ -24,7 +24,6 @@ func Update(_delta : float):
 
 func on_collision_detected(collision_data):
 	if "mice_captured" == collision_data:
-		print("recepcion")
 		Transition.emit(self, "mice_captured")
 
 			

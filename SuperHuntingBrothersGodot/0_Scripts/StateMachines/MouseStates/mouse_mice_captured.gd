@@ -9,4 +9,3 @@ var capture_time : float
 
 func Enter():
 	mouse.velocity = Vector2(0, 0)
-

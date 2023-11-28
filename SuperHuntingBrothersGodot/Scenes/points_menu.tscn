@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://fe617ydt6xvu"]
+
+[ext_resource type="Script" path="res://0_Scripts/Menu/points_menu.gd" id="1_bi5c1"]
+
+[node name="points_menu" type="Control" node_paths=PackedStringArray("actual_time_label", "record_time_label", "points_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bi5c1")
+actual_time_label = NodePath("actual_time_label/time_label")
+record_time_label = NodePath("record_time_label/time_label")
+points_label = NodePath("puntuation_label/points_label")
+
+[node name="level_clear_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 32.0
+offset_right = 904.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 75
+text = "NIVEL SUPERADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="actual_time_label" type="Label" parent="."]
+offset_top = 200.0
+offset_right = 301.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Tiempo  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="actual_time_label"]
+offset_left = 200.0
+offset_right = 501.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "00 : 00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="record_time_label" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 901.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Tiempo Record  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="record_time_label"]
+offset_left = 250.0
+offset_right = 551.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "00 : 00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="puntuation_label" type="Label" parent="."]
+offset_left = 400.0
+offset_top = 350.0
+offset_right = 701.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 32
+text = "Puntuación :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="points_label" type="Label" parent="puntuation_label"]
+offset_left = 200.0
+offset_right = 501.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_level_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 514.0
+offset_right = 803.0
+offset_bottom = 616.0
+text = "Siguiente Nivel"
+
+[connection signal="pressed" from="next_level_button" to="." method="_on_next_level_button_pressed"]

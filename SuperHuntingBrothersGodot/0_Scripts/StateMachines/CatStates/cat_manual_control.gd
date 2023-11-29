@@ -34,18 +34,18 @@ func get_controllers():
 func Enter():
 	check_controller_exist()
 	get_controllers()
-	cat.Collision.connect(on_collision_detected)
+	cat.cat_state_machine_signal.connect(on_cat_signal_detected)
 
 func Exit():
-	cat.Collision.disconnect(on_collision_detected)
+	cat.cat_state_machine_signal.disconnect(on_cat_signal_detected)
 
 func Physics_Update(_delta : float):
 	direction = Input.get_vector(character_left, character_right, character_up, character_down)
 	cat.velocity = direction * SPEED
 
-func on_collision_detected(collision_data):
-	if "mice_captured" == collision_data:
+func on_cat_signal_detected(signal_data):
+	if "mice_captured" == signal_data:
 		Transition.emit(self, "mice_captured")
-	if MOUSE_NAME == collision_data:
+	if MOUSE_NAME == signal_data:
 		Transition.emit(self, "mouse_captured")
 

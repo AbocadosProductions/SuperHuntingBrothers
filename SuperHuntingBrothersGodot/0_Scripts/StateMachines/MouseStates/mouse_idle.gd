@@ -20,10 +20,10 @@ func randomize_wander():
 	
 func Enter():
 	randomize_wander()
-	mouse.Collision.connect(on_collision_detected)
+	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
 
 func Exit():
-	mouse.Collision.disconnect(on_collision_detected)
+	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func Update(_delta : float):
 	if wander_time > 0:
@@ -34,14 +34,14 @@ func Update(_delta : float):
 func Physics_Update(_delta : float):
 	mouse.velocity = random_direction * SPEED
 
-func on_collision_detected(collision_data):
-	if WALL_NAME == collision_data:
+func on_mouse_signal_detected(signal_data):
+	if WALL_NAME == signal_data:
 		randomize_wander()
 			
-	if CAT_NAME == collision_data:
+	if CAT_NAME == signal_data:
 		Transition.emit(self, "captured")
 			
-	if "mice_captured" == collision_data:
+	if "mice_captured" == signal_data:
 		Transition.emit(self, "mice_captured")
 
 			

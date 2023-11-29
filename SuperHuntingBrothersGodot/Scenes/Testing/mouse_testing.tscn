@@ -95,3 +95,72 @@ position = Vector2(1075, 323)
 
 [node name="walls28" parent="." instance=ExtResource("2_bpfh1")]
 position = Vector2(1077, 407)
+
+[node name="cat2" parent="." instance=ExtResource("1_t5ij6")]
+position = Vector2(2127, 271)
+
+[node name="mouse2" parent="." instance=ExtResource("1_n1fgw")]
+position = Vector2(1848, 340)
+
+[node name="walls29" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2239, 598)
+
+[node name="walls30" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2130, 596)
+
+[node name="walls31" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1613, 601)
+
+[node name="walls32" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1482, 605)
+
+[node name="walls33" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1748, 599)
+
+[node name="walls34" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1881, 597)
+
+[node name="walls35" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2007, 594)
+
+[node name="walls36" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2237, 22)
+
+[node name="walls37" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2128, 20)
+
+[node name="walls38" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1611, 25)
+
+[node name="walls39" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1480, 29)
+
+[node name="walls40" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1746, 23)
+
+[node name="walls41" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(1879, 21)
+
+[node name="walls42" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2005, 18)
+
+[node name="walls43" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2358, 46)
+
+[node name="walls44" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2360, 478)
+
+[node name="walls45" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2367, 566)
+
+[node name="walls46" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2359, 229)
+
+[node name="walls47" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2357, 139)
+
+[node name="walls48" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2355, 310)
+
+[node name="walls49" parent="." instance=ExtResource("2_bpfh1")]
+position = Vector2(2357, 394)

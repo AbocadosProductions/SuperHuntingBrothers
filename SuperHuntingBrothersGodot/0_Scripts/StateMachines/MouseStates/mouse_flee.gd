@@ -25,6 +25,7 @@ func Enter():
 func Exit():
 	mouse.mouse_is_fleing = false
 	flee_time = 0
+	mouse.Collision.disconnect(on_collision_detected)
 
 func Update(_delta : float):
 	if flee_time < MAX_FLEE_TIME:
@@ -39,4 +40,3 @@ func Physics_Update(_delta : float):
 func on_collision_detected(collision_data):
 	if WALL_NAME == collision_data:
 		randomize_flee()
-

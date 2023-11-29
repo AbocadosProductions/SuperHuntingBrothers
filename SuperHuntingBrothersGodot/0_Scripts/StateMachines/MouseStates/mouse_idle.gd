@@ -22,6 +22,9 @@ func Enter():
 	randomize_wander()
 	mouse.Collision.connect(on_collision_detected)
 
+func Exit():
+	mouse.Collision.disconnect(on_collision_detected)
+
 func Update(_delta : float):
 	if wander_time > 0:
 		wander_time -= _delta
@@ -38,4 +41,7 @@ func on_collision_detected(collision_data):
 	if CAT_NAME == collision_data:
 		Transition.emit(self, "captured")
 			
+	if "mice_captured" == collision_data:
+		Transition.emit(self, "mice_captured")
 
+			

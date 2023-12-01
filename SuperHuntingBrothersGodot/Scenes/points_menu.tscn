@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=3 uid="uid://fe617ydt6xvu"]
+
+[ext_resource type="Script" path="res://0_Scripts/Menu/points_menu.gd" id="1_bi5c1"]
+[ext_resource type="Script" path="res://0_Scripts/Menu/new_record_controller.gd" id="2_6xwme"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="2_nfxer"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y1g1y"]
+
+[node name="points_menu" type="Control" node_paths=PackedStringArray("datamanager", "actual_time_label", "record_time_label", "points_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bi5c1")
+datamanager = NodePath("DataManager")
+actual_time_label = NodePath("actual_time_label/time_label")
+record_time_label = NodePath("record_time_label/time_label")
+points_label = NodePath("puntuation_label/points_label")
+
+[node name="new_record" type="Node2D" parent="." node_paths=PackedStringArray("points_menu")]
+position = Vector2(550, 0)
+script = ExtResource("2_6xwme")
+points_menu = NodePath("..")
+record_sprites = [null, null]
+
+[node name="High" type="Sprite2D" parent="new_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 213)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="Low" type="Sprite2D" parent="new_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 300)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="level_clear_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 32.0
+offset_right = 904.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 75
+text = "NIVEL SUPERADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="actual_time_label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 301.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Tiempo  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="actual_time_label"]
+layout_mode = 0
+offset_left = 175.0
+offset_right = 476.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "00 : 00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="record_time_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 901.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Tiempo Record  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="record_time_label"]
+layout_mode = 0
+offset_left = 225.0
+offset_right = 526.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "00 : 00 : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="puntuation_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 350.0
+offset_right = 701.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 32
+text = "Puntuación :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="points_label" type="Label" parent="puntuation_label"]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 501.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next_level_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 514.0
+offset_right = 803.0
+offset_bottom = 616.0
+text = "Siguiente Nivel"
+
+[node name="DataManager" parent="." instance=ExtResource("2_nfxer")]
+
+[connection signal="pressed" from="next_level_button" to="." method="_on_next_level_button_pressed"]

@@ -3,8 +3,9 @@ class_name SaveSystem
 
 const path = Constants.SAVE_PATH
 
-@export var records_per_level : Array
-@export var points_per_level : Array 
+@export var record_times_per_level : Array
+@export var times_per_level : Array
+@export var actual_punctuation : int
 
 # This function will save the resource save_system in the given path.
 func write_savedata() -> void:

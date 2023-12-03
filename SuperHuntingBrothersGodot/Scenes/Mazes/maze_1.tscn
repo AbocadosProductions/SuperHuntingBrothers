@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cnk81q4ib8nqb"]
+
+[node name="maze_1" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 143.0
+offset_bottom = 88.0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

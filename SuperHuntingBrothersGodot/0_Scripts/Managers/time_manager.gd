@@ -1,15 +1,17 @@
 extends Node2D
 
 var time_in_level
-var const_level_time = 60
-var level_index = 2
-var const_time_multiplier = 3
+var const_level_time
+var time_treshold
+var level_index
+var const_time_multiplier
 var cats_are_running = false
+var treshold_reached
 
 @export var time_label : Label
 @export var scene_manager : Node2D
 
-signal TimeOut
+signal Time_Signal
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
@@ -30,13 +32,22 @@ func load_variables():
 	const_level_time = 60
 	level_index = 2
 	const_time_multiplier = 3
+	time_treshold = 15
+	treshold_reached = false
 
 func _process(delta):
 	if time_in_level > 0 and cats_are_running:
 		time_in_level -= delta
 		time_label.text = str(int(time_in_level))
+		check_for_treshold()
 	elif time_in_level <= 0:
-		TimeOut.emit("timeout")
+		Time_Signal.emit("timeout")
+
+func check_for_treshold():
+	if time_in_level < time_treshold and not treshold_reached:
+		Time_Signal.emit("treshold_reached")
+		treshold_reached = true
 
 func get_remaining_time():
 	return time_in_level
+

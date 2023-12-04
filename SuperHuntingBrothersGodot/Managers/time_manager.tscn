@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://63q7angp6o8w"]
+
+[ext_resource type="Script" path="res://0_Scripts/Managers/time_manager.gd" id="1_bovar"]
+
+[node name="time_manager" type="Node2D" node_paths=PackedStringArray("time_label")]
+script = ExtResource("1_bovar")
+time_label = NodePath("time_label")
+
+[node name="time_label" type="Label" parent="."]
+offset_left = 448.0
+offset_right = 772.0
+offset_bottom = 111.0

@@ -40,7 +40,7 @@ var is_showing_points = false
 var is_moving_to_the_screen = false
 var is_moving_out_the_screen = false
 
-func ready():
+func initialize_variables():
 	# Load data from data manager
 	updated_points = datamanager.return_points()
 	actual_time = datamanager.return_last_level_time()
@@ -63,14 +63,12 @@ func ready():
 	get_points_obtained_in_level()
 
 func _ready():
-
-	# CACA
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == "show_points":
 		is_moving_to_the_screen = true
-		ready()
+		initialize_variables()
 
 
 # FUNCTIONS NEEDED TO DISPLAY BETTER THE INFO IN THE LABELS (FORMAT INTS TO TIME)

@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0hp1ujxpbwb5"]
+
+[ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_gkjlv"]
+[ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="1_joe5b"]
+[ext_resource type="PackedScene" uid="uid://bbtkhbuwkjj8j" path="res://Managers/level_manager.tscn" id="2_fretg"]
+[ext_resource type="PackedScene" uid="uid://63q7angp6o8w" path="res://Managers/time_manager.tscn" id="3_cyum3"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="4_qlgii"]
+[ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="5_80pgq"]
+[ext_resource type="PackedScene" uid="uid://fe617ydt6xvu" path="res://Scenes/points_menu.tscn" id="7_iuo6b"]
+
+[node name="core" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(1200, 300)
+zoom = Vector2(0.35, 0.35)
+
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "points_menu") instance=ExtResource("1_joe5b")]
+cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
+cat2_state_machine = NodePath("../cat_aguacate/StateMachine")
+points_menu = NodePath("../points_menu")
+
+[node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_fretg")]
+scene_manager = NodePath("../SceneManager")
+
+[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("3_cyum3")]
+scene_manager = NodePath("../SceneManager")
+data_manager = NodePath("../DataManager")
+
+[node name="time_label" parent="time_manager" index="0"]
+offset_left = 1158.0
+offset_right = 1530.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DataManager" parent="." instance=ExtResource("4_qlgii")]
+
+[node name="cat_cattanita" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("5_80pgq")]
+position = Vector2(300, 250)
+scene_manager = NodePath("../SceneManager")
+
+[node name="manual_control" parent="cat_cattanita/StateMachine" index="0"]
+type_of_control = "keyboard"
+
+[node name="mouse_catta" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+position = Vector2(568, 353)
+scene_manager = NodePath("../SceneManager")
+
+[node name="mouse_agua" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+position = Vector2(2200, 500)
+scene_manager = NodePath("../SceneManager")
+
+[node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("5_80pgq")]
+position = Vector2(2000, 350)
+scene_manager = NodePath("../SceneManager")
+
+[node name="manual_control" parent="cat_aguacate/StateMachine" index="0"]
+type_of_control = "arrows"
+
+[node name="points_menu" parent="." node_paths=PackedStringArray("datamanager", "scene_manager") instance=ExtResource("7_iuo6b")]
+offset_left = -3000.0
+offset_right = -3000.0
+datamanager = NodePath("../DataManager")
+scene_manager = NodePath("../SceneManager")
+
+[editable path="SceneManager"]
+[editable path="time_manager"]
+[editable path="cat_cattanita"]
+[editable path="mouse_catta"]
+[editable path="mouse_agua"]
+[editable path="cat_aguacate"]
+[editable path="points_menu"]

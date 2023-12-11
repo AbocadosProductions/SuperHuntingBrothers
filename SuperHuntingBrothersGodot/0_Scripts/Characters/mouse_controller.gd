@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-const WALL_NAME = "wall"
-const CAT_NAME = "cat"
+
 var mouse_is_fleing : bool = false
 
 signal mouse_state_machine_signal
@@ -18,14 +17,16 @@ func _physics_process(delta):
 func detect_collision(collision_info):
 	if collision_info:
 		var collision_name = collision_info.get_collider().get_name()
-		if WALL_NAME in collision_name:
-			mouse_state_machine_signal.emit(WALL_NAME)
+		if Constants.WALL_PREFIX in collision_name:
+			mouse_state_machine_signal.emit(Constants.WALL_PREFIX)
 
 func _on_area_2d_body_entered(body):
-	if CAT_NAME in body.name and not mouse_is_fleing:
+	if Constants.CAT_PREFIX in body.name and not mouse_is_fleing:
 		body.mouse_captured()
-		mouse_state_machine_signal.emit(CAT_NAME)
+		mouse_state_machine_signal.emit(Constants.MOUSE_CAT_DETECTED_SIGNAL)
 
 func scene_manager_signal_detected(signal_emited):
-	if signal_emited == "mice_captured":
-		mouse_state_machine_signal.emit(signal_emited)
+	if signal_emited == Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL:
+		mouse_state_machine_signal.emit(Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
+	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
+		mouse_state_machine_signal.emit(Constants.MOUSE_IDLE_SIGNAL)

@@ -1,7 +1,6 @@
 extends State
 
 const SPEED = 300.0
-const MOUSE_NAME = "mouse"
 
 var character_controls = null
 var character_left = null
@@ -44,8 +43,8 @@ func Physics_Update(_delta : float):
 	cat.velocity = direction * SPEED
 
 func on_cat_signal_detected(signal_data):
-	if "mice_captured" == signal_data:
-		Transition.emit(self, "mice_captured")
-	if MOUSE_NAME == signal_data:
-		Transition.emit(self, "mouse_captured")
+	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
+	if Constants.CAT_MOUSE_CAPTURED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.CAT_MOUSE_CAPTURED_SIGNAL)
 

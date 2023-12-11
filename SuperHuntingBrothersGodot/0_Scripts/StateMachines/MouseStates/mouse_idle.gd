@@ -1,8 +1,6 @@
 extends State
 
 
-const WALL_NAME = "wall"
-const CAT_NAME = "cat"
 const SPEED = 100.0
 
 var move_direction : Vector2
@@ -35,13 +33,11 @@ func Physics_Update(_delta : float):
 	mouse.velocity = random_direction * SPEED
 
 func on_mouse_signal_detected(signal_data):
-	if WALL_NAME == signal_data:
+	if Constants.WALL_PREFIX == signal_data:
 		randomize_wander()
-			
-	if CAT_NAME == signal_data:
-		Transition.emit(self, "captured")
-			
-	if "mice_captured" == signal_data:
-		Transition.emit(self, "mice_captured")
 
-			
+	if Constants.MOUSE_CAT_DETECTED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.MOUSE_CAT_DETECTED_SIGNAL)
+
+	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)

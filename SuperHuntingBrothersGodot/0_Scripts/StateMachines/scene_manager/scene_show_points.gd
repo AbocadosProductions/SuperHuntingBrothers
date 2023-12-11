@@ -11,5 +11,4 @@ func Exit():
 
 func signal_detected(signal_data):
 	if signal_data == Constants.POINTS_MENU_FINISHED_SIGNAL:
-		print("AAAAAAAAAAAAAAA")
 		Transition.emit(self, Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL)

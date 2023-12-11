@@ -47,6 +47,7 @@ const SCENE_MANAGER_LEVEL_RUNNING_SIGNAL = "level_running"
 const SCENE_MANAGER_ONE_MOUSE_CAPTURED_SIGNAL = "mouse_captured"
 const SCENE_MANAGER_MICE_CAPTURED_SIGNAL = "mice_captured"
 const SCENE_MANAGER_SHOW_POINTS_SIGNAL = "show_points"
+const SCENE_MANAGER_PREPARATION_TIME = 1
 
 # --------------------------------------------------------------------------- #
 

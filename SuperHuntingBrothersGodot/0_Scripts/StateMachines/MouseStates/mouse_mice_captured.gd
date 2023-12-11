@@ -16,4 +16,4 @@ func Exit():
 
 func on_mouse_signal_detected(signal_data):
 	if "idle" == signal_data:
-		Transition.emit(self, "idle")
+		Transition.emit(self, Constants.MOUSE_IDLE_SIGNAL)

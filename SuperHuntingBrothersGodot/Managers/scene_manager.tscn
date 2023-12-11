@@ -1,26 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo78ejselsj43"]
+[gd_scene load_steps=8 format=3 uid="uid://bo78ejselsj43"]
 
 [ext_resource type="Script" path="res://0_Scripts/Managers/SceneManager.gd" id="1_520la"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_rprxe"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_cats_running.gd" id="3_i3n5i"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_new_maze_start.gd" id="3_70f0w"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_one_mouse_captured.gd" id="4_u7dqy"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_level_running.gd" id="4_ujcjp"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_two_mice_captured.gd" id="5_2kuvn"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_show_points.gd" id="7_d5g65"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_520la")
 
 [node name="scene_manager_state_machine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_rprxe")
-initial_state = NodePath("cats_running")
+initial_state = NodePath("new_mazes_start")
 
-[node name="cats_running" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
-script = ExtResource("3_i3n5i")
+[node name="new_mazes_start" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+script = ExtResource("3_70f0w")
 scene_manager = NodePath("../..")
 
-[node name="one_mouse_captured" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+[node name="level_running" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+script = ExtResource("4_ujcjp")
+scene_manager = NodePath("../..")
+
+[node name="mouse_captured" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("4_u7dqy")
 scene_manager = NodePath("../..")
 
-[node name="two_mice_captured" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+[node name="mice_captured" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("5_2kuvn")
+scene_manager = NodePath("../..")
+
+[node name="show_points" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+script = ExtResource("7_d5g65")
 scene_manager = NodePath("../..")

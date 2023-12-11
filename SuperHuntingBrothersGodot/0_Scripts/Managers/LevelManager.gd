@@ -3,14 +3,16 @@ extends Node
 var maze_scenes = []
 var node_names_in_use = []
 var level : Node2D
-var path = "res://Scenes/Mazes"
-var maze_1_pos = Vector2(100, 0)
-var maze_2_pos = Vector2(400, 0)
+var path = Constants.MAZES_FOLDER_PATH
+var maze_1_pos = Constants.MAZES_1_POSITION
+var maze_2_pos = Constants.MAZES_2_POSITION
 var maze_path_1
 var maze_path_2
 var new_maze_1_name
 var new_maze_2_name
 var possible_mazes = []
+
+@export var scene_manager : Node2D
 
 func get_maze_scenes():
 	var dir = DirAccess.open(path)
@@ -19,14 +21,15 @@ func get_maze_scenes():
 		return
 	
 	for file in dir.get_files():
-		if file.ends_with(".tscn"):
+		if file.ends_with(Constants.MAZE_FILE_TERMINATION):
 			maze_scenes.append(file.split(".")[0])
 
 func get_mazes_in_use():
 	for child in level.get_children():
-		if "maze" in child.name:
+		if Constants.MAZE_FILE_PREFIX in child.name:
 			node_names_in_use.append(child.name)
-
+	if node_names_in_use == []:
+		node_names_in_use = ["", ""]
 
 func get_new_mazes():
 	for maze in maze_scenes:
@@ -37,15 +40,14 @@ func get_new_mazes():
 	possible_mazes.erase(new_maze_1_name)
 	new_maze_2_name = possible_mazes[randi() % possible_mazes.size()]
 
-	maze_path_1 = path + "/%s.tscn"
+	maze_path_1 = path + Constants.MAZE_PATH_FORMAT_STRING
 	maze_path_1 = maze_path_1 % new_maze_1_name
-	maze_path_2 = path + "/%s.tscn"
+	maze_path_2 = path + Constants.MAZE_PATH_FORMAT_STRING
 	maze_path_2 = maze_path_2 % new_maze_2_name
 	
 func restart_lists():
 	possible_mazes = []
 	node_names_in_use = []
-	maze_scenes = []
 	
 func load_new_mazes():
 	var maze_1_node = load(maze_path_1)	
@@ -63,18 +65,26 @@ func load_new_mazes():
 
 func delete_previous_mazes():
 	for child in level.get_children():
-		if "maze" in child.name:
+		if Constants.MAZE_FILE_PREFIX in child.name:
 			child.queue_free()
 
 
 func _ready():
+	scene_manager.External_Signal.connect(scene_manager_signal_detected)
 	level = get_parent()
-
+	get_maze_scenes()
+	generate_level()
 
 func _on_button_pressed():
-	get_maze_scenes()
+	generate_level()
+
+func generate_level():
 	get_mazes_in_use()
 	get_new_mazes()
 	restart_lists()
 	delete_previous_mazes()
 	load_new_mazes()
+
+func scene_manager_signal_detected(signal_emited):
+	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL:
+		generate_level()

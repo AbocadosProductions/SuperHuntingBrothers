@@ -1,20 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1r81jjc4inft"]
+[gd_scene load_steps=6 format=3 uid="uid://b1r81jjc4inft"]
 
 [ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="1_87xxr"]
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="2_qx38q"]
 [ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="3_fj7uf"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="4_wkkfp"]
+[ext_resource type="PackedScene" uid="uid://63q7angp6o8w" path="res://Managers/time_manager.tscn" id="5_1sxwp"]
 
 [node name="END_LEVEL" type="Node2D"]
 
-[node name="maze_1" type="Node2D" parent="."]
-
-[node name="cat" parent="maze_1" node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_87xxr")]
+[node name="cat" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_87xxr")]
 position = Vector2(847, 284)
-scene_manager = NodePath("../../SceneManager")
+scene_manager = NodePath("../SceneManager")
 
-[node name="manual_control" parent="maze_1/cat/StateMachine" index="0"]
+[node name="manual_control" parent="cat/StateMachine" index="0"]
 type_of_control = "keyboard"
+
+[node name="maze_1" type="Node2D" parent="."]
 
 [node name="mouse" parent="maze_1" node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_qx38q")]
 position = Vector2(568, 353)
@@ -207,11 +208,22 @@ position = Vector2(1345, 312)
 zoom = Vector2(0.4, 0.4)
 
 [node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine") instance=ExtResource("4_wkkfp")]
-cat1_state_machine = NodePath("../maze_1/cat/StateMachine")
+cat1_state_machine = NodePath("../cat/StateMachine")
 cat2_state_machine = NodePath("../maze_2/cat1/StateMachine")
 
-[editable path="maze_1/cat"]
+[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("5_1sxwp")]
+scene_manager = NodePath("../SceneManager")
+
+[node name="time_label" parent="time_manager" index="0"]
+offset_left = 1163.0
+offset_right = 1505.0
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="cat"]
 [editable path="maze_1/mouse"]
 [editable path="maze_2/cat1"]
 [editable path="maze_2/mouse1"]
 [editable path="SceneManager"]
+[editable path="time_manager"]

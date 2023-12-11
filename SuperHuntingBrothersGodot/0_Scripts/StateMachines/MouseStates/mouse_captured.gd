@@ -1,11 +1,9 @@
 extends State
 
-const MAX_CAPTURE_TIME : float = 2.0
 
 var capture_time : float
 
 @export var mouse : CharacterBody2D
-
 
 
 func Enter():
@@ -17,13 +15,11 @@ func Exit():
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func Update(_delta : float):
-	if capture_time < MAX_CAPTURE_TIME:
+	if capture_time < Constants.MAX_CAPTURE_TIME:
 		capture_time += _delta
 	else:
-		Transition.emit(self, "flee")
+		Transition.emit(self, Constants.MOUSE_FLEE_SIGNAL)
 
 func on_mouse_signal_detected(signal_data):
-	if "mice_captured" == signal_data:
-		Transition.emit(self, "mice_captured")
-
-			
+	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)

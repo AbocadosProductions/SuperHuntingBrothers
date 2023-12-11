@@ -1,7 +1,6 @@
 extends Node2D
 
 @export var points_menu : Control
-@export var record_sprites : Array
 
 var new_record : bool = false
 var new_record_is_hidden : bool = false
@@ -13,18 +12,19 @@ func _ready():
 	points_menu.External_Signal.connect(points_menu_signal_detected)
 	for child in get_children():
 		child.set_visible(new_record_is_hidden)
+	new_record = false
 
 func _process(delta):
 	if new_record:
 		blink_sprites()
 
-func points_menu_signal_detected(signal_emited):
-	if signal_emited == "new_record":
-		new_record = true
+func points_menu_signal_detected(emisioner, signal_emited):
+	if signal_emited == Constants.NEW_RECORD_SIGNAL:
+		new_record = !new_record
 
 func blink_sprites():
 	counter += 1
-	if counter > 6:
+	if counter > Constants.NEW_RECORD_BLINK_RATE:
 		counter = 0
 		new_record_is_hidden = !new_record_is_hidden
 		for child in get_children():

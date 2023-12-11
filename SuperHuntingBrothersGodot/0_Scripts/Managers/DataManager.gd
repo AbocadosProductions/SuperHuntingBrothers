@@ -2,7 +2,7 @@ extends Node2D
 
 var _save_data : SaveSystem
 
-func _ready():
+func _init():
 	_create_or_load_save_data()
 
 # Loads the last save_data file or creates it if there isn't any
@@ -39,8 +39,8 @@ func return_record_data() -> int:
 
 # ACTUAL TIMES SECTIONS : ADD, RETURN, RESET
 
-func add_actual_level_time(points: int) -> void:
-	_save_data.times_per_level.append(points)
+func add_actual_level_time(time: int) -> void:
+	_save_data.times_per_level.append(time)
 	_save_game()
 
 func return_last_level_time() -> int:

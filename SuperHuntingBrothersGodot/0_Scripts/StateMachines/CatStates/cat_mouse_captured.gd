@@ -19,8 +19,8 @@ func Update(_delta : float):
 	if capture_time < MAX_CAPTURE_TIME:
 		capture_time += _delta
 	else:
-		Transition.emit(self, "manual_control")
+		Transition.emit(self, Constants.CAT_MANUAL_CONTROL_SIGNAL)
 
 func on_cat_signal_detected(signal_data):
-	if "mice_captured" == signal_data:
-		Transition.emit(self, "mice_captured")
+	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:
+		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)

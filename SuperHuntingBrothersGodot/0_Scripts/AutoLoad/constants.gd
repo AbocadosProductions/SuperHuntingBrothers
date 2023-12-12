@@ -1,6 +1,7 @@
 # Level constants
 
 const FIRST_LEVEL: String = "res://Scenes/core.tscn"
+const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 
 # --------------------------------------------------------------------------- #
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://dxx2jaconfuts"]
 
 [ext_resource type="Script" path="res://0_Scripts/Resources/SaveSystem.gd" id="1_pu3n5"]
 
@@ -7,3 +7,5 @@ script = ExtResource("1_pu3n5")
 record_times_per_level = [52, 54, 49, 41, 37]
 times_per_level = [49, 54, 49, 41, 37]
 actual_punctuation = 18306
+record_punctuation = 0
+record_level = 0

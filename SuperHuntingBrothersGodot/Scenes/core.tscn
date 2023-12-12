@@ -14,9 +14,10 @@
 offset = Vector2(1200, 300)
 zoom = Vector2(0.35, 0.35)
 
-[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "points_menu") instance=ExtResource("1_joe5b")]
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
 cat2_state_machine = NodePath("../cat_aguacate/StateMachine")
+time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 
 [node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_fretg")]

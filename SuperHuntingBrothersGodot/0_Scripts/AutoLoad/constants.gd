@@ -1,6 +1,7 @@
 # Level constants
 
 const FIRST_LEVEL: String = "res://Scenes/core.tscn"
+const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 
 # --------------------------------------------------------------------------- #
 
@@ -80,3 +81,8 @@ const MAX_CAPTURE_TIME = 2.0
 
 # --------------------------------------------------------------------------- #
 
+# Pause Menu constants
+
+const PAUSE_MENU_SIGNAL = "game_paused"
+
+# --------------------------------------------------------------------------- #

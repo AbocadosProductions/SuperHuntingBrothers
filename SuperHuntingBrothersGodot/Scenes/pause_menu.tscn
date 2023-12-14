@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxffchwk3pqdd"]
+
+[ext_resource type="Script" path="res://0_Scripts/Menu/pause_menu.gd" id="1_g40wr"]
+
+[node name="pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g40wr")
+
+[node name="level_clear_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 32.0
+offset_right = 904.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 75
+text = "PARTIDA EN PAUSA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 718.0
+offset_top = 520.0
+offset_right = 972.0
+offset_bottom = 607.0
+text = "Continuar la partida"
+
+[node name="back_to_menu_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 519.0
+offset_right = 538.0
+offset_bottom = 606.0
+text = "Volver al menu"
+
+[node name="volumen_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 288.0
+offset_right = 497.0
+offset_bottom = 361.0
+text = "Volumen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="volumen_slider" type="HSlider" parent="volumen_label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 156.5
+offset_top = -46.5
+offset_right = 665.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="continue_button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="value_changed" from="volumen_label/volumen_slider" to="." method="_on_h_slider_value_changed"]

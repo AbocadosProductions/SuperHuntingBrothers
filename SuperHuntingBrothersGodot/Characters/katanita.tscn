@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8a5gceuocnf1"]
+[gd_scene load_steps=9 format=3 uid="uid://c8a5gceuocnf1"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_qpobw"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_wm5g0"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_manual_control.gd" id="3_iqtod"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_captured.gd" id="4_e4vxt"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="5_q4oty"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="6_isxei"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jqlbi"]
 
@@ -39,3 +40,6 @@ cat = NodePath("../..")
 [node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("5_q4oty")
 cat = NodePath("../..")
+
+[node name="game_paused" type="Node" parent="StateMachine"]
+script = ExtResource("6_isxei")

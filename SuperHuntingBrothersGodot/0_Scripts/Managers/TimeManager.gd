@@ -26,6 +26,8 @@ func scene_manager_signal_detected(signal_emited):
 	elif signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
 		cats_are_running = true
 		prepare_time_level()
+	elif signal_emited == Constants.PAUSE_MENU_SIGNAL:
+		cats_are_running = !cats_are_running
 
 func prepare_time_level():
 	load_variables()

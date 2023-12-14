@@ -40,3 +40,7 @@ func Physics_Update(_delta : float):
 func on_mouse_signal_detected(signal_data):
 	if WALL_NAME == signal_data:
 		randomize_flee()
+
+	if Constants.PAUSE_MENU_SIGNAL == signal_data:
+		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
+

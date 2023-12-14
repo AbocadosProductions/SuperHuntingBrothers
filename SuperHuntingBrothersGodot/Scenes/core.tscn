@@ -73,7 +73,8 @@ offset_right = -3000.0
 datamanager = NodePath("../DataManager")
 scene_manager = NodePath("../SceneManager")
 
-[node name="pause_menu" parent="." instance=ExtResource("8_s8chp")]
+[node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("8_s8chp")]
+scene_manager = NodePath("../SceneManager")
 
 [editable path="SceneManager"]
 [editable path="time_manager"]

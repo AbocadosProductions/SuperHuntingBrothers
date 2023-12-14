@@ -2,6 +2,8 @@
 
 const FIRST_LEVEL: String = "res://Scenes/core.tscn"
 const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
+const LOSE_MENU: String = "res://Scenes/lose_menu.tscn"
+
 
 # --------------------------------------------------------------------------- #
 
@@ -57,8 +59,8 @@ const SCENE_MANAGER_PREPARATION_TIME = 1
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 const DEFAULT_TIME_PER_LEVEL = 60
-const TIME_PER_LEVEL_TO_SUSTRACT = 5
-const MINIMUM_TIME_PER_LEVEL = 25
+const TIME_PER_LEVEL_TO_SUSTRACT = 55
+const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15
 
 # --------------------------------------------------------------------------- #
@@ -81,3 +83,6 @@ const MAX_CAPTURE_TIME = 2.0
 
 # --------------------------------------------------------------------------- #
 
+# Lose Menu constants
+const END_MENU_LEVEL_RECORD_SIGNAL = "new_level_record"
+const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"

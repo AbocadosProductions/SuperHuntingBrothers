@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://bexhcb13ghv2o"]
+
+[ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_hxm02"]
+
+[node name="tutorial" type="Control" node_paths=PackedStringArray("first_block", "second_block", "next_button", "menu_button", "play_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hxm02")
+first_block = NodePath("first_to_show")
+second_block = NodePath("second_to_show")
+next_button = NodePath("Next_Button")
+menu_button = NodePath("Menu_Button")
+play_button = NodePath("Play_Button")
+
+[node name="title_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = -3.0
+offset_right = 943.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 60
+text = "¿CÓMO SE JUEGA?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="first_to_show" type="Node2D" parent="."]
+
+[node name="goal" type="Label" parent="first_to_show"]
+offset_left = 586.0
+offset_top = 260.0
+offset_right = 1151.0
+offset_bottom = 556.0
+theme_override_font_sizes/font_size = 30
+text = "Cuando alcances al raton con el gatito 
+este se detendra un breve instante y 
+luego huirá muy rapido.
+¡Necesitas capturar los dos ratones a 
+la vez para completar el nivel!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="topic" type="Label" parent="first_to_show"]
+offset_left = 3.0
+offset_top = 105.0
+offset_right = 560.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 30
+text = "En este juego controlaras a dos gatitos 
+que persiguen a su raton de juguete a
+través de unos laberintos que les han 
+preparado sus humanos favoritos."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="second_to_show" type="Node2D" parent="."]
+position = Vector2(0, 450)
+
+[node name="cattanita_control" type="Label" parent="second_to_show"]
+offset_left = 567.0
+offset_top = 356.0
+offset_right = 1145.0
+offset_bottom = 652.0
+theme_override_font_sizes/font_size = 30
+text = "¡Esta es catanitta! 
+Para controlarla usaras las teclas WASD.
+W - Arriba     S - Abajo
+A - Izquierda     D - Derecha   
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="aguacate_control" type="Label" parent="second_to_show"]
+offset_left = 7.0
+offset_top = 180.0
+offset_right = 674.0
+offset_bottom = 433.0
+theme_override_font_sizes/font_size = 30
+text = "¡Este es aguacate! 
+Para controlarle usaras las teclas de direccion.
+↑ - Arriba     ↓ - Abajo
+← - Izquierda     → - Derecha   
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 538.0
+offset_right = 720.0
+offset_bottom = 633.0
+theme_override_font_sizes/font_size = 30
+text = "¡Cuentame más!"
+
+[node name="Menu_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 540.0
+offset_right = 475.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 25
+text = "Volver al Menu"
+
+[node name="Play_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 540.0
+offset_right = 983.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 35
+text = "¡JUGAR!"
+
+[connection signal="pressed" from="Next_Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Menu_Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]

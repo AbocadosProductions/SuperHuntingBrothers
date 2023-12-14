@@ -26,7 +26,7 @@ func _on_area_2d_body_entered(body):
 		mouse_state_machine_signal.emit(Constants.MOUSE_CAT_DETECTED_SIGNAL)
 
 func scene_manager_signal_detected(signal_emited):
-	if signal_emited == Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL:
+	if signal_emited in [Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL]:
 		mouse_state_machine_signal.emit(Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
 	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
 		mouse_state_machine_signal.emit(Constants.MOUSE_IDLE_SIGNAL)

@@ -6,6 +6,8 @@ const path = Constants.SAVE_PATH
 @export var record_times_per_level : Array
 @export var times_per_level : Array
 @export var actual_punctuation : int
+@export var record_punctuation : int
+@export var record_level : int
 
 # This function will save the resource save_system in the given path.
 func write_savedata() -> void:

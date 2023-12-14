@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bo78ejselsj43"]
+[gd_scene load_steps=10 format=3 uid="uid://bo78ejselsj43"]
 
 [ext_resource type="Script" path="res://0_Scripts/Managers/SceneManager.gd" id="1_520la"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_rprxe"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_level_running.gd" id="4_ujcjp"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_two_mice_captured.gd" id="5_2kuvn"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_show_points.gd" id="7_d5g65"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_timeout.gd" id="8_84tk3"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/scene_manager/scene_pause_game.gd" id="8_t4qc1"]
 
 [node name="SceneManager" type="Node2D"]
@@ -38,4 +39,8 @@ scene_manager = NodePath("../..")
 
 [node name="game_paused" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("8_t4qc1")
+scene_manager = NodePath("../..")
+
+[node name="timeout" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+script = ExtResource("8_84tk3")
 scene_manager = NodePath("../..")

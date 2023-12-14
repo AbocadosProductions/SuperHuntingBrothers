@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="4_qlgii"]
 [ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="5_80pgq"]
 [ext_resource type="PackedScene" uid="uid://fe617ydt6xvu" path="res://Scenes/points_menu.tscn" id="7_iuo6b"]
-[ext_resource type="PackedScene" uid="uid://dxffchwk3pqdd" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
+[ext_resource type="PackedScene" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
 
 [node name="core" type="Node2D"]
 
@@ -15,9 +15,10 @@
 offset = Vector2(1200, 300)
 zoom = Vector2(0.35, 0.35)
 
-[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "points_menu", "pause_menu") instance=ExtResource("1_joe5b")]
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
 cat2_state_machine = NodePath("../cat_aguacate/StateMachine")
+time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 pause_menu = NodePath("../pause_menu")
 

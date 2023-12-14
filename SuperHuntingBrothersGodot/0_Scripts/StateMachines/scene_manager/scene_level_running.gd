@@ -16,3 +16,6 @@ func signal_detected(signal_data):
 
 	elif signal_data == Constants.PAUSE_MENU_SIGNAL:
 		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
+
+	elif signal_data == Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL:
+		Transition.emit(self, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)

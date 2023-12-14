@@ -41,3 +41,6 @@ func on_mouse_signal_detected(signal_data):
 
 	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:
 		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
+
+	if Constants.PAUSE_MENU_SIGNAL == signal_data:
+		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)

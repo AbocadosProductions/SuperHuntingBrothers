@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 
-[node name="main_menu" type="Control" node_paths=PackedStringArray("normal_menu", "credits_menu")]
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,10 +10,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_odwai")
-normal_menu = NodePath("normal_menu")
-credits_menu = NodePath("credits_menu")
 
 [node name="Title" type="Label" parent="."]
+layout_mode = 0
 offset_left = 278.0
 offset_right = 834.0
 offset_bottom = 101.0
@@ -62,6 +61,7 @@ layout_mode = 2
 text = "Cerrar el Juego"
 
 [node name="credits_menu" type="Node2D" parent="."]
+visible = false
 
 [node name="back_to_menu_button" type="Button" parent="credits_menu"]
 offset_left = 371.0

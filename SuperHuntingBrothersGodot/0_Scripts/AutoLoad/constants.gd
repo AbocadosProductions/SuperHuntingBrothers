@@ -83,6 +83,13 @@ const MAX_CAPTURE_TIME = 2.0
 
 # --------------------------------------------------------------------------- #
 
+# Pause Menu constants
+
+const PAUSE_MENU_SIGNAL = "game_paused"
+
+# --------------------------------------------------------------------------- #
+
 # Lose Menu constants
 const END_MENU_LEVEL_RECORD_SIGNAL = "new_level_record"
 const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
+

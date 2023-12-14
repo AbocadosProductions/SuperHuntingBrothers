@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_fyho5")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_wm5g0")
-initial_state = NodePath("manual_control")
+initial_state = NodePath("mice_captured")
 
 [node name="manual_control" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("3_iqtod")

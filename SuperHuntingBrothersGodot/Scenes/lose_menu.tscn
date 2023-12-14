@@ -1,0 +1,176 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2y0p2ejqfjgu"]
+
+[ext_resource type="Script" path="res://0_Scripts/Menu/lose_menu.gd" id="1_d4mky"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="2_0r01c"]
+[ext_resource type="Script" path="res://0_Scripts/Menu/new_punctuation_record.gd" id="2_v544t"]
+[ext_resource type="Script" path="res://0_Scripts/Menu/new_level_record.gd" id="3_lqvoi"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y1g1y"]
+
+[node name="lose_menu" type="Control" node_paths=PackedStringArray("actual_punctuation_label", "record_punctuation_label", "actual_level_label", "record_level_label", "new_record_punctuation_announcer", "new_record_level_announcer", "data_manager")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d4mky")
+actual_punctuation_label = NodePath("actual_punctuation/punctuation_label")
+record_punctuation_label = NodePath("record_punctuation_label/punctuation_label")
+actual_level_label = NodePath("actual_level/punctuation_label")
+record_level_label = NodePath("record_level_label/punctuation_label")
+new_record_punctuation_announcer = NodePath("new_punctuation_record")
+new_record_level_announcer = NodePath("new_level_record")
+data_manager = NodePath("DataManager")
+
+[node name="new_punctuation_record" type="Node2D" parent="." node_paths=PackedStringArray("lose_menu")]
+position = Vector2(550, 0)
+script = ExtResource("2_v544t")
+lose_menu = NodePath("..")
+
+[node name="High" type="Sprite2D" parent="new_punctuation_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 213)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="Low" type="Sprite2D" parent="new_punctuation_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 300)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="new_level_record" type="Node2D" parent="." node_paths=PackedStringArray("lose_menu")]
+position = Vector2(550, 150)
+script = ExtResource("3_lqvoi")
+lose_menu = NodePath("..")
+
+[node name="High" type="Sprite2D" parent="new_level_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 213)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="Low" type="Sprite2D" parent="new_level_record"]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(0.8, 1, 0, 1)
+position = Vector2(287, 300)
+scale = Vector2(497.5, 37)
+texture = SubResource("PlaceholderTexture2D_y1g1y")
+
+[node name="menu_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 32.0
+offset_right = 904.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 75
+text = "Fin de la partida"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="actual_punctuation" type="Label" parent="."]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 301.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Puntuación  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="actual_punctuation"]
+layout_mode = 0
+offset_left = 247.0
+offset_right = 476.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "2500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="record_punctuation_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 200.0
+offset_right = 901.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 32
+text = "Puntuación Record  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="record_punctuation_label"]
+layout_mode = 0
+offset_left = 325.0
+offset_right = 554.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "2500"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="actual_level" type="Label" parent="."]
+layout_mode = 0
+offset_top = 350.0
+offset_right = 301.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 32
+text = "Nivel Alcanzado :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="actual_level"]
+layout_mode = 0
+offset_left = 279.0
+offset_right = 465.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="record_level_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 350.0
+offset_right = 901.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 32
+text = "Nivel Record  :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="record_level_label"]
+layout_mode = 0
+offset_left = 279.0
+offset_right = 465.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="main_menu_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 533.0
+offset_right = 520.0
+offset_bottom = 613.0
+text = "Salir al Menu"
+
+[node name="DataManager" parent="." instance=ExtResource("2_0r01c")]
+
+[node name="retry_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 514.0
+offset_right = 974.0
+offset_bottom = 615.0
+text = "VOLVER A JUGAR"
+
+[connection signal="pressed" from="main_menu_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="retry_button" to="." method="_on_retry_button_pressed"]

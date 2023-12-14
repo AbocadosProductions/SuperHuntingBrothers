@@ -32,7 +32,7 @@ func prepare_time_level():
 	time_in_level = const_level_time - level_index * const_time_multiplier
 	if time_in_level < minimum_time:
 		time_in_level = minimum_time
-	time_label.text = str(int(time_in_level))
+	time_label.text = format_time(time_in_level)
 
 func load_variables():
 	const_level_time = Constants.DEFAULT_TIME_PER_LEVEL
@@ -46,14 +46,15 @@ func load_variables():
 func _process(delta):
 	if time_in_level > 0 and cats_are_running:
 		time_in_level -= delta
-		time_label.text = str(int(time_in_level))
+		time_label.text = format_time(time_in_level)
 		check_for_treshold()
 	elif time_in_level <= 0:
-		Time_Signal.emit(Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)
+		time_label.text = "0.0"
+		Time_Signal.emit(self, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)
 
 func check_for_treshold():
 	if time_in_level < time_treshold and not treshold_reached:
-		Time_Signal.emit(Constants.TIME_MANAGER_TRESHOLD_REACHED_SIGNAL)
+		Time_Signal.emit(self, Constants.TIME_MANAGER_TRESHOLD_REACHED_SIGNAL)
 		treshold_reached = true
 
 func get_remaining_time():
@@ -61,3 +62,10 @@ func get_remaining_time():
 
 func save_time():
 	data_manager.add_actual_level_time(time_in_level)
+
+func format_time(time: float) -> String:
+	var formatted_time = str(snapped(time, 0.1))
+	if len(formatted_time.split(".")) == 1:
+		formatted_time += ".0"
+	return formatted_time
+	

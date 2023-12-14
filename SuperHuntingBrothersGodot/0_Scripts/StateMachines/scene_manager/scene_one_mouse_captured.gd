@@ -15,3 +15,6 @@ func signal_detected(signal_data):
 
 	elif signal_data == Constants.CAT_MOUSE_CAPTURED_SIGNAL:
 		Transition.emit(self, Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
+
+	elif signal_data == Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL:
+		Transition.emit(self, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)

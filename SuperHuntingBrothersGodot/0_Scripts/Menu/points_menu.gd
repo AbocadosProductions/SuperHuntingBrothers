@@ -44,7 +44,7 @@ func initialize_variables():
 	# Load data from data manager
 	updated_points = datamanager.return_points()
 	actual_time = datamanager.return_last_level_time()
-	record_time = datamanager.return_record_data()
+	record_time = datamanager.return_record_time()
 	level_index = datamanager.return_level_index()
 
 	# Load data from constants
@@ -79,7 +79,8 @@ func set_time_values_in_labels():
 	else:
 		record_time_label.text = format_time(record_time)
 
-func format_time(time:int):
+func format_time(time: int):
+	@warning_ignore("integer_division")
 	minutes = int(time / 60)
 	seconds = time - minutes * 60 
 	
@@ -98,12 +99,13 @@ func format_time(time:int):
 
 
  # POINTS TO BE ADDED TO THE PUNCTUATION LABEL
+
 func get_points_obtained_in_level():
 	points_obtained_in_this_level = actual_time * multiplier
 	points_per_step = points_obtained_in_this_level / punctuation_steps
 
 
-func _process(delta):
+func _process(_delta):
 	if is_showing_points:
 		# Updates the punctuation label
 		if points_obtained_in_this_level > 0:
@@ -138,7 +140,7 @@ func _process(delta):
 # CONTROLS THE RECORD SPRITES AND THE RECORD LABEL WHEN POINTS FINISH TO BE UPDATED
 func check_for_record():
 	if actual_time < record_time or record_time == 0:
-		datamanager.set_new_record_points()
+		datamanager.return_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)
 

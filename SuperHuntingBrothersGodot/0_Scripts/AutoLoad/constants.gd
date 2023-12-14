@@ -4,6 +4,7 @@ const FIRST_LEVEL: String = "res://Scenes/core.tscn"
 const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 const LOSE_MENU: String = "res://Scenes/lose_menu.tscn"
 
+
 # --------------------------------------------------------------------------- #
 
 # Save System constants

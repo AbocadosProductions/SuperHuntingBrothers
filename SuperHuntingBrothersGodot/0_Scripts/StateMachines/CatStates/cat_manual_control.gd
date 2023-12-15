@@ -51,10 +51,14 @@ func ortogonalize_direction():
 		direction[1] = 0
 
 func set_direction():
-	cat.direction = Constants.DIRECTIONS[direction]
+	if direction != Vector2(0, 0):
+		cat.direction = Constants.DIRECTIONS[direction]
 
 func send_animation_signal():
-	cat.External_Signal.emit(Constants.ANIMATION_RUN)
+	if direction != Vector2(0, 0):
+		cat.External_Signal.emit(Constants.ANIMATION_RUN)
+	else:
+		cat.External_Signal.emit(Constants.ANIMATION_IDLE)
 
 func on_cat_signal_detected(signal_data):
 	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:

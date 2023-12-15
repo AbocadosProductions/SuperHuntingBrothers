@@ -19,7 +19,7 @@ func randomize_flee():
 func Enter():
 	mouse.mouse_is_fleing = true
 	randomize_flee()
-	mouse.External_Signal.emit(Constants.ANIMATION_FLEE)
+	mouse.External_Signal.emit(Constants.ANIMATION_RELEASE)
 	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
 		
 func Exit():

@@ -16,8 +16,8 @@ const SAVE_PATH: String = "res://save_data.tres"
 # LevelManager constants
 
 const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
-const MAZES_1_POSITION = Vector2 (0, 0)
-const MAZES_2_POSITION = Vector2 (1500, 0)
+const MAZES_1_POSITION = Vector2 (350, 350)
+const MAZES_2_POSITION = Vector2 (500, 350)
 const MAZE_FILE_TERMINATION = ".tscn"
 const MAZE_FILE_PREFIX = "maze"
 const MAZE_PATH_FORMAT_STRING = "/%s.tscn"
@@ -115,10 +115,36 @@ const POSITIONS_PER_LEVEL = {
 # Directions constants
 
 const DIRECTIONS = {
-	Vector2(1, 0): "_RIGHT", 
-	Vector2(0, 1): "_UP", 
-	Vector2(-1, 0): "_LEFT", 
-	Vector2(0, -1): "_DOWN"
+	Vector2(1, 0): "_Right", 
+	Vector2(0, 1): "_Down", 
+	Vector2(-1, 0): "_Left", 
+	Vector2(0, -1): "_Up"
 }
+
+# --------------------------------------------------------------------------- #
+
+# Animation names constants
+
+const ANIMATION_BEGGINING_RIGHT = "Beggining"
+const ANIMATION_IDLE = "Idle"
+const ANIMATION_IDLE_RIGHT = "Idle_Right"
+const ANIMATION_IDLE_LEFT = "Idle_Left"
+const ANIMATION_IDLE_UP = "Idle_Up"
+const ANIMATION_IDLE_DOWN = "Idle_Down"
+const ANIMATION_RUN = "Run"
+const ANIMATION_RUN_RIGHT = "Run_Right"
+const ANIMATION_RUN_LEFT = "Run_Left"
+const ANIMATION_RUN_UP = "Run_Up"
+const ANIMATION_RUN_DOWN = "Run_Down"
+const ANIMATION_ATTACK = "Attack"
+const ANIMATION_ATTACK_RIGHT = "Attack_Right"
+const ANIMATION_ATTACK_LEFT = "Attack_Left"
+const ANIMATION_ATTACK_UP = "Attack_Up"
+const ANIMATION_ATTACK_DOWN = "Attack_Down"
+const ANIMATION_RELEASE = "Release"
+const ANIMATION_RELEASE_RIGHT = "Release_Right"
+const ANIMATION_RELEASE_LEFT = "Release_Left"
+const ANIMATION_RELEASE_UP = "Release_Up"
+const ANIMATION_RELEASE_DOWN = "Release_Down"
 
 # --------------------------------------------------------------------------- #

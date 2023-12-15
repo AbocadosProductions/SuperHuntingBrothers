@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8a5gceuocnf1"]
+[gd_scene load_steps=10 format=3 uid="uid://c8a5gceuocnf1"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_qpobw"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_wm5g0"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_manual_control.gd" id="3_iqtod"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_captured.gd" id="4_e4vxt"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_flee.gd" id="5_8lib7"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="5_q4oty"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="6_isxei"]
 
@@ -31,11 +32,14 @@ initial_state = NodePath("mice_captured")
 [node name="manual_control" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("3_iqtod")
 type_of_control = "asiduyhaiu"
-cat = NodePath("../..")
+cat = NodePath("")
 
 [node name="mouse_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("4_e4vxt")
 cat = NodePath("../..")
+
+[node name="flee" type="Node" parent="StateMachine"]
+script = ExtResource("5_8lib7")
 
 [node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("5_q4oty")

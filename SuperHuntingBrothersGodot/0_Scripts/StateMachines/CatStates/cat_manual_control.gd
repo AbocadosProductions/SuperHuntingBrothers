@@ -40,7 +40,21 @@ func Exit():
 
 func Physics_Update(_delta : float):
 	direction = Input.get_vector(character_left, character_right, character_up, character_down)
+	ortogonalize_direction()
+	set_direction()
+	send_animation_signal()
 	cat.velocity = direction * SPEED
+
+func ortogonalize_direction():
+	if direction[0] != 0 and direction[1] != 0:
+		direction[0] = ceil(direction[0])
+		direction[1] = 0
+
+func set_direction():
+	cat.direction = Constants.DIRECTIONS[direction]
+
+func send_animation_signal():
+	cat.External_Signal.emit(Constants.ANIMATION_RUN)
 
 func on_cat_signal_detected(signal_data):
 	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:

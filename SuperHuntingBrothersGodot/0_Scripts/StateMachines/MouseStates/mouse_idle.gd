@@ -14,6 +14,8 @@ var random_direction = null
 
 func randomize_wander():
 	random_direction = maze_directions[randi() % maze_directions.size()]
+	mouse.direction = Constants.DIRECTIONS[random_direction]
+	mouse.External_Signal.emit(Constants.ANIMATION_RUN)
 	wander_time = randf_range(1, 2)
 	
 func Enter():

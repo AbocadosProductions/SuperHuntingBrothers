@@ -80,6 +80,7 @@ const MOUSE_CAT_DETECTED_SIGNAL = "captured"
 const CAT_PREFIX = "cat"
 const WALL_PREFIX = "wall"
 const MAX_CAPTURE_TIME = 2.0
+const MAX_FLEE_TIME = 1.5
 
 # --------------------------------------------------------------------------- #
 
@@ -107,6 +108,17 @@ const POSITIONS_PER_LEVEL = {
 	"maze_4" = {"cat" = [Vector2(0,0)],
 				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
 
+}
+
+# --------------------------------------------------------------------------- #
+
+# Directions constants
+
+const DIRECTIONS = {
+	Vector2(1, 0): "_RIGHT", 
+	Vector2(0, 1): "_UP", 
+	Vector2(-1, 0): "_LEFT", 
+	Vector2(0, -1): "_DOWN"
 }
 
 # --------------------------------------------------------------------------- #

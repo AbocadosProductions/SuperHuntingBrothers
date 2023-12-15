@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal cat_state_machine_signal
+signal External_signal
 
 @export var scene_manager : Node2D
 

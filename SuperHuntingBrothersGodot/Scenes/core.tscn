@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="4_qlgii"]
 [ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="5_80pgq"]
 [ext_resource type="PackedScene" uid="uid://fe617ydt6xvu" path="res://Scenes/points_menu.tscn" id="7_iuo6b"]
-[ext_resource type="PackedScene" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
+[ext_resource type="PackedScene" uid="uid://dxffchwk3pqdd" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
 
 [node name="core" type="Node2D"]
 
@@ -22,8 +22,12 @@ time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 pause_menu = NodePath("../pause_menu")
 
-[node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("2_fretg")]
+[node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager", "cat_1", "cat_2", "mouse_1", "mouse_2") instance=ExtResource("2_fretg")]
 scene_manager = NodePath("../SceneManager")
+cat_1 = NodePath("../cat_cattanita")
+cat_2 = NodePath("../cat_aguacate")
+mouse_1 = NodePath("../mouse_catta")
+mouse_2 = NodePath("../mouse_agua")
 
 [node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("3_cyum3")]
 scene_manager = NodePath("../SceneManager")

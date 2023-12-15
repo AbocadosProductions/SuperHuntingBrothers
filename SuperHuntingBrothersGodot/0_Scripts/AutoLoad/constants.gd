@@ -93,3 +93,20 @@ const PAUSE_MENU_SIGNAL = "game_paused"
 const END_MENU_LEVEL_RECORD_SIGNAL = "new_level_record"
 const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
+# --------------------------------------------------------------------------- #
+
+# Positions constants
+
+const POSITIONS_PER_LEVEL = {
+	"maze_1" = {"cat" = [Vector2(0,0)],
+				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+	"maze_2" = {"cat" = [Vector2(0,0)],
+				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+	"maze_3" = {"cat" = [Vector2(0,0)],
+				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+	"maze_4" = {"cat" = [Vector2(0,0)],
+				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+
+}
+
+# --------------------------------------------------------------------------- #

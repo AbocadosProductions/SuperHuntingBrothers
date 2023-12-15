@@ -13,6 +13,10 @@ var new_maze_2_name
 var possible_mazes = []
 
 @export var scene_manager : Node2D
+@export var cat_1 : Node2D
+@export var cat_2 : Node2D
+@export var mouse_1 : Node2D
+@export var mouse_2 : Node2D
 
 func get_maze_scenes():
 	var dir = DirAccess.open(path)
@@ -78,12 +82,28 @@ func _ready():
 func _on_button_pressed():
 	generate_level()
 
+func move_characters_to_positions():
+	# Load Positions accordint to the maze
+	var positions_maze_1 = Constants.POSITIONS_PER_LEVEL[new_maze_1_name]
+	var positions_maze_2 = Constants.POSITIONS_PER_LEVEL[new_maze_2_name]
+	# Move characters in maze 1
+	cat_1.position = positions_maze_1["cat"][randi() % positions_maze_1["cat"].size()]
+	cat_1.position += maze_1_pos
+	mouse_1.position = positions_maze_1["mouse"][randi() % positions_maze_1["mouse"].size()]
+	mouse_1.position += maze_1_pos
+	# Move characters in maze 2
+	cat_2.position = positions_maze_2["cat"][randi() % positions_maze_2["cat"].size()]
+	cat_2.position += maze_2_pos
+	mouse_2.position = positions_maze_2["mouse"][randi() % positions_maze_2["mouse"].size()]
+	mouse_2.position += maze_2_pos
+
 func generate_level():
 	get_mazes_in_use()
 	get_new_mazes()
 	restart_lists()
 	delete_previous_mazes()
 	load_new_mazes()
+	move_characters_to_positions()
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL:

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://chbx1sebpqd6b"]
+
+[ext_resource type="Texture2D" uid="uid://6m7nian5lmsx" path="res://Sprites/Environment/Walls.png" id="1_xrjnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mhdm"]
+size = Vector2(16, 16)
+
+[node name="walls" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2mhdm")
+debug_color = Color(0, 0, 0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xrjnb")
+hframes = 3
+vframes = 2
+frame = 4

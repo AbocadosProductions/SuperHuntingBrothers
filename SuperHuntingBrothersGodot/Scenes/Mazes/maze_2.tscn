@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c51tk0ask6ymb"]
 
-[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="1_j0jq2"]
+[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/Walls/walls.tscn" id="1_j0jq2"]
 
 [node name="maze_2" type="Node2D"]
 

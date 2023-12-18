@@ -110,3 +110,25 @@ const POSITIONS_PER_LEVEL = {
 }
 
 # --------------------------------------------------------------------------- #
+
+# Animation names constants
+
+const ANIMATION_BEGGINING_RIGHT = "Beggining"
+const ANIMATION_IDLE_RIGHT = "Idle_Right"
+const ANIMATION_IDLE_LEFT = "Idle_Left"
+const ANIMATION_IDLE_UP = "Idle_Up"
+const ANIMATION_IDLE_DOWN = "Idle_Down"
+const ANIMATION_RUN_RIGHT = "Run_Right"
+const ANIMATION_RUN_LEFT = "Run_Left"
+const ANIMATION_RUN_UP = "Run_Up"
+const ANIMATION_RUN_DOWN = "Run_Down"
+const ANIMATION_ATTACK_RIGHT = "Attack_Right"
+const ANIMATION_ATTACK_LEFT = "Attack_Left"
+const ANIMATION_ATTACK_UP = "Attack_Up"
+const ANIMATION_ATTACK_DOWN = "Attack_Down"
+const ANIMATION_RELEASE_RIGHT = "Release_Right"
+const ANIMATION_RELEASE_LEFT = "Release_Left"
+const ANIMATION_RELEASE_UP = "Release_Up"
+const ANIMATION_RELEASE_DOWN = "Release_Down"
+
+# --------------------------------------------------------------------------- #

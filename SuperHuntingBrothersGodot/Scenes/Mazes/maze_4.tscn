@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxmy4xh6og76h"]
 
-[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="1_20rrb"]
+[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/Walls/walls.tscn" id="1_20rrb"]
 
 [node name="maze_4" type="Node2D"]
 rotation = 1.5708

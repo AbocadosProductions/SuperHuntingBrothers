@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbpym3ga2ey3o"]
+
+[ext_resource type="Texture2D" uid="uid://dq8wyc1j4y8rd" path="res://Sprites/Environment/Floors.png" id="1_bn17s"]
+
+[node name="walls" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bn17s")
+hframes = 2
+vframes = 2
+frame = 1

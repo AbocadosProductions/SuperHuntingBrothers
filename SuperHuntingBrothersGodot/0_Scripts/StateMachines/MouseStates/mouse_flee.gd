@@ -1,7 +1,7 @@
 extends State
 class_name MouseIdle
 
-const SPEED = 300.0
+const SPEED = 50.0
 
 
 var move_direction : Vector2

@@ -1,7 +1,7 @@
 extends State
 
 
-const SPEED = 100.0
+const SPEED = 25.0
 
 var move_direction : Vector2
 var wander_time : float

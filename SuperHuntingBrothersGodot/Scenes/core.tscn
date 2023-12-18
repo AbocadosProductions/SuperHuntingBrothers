@@ -13,7 +13,7 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(500, 350)
-zoom = Vector2(3, 3)
+zoom = Vector2(1.5, 1.5)
 
 [node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")

@@ -7,7 +7,7 @@ var flee_time = 0
 func Enter():
 	cat.velocity = Vector2(0, 0)
 	cat.cat_state_machine_signal.connect(on_cat_signal_detected)
-	cat.External_Signal.emit(Constants.ANIMATION_FLEE)
+	cat.External_Signal.emit(Constants.ANIMATION_RELEASE)
 
 func Exit():
 	cat.cat_state_machine_signal.disconnect(on_cat_signal_detected)

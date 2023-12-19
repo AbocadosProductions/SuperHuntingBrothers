@@ -29,9 +29,10 @@ scene_manager = NodePath("../..")
 script = ExtResource("4_u7dqy")
 scene_manager = NodePath("../..")
 
-[node name="mice_captured" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
+[node name="mice_captured" type="Node" parent="scene_manager_state_machine"]
 script = ExtResource("5_2kuvn")
-scene_manager = NodePath("../..")
+scene_manager = Object(Node2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(0, 0),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"script":ExtResource("1_520la"),"cat1_state_machine":null,"cat2_state_machine":null,"time_manager":null,"points_menu":null,"pause_menu":null)
+
 
 [node name="show_points" type="Node" parent="scene_manager_state_machine" node_paths=PackedStringArray("scene_manager")]
 script = ExtResource("7_d5g65")

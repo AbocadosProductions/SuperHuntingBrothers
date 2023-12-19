@@ -22,4 +22,8 @@ func _ready():
 
 
 func scene_manager_state_controller(_emisioner, signal_detected):
+	print("_emisioner")
+	print(_emisioner)
+	print("signal_detected")
+	print(signal_detected)
 	Internal_Signal.emit(signal_detected)

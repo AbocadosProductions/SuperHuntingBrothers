@@ -59,7 +59,7 @@ const SCENE_MANAGER_PREPARATION_TIME = 1
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 const DEFAULT_TIME_PER_LEVEL = 60
-const TIME_PER_LEVEL_TO_SUSTRACT = 55
+const TIME_PER_LEVEL_TO_SUSTRACT = 5
 const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15
 
@@ -100,13 +100,13 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
 const POSITIONS_PER_LEVEL = {
 	"maze_1" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
 	"maze_2" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
 	"maze_3" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
 	"maze_4" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
 
 }
 

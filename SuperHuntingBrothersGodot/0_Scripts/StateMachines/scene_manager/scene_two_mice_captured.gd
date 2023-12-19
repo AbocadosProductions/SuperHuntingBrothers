@@ -7,7 +7,7 @@ var time_passed_in_state : float = 0
 
 func Enter():
 	scene_manager.External_Signal.emit(Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
-
+	
 func Exit():
 	time_passed_in_state = 0
 

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhwi5pi3iosrd"]
-
-[ext_resource type="Script" path="res://caca.gd" id="1_yhu2y"]
-
-[node name="caca" type="Node2D"]
-script = ExtResource("1_yhu2y")

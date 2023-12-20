@@ -1,9 +1,8 @@
 extends State
 class_name MouseIdle
 
-const WALL_NAME = "wall"
-const SPEED = 300.0
-const MAX_FLEE_TIME = 1.5
+const SPEED = 50.0
+
 
 var move_direction : Vector2
 var flee_time : float
@@ -20,6 +19,7 @@ func randomize_flee():
 func Enter():
 	mouse.mouse_is_fleing = true
 	randomize_flee()
+	mouse.External_Signal.emit(Constants.ANIMATION_RELEASE)
 	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
 		
 func Exit():
@@ -28,7 +28,7 @@ func Exit():
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func Update(_delta : float):
-	if flee_time < MAX_FLEE_TIME:
+	if flee_time < Constants.MAX_FLEE_TIME:
 		flee_time += _delta
 	else:
 		Transition.emit(self, "idle")
@@ -38,7 +38,7 @@ func Physics_Update(_delta : float):
 	mouse.velocity = random_direction * SPEED
 
 func on_mouse_signal_detected(signal_data):
-	if WALL_NAME == signal_data:
+	if Constants.WALL_PREFIX == signal_data:
 		randomize_flee()
 
 	if Constants.PAUSE_MENU_SIGNAL == signal_data:

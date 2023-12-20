@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://58t2i41i7iba" path="res://Sprites/Cattanita/Cattanita_Run_Up.png" id="22_fivuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyho5"]
-size = Vector2(99, 99)
+size = Vector2(9, 13)
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
@@ -943,13 +943,13 @@ collision_mask = 4
 script = ExtResource("1_qpobw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
-scale = Vector2(100, 100)
+position = Vector2(8, 0)
 texture = ExtResource("2_ltnwp")
 hframes = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+visible = false
+position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_fyho5")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]

@@ -7,5 +7,5 @@ script = ExtResource("1_ctaic")
 record_times_per_level = []
 times_per_level = [48, 53]
 actual_punctuation = 1468
-record_punctuation = 0
-record_level = 0
+record_punctuation = 1468
+record_level = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://n7tdin7f3yqb"]
+[gd_scene load_steps=45 format=3 uid="uid://n7tdin7f3yqb"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_nmf7v"]
 [ext_resource type="Texture2D" uid="uid://dr16jceetyjt3" path="res://Sprites/Cattanita/Cattanita_Attack_Down.png" id="2_bix6r"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="6_p08yn"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="7_qqo2o"]
 [ext_resource type="Texture2D" uid="uid://vbsm5fw346w1" path="res://Sprites/Aguacate/Aguacate_Attack_Down.png" id="8_20p7k"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_flee.gd" id="8_x8pax"]
 [ext_resource type="Texture2D" uid="uid://b1cd1c4u5q6mo" path="res://Sprites/Aguacate/Aguacate_Attack_Left.png" id="9_fxj75"]
 [ext_resource type="Texture2D" uid="uid://dph6yhg63wfb8" path="res://Sprites/Aguacate/Aguacate_Attack_Right.png" id="10_e02un"]
 [ext_resource type="Texture2D" uid="uid://b6mturpa421d4" path="res://Sprites/Aguacate/Aguacate_Attack_Up.png" id="11_t5ptu"]
@@ -23,9 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://dlk7mpdo54s7j" path="res://Sprites/Aguacate/Aguacate_Run_Left.png" id="21_fe0ty"]
 [ext_resource type="Texture2D" uid="uid://ckrehdvsgw4u1" path="res://Sprites/Aguacate/Aguacate_Run_Right.png" id="22_6i2bx"]
 [ext_resource type="Texture2D" uid="uid://dspp5ekrkdbl1" path="res://Sprites/Aguacate/Aguacate_Run_Up.png" id="23_1m4fg"]
+[ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_211rw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyho5"]
-size = Vector2(99, 99)
+size = Vector2(6, 11)
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
@@ -940,17 +942,17 @@ _data = {
 }
 
 [node name="aguacate" type="CharacterBody2D"]
+position = Vector2(8, 2)
 collision_mask = 4
 script = ExtResource("1_nmf7v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
-scale = Vector2(100, 100)
+position = Vector2(0, -1)
 texture = ExtResource("2_bix6r")
 hframes = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-8, -2)
 shape = SubResource("RectangleShape2D_fyho5")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
@@ -973,7 +975,16 @@ cat = NodePath("../..")
 [node name="game_paused" type="Node" parent="StateMachine"]
 script = ExtResource("7_qqo2o")
 
+[node name="flee" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
+script = ExtResource("8_x8pax")
+cat = NodePath("../..")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_05pvf")
 }
+
+[node name="animation_controller" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "emisioner")]
+script = ExtResource("24_211rw")
+animation_player = NodePath("../AnimationPlayer")
+emisioner = NodePath("..")

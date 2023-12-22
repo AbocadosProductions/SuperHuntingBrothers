@@ -10,6 +10,7 @@ var capture_time : float
 func Enter():
 	mouse.velocity = Vector2(0, 0)
 	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
+	mouse.External_Signal.emit(Constants.ANIMATION_ATTACK)
 
 func Exit():
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)

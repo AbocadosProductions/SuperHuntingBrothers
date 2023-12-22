@@ -1,6 +1,6 @@
 extends State
 
-const SPEED = 300.0
+const SPEED = 75.0
 
 var character_controls = null
 var character_left = null
@@ -40,7 +40,25 @@ func Exit():
 
 func Physics_Update(_delta : float):
 	direction = Input.get_vector(character_left, character_right, character_up, character_down)
+	ortogonalize_direction()
+	set_direction()
+	send_animation_signal()
 	cat.velocity = direction * SPEED
+
+func ortogonalize_direction():
+	if direction[0] != 0 and direction[1] != 0:
+		direction[0] = ceil(direction[0])
+		direction[1] = 0
+
+func set_direction():
+	if direction != Vector2(0, 0):
+		cat.direction = Constants.DIRECTIONS[direction]
+
+func send_animation_signal():
+	if direction != Vector2(0, 0):
+		cat.External_Signal.emit(Constants.ANIMATION_RUN)
+	else:
+		cat.External_Signal.emit(Constants.ANIMATION_IDLE)
 
 func on_cat_signal_detected(signal_data):
 	if Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL == signal_data:

@@ -16,8 +16,8 @@ const SAVE_PATH: String = "res://save_data.tres"
 # LevelManager constants
 
 const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
-const MAZES_1_POSITION = Vector2 (0, 0)
-const MAZES_2_POSITION = Vector2 (1500, 0)
+const MAZES_1_POSITION = Vector2 (300, 375)
+const MAZES_2_POSITION = Vector2 (715, 375)
 const MAZE_FILE_TERMINATION = ".tscn"
 const MAZE_FILE_PREFIX = "maze"
 const MAZE_PATH_FORMAT_STRING = "/%s.tscn"
@@ -59,7 +59,7 @@ const SCENE_MANAGER_PREPARATION_TIME = 1
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 const DEFAULT_TIME_PER_LEVEL = 60
-const TIME_PER_LEVEL_TO_SUSTRACT = 55
+const TIME_PER_LEVEL_TO_SUSTRACT = 5
 const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15
 
@@ -80,6 +80,7 @@ const MOUSE_CAT_DETECTED_SIGNAL = "captured"
 const CAT_PREFIX = "cat"
 const WALL_PREFIX = "wall"
 const MAX_CAPTURE_TIME = 2.0
+const MAX_FLEE_TIME = 1.5
 
 # --------------------------------------------------------------------------- #
 
@@ -98,34 +99,56 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 # Positions constants
 
 const POSITIONS_PER_LEVEL = {
-	"maze_1" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
-	"maze_2" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
-	"maze_3" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
-	"maze_4" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(0,0), Vector2(0,0), Vector2(0,0), Vector2(0,0)]},
+	"maze_1" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_2" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_3" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_4" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]}
+				}
+# --------------------------------------------------------------------------- #
 
+# Directions constants
+
+const DIRECTIONS = {
+	Vector2(1, 0): "_Right", 
+	Vector2(0, 1): "_Down", 
+	Vector2(-1, 0): "_Left", 
+	Vector2(0, -1): "_Up"
 }
+
+
+const CRASH_DIRECTIONS = {
+	Vector2(1, 0): [Vector2(0, 1), Vector2(0, -1)], 
+	Vector2(0, 1): [Vector2(1, 0), Vector2(-1, 0)], 
+	Vector2(-1, 0): [Vector2(0, 1), Vector2(0, -1)], 
+	Vector2(0, -1): [Vector2(-1, 0), Vector2(1, 0)]
+}
+
 
 # --------------------------------------------------------------------------- #
 
 # Animation names constants
 
 const ANIMATION_BEGGINING_RIGHT = "Beggining"
+const ANIMATION_IDLE = "Idle"
 const ANIMATION_IDLE_RIGHT = "Idle_Right"
 const ANIMATION_IDLE_LEFT = "Idle_Left"
 const ANIMATION_IDLE_UP = "Idle_Up"
 const ANIMATION_IDLE_DOWN = "Idle_Down"
+const ANIMATION_RUN = "Run"
 const ANIMATION_RUN_RIGHT = "Run_Right"
 const ANIMATION_RUN_LEFT = "Run_Left"
 const ANIMATION_RUN_UP = "Run_Up"
 const ANIMATION_RUN_DOWN = "Run_Down"
+const ANIMATION_ATTACK = "Attack"
 const ANIMATION_ATTACK_RIGHT = "Attack_Right"
 const ANIMATION_ATTACK_LEFT = "Attack_Left"
 const ANIMATION_ATTACK_UP = "Attack_Up"
 const ANIMATION_ATTACK_DOWN = "Attack_Down"
+const ANIMATION_RELEASE = "Release"
 const ANIMATION_RELEASE_RIGHT = "Release_Right"
 const ANIMATION_RELEASE_LEFT = "Release_Left"
 const ANIMATION_RELEASE_UP = "Release_Up"

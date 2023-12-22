@@ -1,10 +1,11 @@
-[gd_scene load_steps=42 format=3 uid="uid://c8a5gceuocnf1"]
+[gd_scene load_steps=44 format=3 uid="uid://c8a5gceuocnf1"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_qpobw"]
 [ext_resource type="Texture2D" uid="uid://dr16jceetyjt3" path="res://Sprites/Cattanita/Cattanita_Attack_Down.png" id="2_ltnwp"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_wm5g0"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_manual_control.gd" id="3_iqtod"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_captured.gd" id="4_e4vxt"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_flee.gd" id="5_8lib7"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="5_q4oty"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="6_isxei"]
 [ext_resource type="Texture2D" uid="uid://ddcw7my2ad7d7" path="res://Sprites/Cattanita/Cattanita_Attack_Left.png" id="8_e8s4i"]
@@ -22,9 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://q05x4g0qfet8" path="res://Sprites/Cattanita/Cattanita_Run_Left.png" id="20_g03aj"]
 [ext_resource type="Texture2D" uid="uid://cp4p2qma2sfl4" path="res://Sprites/Cattanita/Cattanita_Run_Right.png" id="21_02tr2"]
 [ext_resource type="Texture2D" uid="uid://58t2i41i7iba" path="res://Sprites/Cattanita/Cattanita_Run_Up.png" id="22_fivuc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyho5"]
-size = Vector2(9, 13)
+[ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_63yi8"]
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
@@ -938,6 +937,9 @@ _data = {
 "Run_Up": SubResource("Animation_1momu")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ble6"]
+size = Vector2(6, 11)
+
 [node name="Katanita" type="CharacterBody2D"]
 collision_mask = 4
 script = ExtResource("1_qpobw")
@@ -947,23 +949,20 @@ position = Vector2(8, 0)
 texture = ExtResource("2_ltnwp")
 hframes = 15
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-0.5, -1.5)
-shape = SubResource("RectangleShape2D_fyho5")
-
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_wm5g0")
 initial_state = NodePath("mice_captured")
 
-[node name="manual_control" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
+[node name="manual_control" type="Node" parent="StateMachine"]
 script = ExtResource("3_iqtod")
 type_of_control = "asiduyhaiu"
-cat = NodePath("../..")
 
 [node name="mouse_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("4_e4vxt")
 cat = NodePath("../..")
+
+[node name="flee" type="Node" parent="StateMachine"]
+script = ExtResource("5_8lib7")
 
 [node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
 script = ExtResource("5_q4oty")
@@ -976,3 +975,11 @@ script = ExtResource("6_isxei")
 libraries = {
 "": SubResource("AnimationLibrary_05pvf")
 }
+
+[node name="animation_controller" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "emisioner")]
+script = ExtResource("24_63yi8")
+animation_player = NodePath("../AnimationPlayer")
+emisioner = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7ble6")

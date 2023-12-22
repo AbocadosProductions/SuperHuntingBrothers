@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0hp1ujxpbwb5"]
+[gd_scene load_steps=10 format=3 uid="uid://c0hp1ujxpbwb5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_gkjlv"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="1_joe5b"]
@@ -8,12 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="5_80pgq"]
 [ext_resource type="PackedScene" uid="uid://fe617ydt6xvu" path="res://Scenes/points_menu.tscn" id="7_iuo6b"]
 [ext_resource type="PackedScene" uid="uid://dxffchwk3pqdd" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
+[ext_resource type="PackedScene" uid="uid://n7tdin7f3yqb" path="res://Characters/aguacate.tscn" id="9_141fg"]
 
 [node name="core" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(1200, 300)
-zoom = Vector2(0.35, 0.35)
+offset = Vector2(500, 350)
+zoom = Vector2(2.85, 2.85)
 
 [node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
@@ -22,6 +23,9 @@ time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 pause_menu = NodePath("../pause_menu")
 
+[node name="mice_captured" parent="SceneManager/scene_manager_state_machine" index="3" node_paths=PackedStringArray("scene_manager")]
+scene_manager = NodePath("../..")
+
 [node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager", "cat_1", "cat_2", "mouse_1", "mouse_2") instance=ExtResource("2_fretg")]
 scene_manager = NodePath("../SceneManager")
 cat_1 = NodePath("../cat_cattanita")
@@ -29,47 +33,31 @@ cat_2 = NodePath("../cat_aguacate")
 mouse_1 = NodePath("../mouse_catta")
 mouse_2 = NodePath("../mouse_agua")
 
-[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("3_cyum3")]
-scene_manager = NodePath("../SceneManager")
-data_manager = NodePath("../DataManager")
-
-[node name="time_label" parent="time_manager" index="0"]
-offset_left = 1158.0
-offset_right = 1530.0
-offset_bottom = 528.0
-theme_override_font_sizes/font_size = 50
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="DataManager" parent="." instance=ExtResource("4_qlgii")]
 
 [node name="cat_cattanita" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("5_80pgq")]
-position = Vector2(300, 250)
+top_level = true
 scene_manager = NodePath("../SceneManager")
 
-[node name="manual_control" parent="cat_cattanita/StateMachine" index="0"]
+[node name="manual_control" parent="cat_cattanita/StateMachine" index="0" node_paths=PackedStringArray("cat")]
 type_of_control = "keyboard"
+cat = NodePath("../..")
 
-[node name="game_paused" parent="cat_cattanita/StateMachine" index="3" node_paths=PackedStringArray("cat")]
+[node name="flee" parent="cat_cattanita/StateMachine" index="2" node_paths=PackedStringArray("cat")]
+cat = NodePath("../..")
+
+[node name="game_paused" parent="cat_cattanita/StateMachine" index="4" node_paths=PackedStringArray("cat")]
 cat = NodePath("../..")
 
 [node name="mouse_catta" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+top_level = true
 position = Vector2(568, 353)
 scene_manager = NodePath("../SceneManager")
 
 [node name="mouse_agua" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+top_level = true
 position = Vector2(2200, 500)
 scene_manager = NodePath("../SceneManager")
-
-[node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("5_80pgq")]
-position = Vector2(2000, 350)
-scene_manager = NodePath("../SceneManager")
-
-[node name="manual_control" parent="cat_aguacate/StateMachine" index="0"]
-type_of_control = "arrows"
-
-[node name="game_paused" parent="cat_aguacate/StateMachine" index="3" node_paths=PackedStringArray("cat")]
-cat = NodePath("../..")
 
 [node name="points_menu" parent="." node_paths=PackedStringArray("datamanager", "scene_manager") instance=ExtResource("7_iuo6b")]
 offset_left = -3000.0
@@ -79,11 +67,27 @@ scene_manager = NodePath("../SceneManager")
 
 [node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("8_s8chp")]
 scene_manager = NodePath("../SceneManager")
+metadata/_edit_use_anchors_ = true
+
+[node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("9_141fg")]
+top_level = true
+position = Vector2(219, 364)
+scene_manager = NodePath("../SceneManager")
+
+[node name="manual_control" parent="cat_aguacate/StateMachine" index="0"]
+type_of_control = "arrows"
+
+[node name="game_paused" parent="cat_aguacate/StateMachine" index="3" node_paths=PackedStringArray("cat")]
+cat = NodePath("../..")
+
+[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("3_cyum3")]
+position = Vector2(475, 292)
+scene_manager = NodePath("../SceneManager")
+data_manager = NodePath("../DataManager")
 
 [editable path="SceneManager"]
-[editable path="time_manager"]
 [editable path="cat_cattanita"]
 [editable path="mouse_catta"]
 [editable path="mouse_agua"]
-[editable path="cat_aguacate"]
 [editable path="points_menu"]
+[editable path="cat_aguacate"]

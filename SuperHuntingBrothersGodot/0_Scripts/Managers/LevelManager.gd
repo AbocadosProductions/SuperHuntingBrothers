@@ -62,10 +62,10 @@ func load_new_mazes():
 	
 	var maze_2_node = load(maze_path_2)	
 	var maze_2_node_instance =  maze_2_node.instantiate()
-	maze_1_node_instance.position = maze_2_pos
+	maze_2_node_instance.position = maze_2_pos
 	maze_2_node_instance.name = new_maze_2_name
 	level.call_deferred("add_child", maze_2_node_instance)
-		
+
 
 func delete_previous_mazes():
 	for child in level.get_children():

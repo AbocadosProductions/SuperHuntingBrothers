@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b1wrtriir6fy0"]
+[gd_scene load_steps=40 format=3 uid="uid://b1wrtriir6fy0"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/mouse_controller.gd" id="1_66pqi"]
 [ext_resource type="Texture2D" uid="uid://dlq0xin5ljdys" path="res://Sprites/Raton/Mouse_Beggining.png" id="2_kl5ym"]
@@ -20,9 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://dlfjohpvd306w" path="res://Sprites/Raton/Mouse_Run_Left.png" id="18_8yb1w"]
 [ext_resource type="Texture2D" uid="uid://cmyned4mwck" path="res://Sprites/Raton/Mouse_Run_Right.png" id="19_ay4ed"]
 [ext_resource type="Texture2D" uid="uid://bhoi0kd40u72y" path="res://Sprites/Raton/Mouse_Run_Up.png" id="20_nqtwi"]
+[ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="21_bxq7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn1m2"]
-size = Vector2(98, 98)
+size = Vector2(14, 10)
 
 [sub_resource type="GDScript" id="GDScript_sa2yw"]
 script/source = "extends CollisionShape2D
@@ -39,7 +40,7 @@ func _process(_delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_770p8"]
-size = Vector2(107, 105)
+size = Vector2(16, 12)
 
 [sub_resource type="Animation" id="Animation_m013t"]
 resource_name = "Attack_Down"
@@ -800,11 +801,11 @@ collision_mask = 4
 script = ExtResource("1_66pqi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_bn1m2")
 script = SubResource("GDScript_sa2yw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(100, 100)
 texture = ExtResource("2_kl5ym")
 hframes = 4
 
@@ -835,12 +836,17 @@ mouse = NodePath("../..")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 0.5)
+position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_770p8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_pjfqh")
 }
+
+[node name="animation_controller" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "emisioner")]
+script = ExtResource("21_bxq7n")
+animation_player = NodePath("../AnimationPlayer")
+emisioner = NodePath("..")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

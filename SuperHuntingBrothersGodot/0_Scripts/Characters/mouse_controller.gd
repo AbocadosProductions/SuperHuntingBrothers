@@ -2,8 +2,10 @@ extends CharacterBody2D
 
 
 var mouse_is_fleing : bool = false
+var direction = ""
 
 signal mouse_state_machine_signal
+signal External_Signal
 
 @export var scene_manager : Node2D
 

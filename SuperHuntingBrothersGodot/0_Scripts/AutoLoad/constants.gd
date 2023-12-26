@@ -16,8 +16,8 @@ const SAVE_PATH: String = "res://save_data.tres"
 # LevelManager constants
 
 const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
-const MAZES_1_POSITION = Vector2 (350, 350)
-const MAZES_2_POSITION = Vector2 (500, 350)
+const MAZES_1_POSITION = Vector2 (300, 375)
+const MAZES_2_POSITION = Vector2 (715, 375)
 const MAZE_FILE_TERMINATION = ".tscn"
 const MAZE_FILE_PREFIX = "maze"
 const MAZE_PATH_FORMAT_STRING = "/%s.tscn"
@@ -99,17 +99,15 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 # Positions constants
 
 const POSITIONS_PER_LEVEL = {
-	"maze_1" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
-	"maze_2" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
-	"maze_3" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
-	"maze_4" = {"cat" = [Vector2(0,0)],
-				"mouse" = [Vector2(100,100), Vector2(100,100), Vector2(100,100), Vector2(100,100)]},
-
-}
-
+	"maze_1" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_2" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_3" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+	"maze_4" = {"cat" = [Vector2(13, 9)],
+				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]}
+				}
 # --------------------------------------------------------------------------- #
 
 # Directions constants
@@ -120,6 +118,15 @@ const DIRECTIONS = {
 	Vector2(-1, 0): "_Left", 
 	Vector2(0, -1): "_Up"
 }
+
+
+const CRASH_DIRECTIONS = {
+	Vector2(1, 0): [Vector2(0, 1), Vector2(0, -1)], 
+	Vector2(0, 1): [Vector2(1, 0), Vector2(-1, 0)], 
+	Vector2(-1, 0): [Vector2(0, 1), Vector2(0, -1)], 
+	Vector2(0, -1): [Vector2(-1, 0), Vector2(1, 0)]
+}
+
 
 # --------------------------------------------------------------------------- #
 

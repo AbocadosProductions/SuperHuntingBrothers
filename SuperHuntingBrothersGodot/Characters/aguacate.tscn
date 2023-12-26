@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_211rw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyho5"]
-size = Vector2(28, 15)
+size = Vector2(6, 11)
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
@@ -942,16 +942,17 @@ _data = {
 }
 
 [node name="aguacate" type="CharacterBody2D"]
+position = Vector2(8, 2)
 collision_mask = 4
 script = ExtResource("1_nmf7v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(0, -1)
 texture = ExtResource("2_bix6r")
 hframes = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, -6.5)
+position = Vector2(-8, -2)
 shape = SubResource("RectangleShape2D_fyho5")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://csuvhchaomtlv"]
 
-[ext_resource type="PackedScene" uid="uid://cnk81q4ib8nqb" path="res://Scenes/Mazes/maze_1.tscn" id="1_c4su0"]
-[ext_resource type="PackedScene" uid="uid://c51tk0ask6ymb" path="res://Scenes/Mazes/maze_2.tscn" id="2_pg0dy"]
+[ext_resource type="PackedScene" uid="uid://cnk81q4ib8nqb" path="res://Scenes/Testing/maze_1.tscn" id="1_c4su0"]
+[ext_resource type="PackedScene" uid="uid://c51tk0ask6ymb" path="res://Scenes/Testing/maze_2.tscn" id="2_pg0dy"]
 [ext_resource type="PackedScene" uid="uid://bbtkhbuwkjj8j" path="res://Managers/level_manager.tscn" id="3_kyce4"]
 
 [node name="maze_selector_test" type="Node2D"]

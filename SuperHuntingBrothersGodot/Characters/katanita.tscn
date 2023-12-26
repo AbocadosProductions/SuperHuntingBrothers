@@ -25,9 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://58t2i41i7iba" path="res://Sprites/Cattanita/Cattanita_Run_Up.png" id="22_fivuc"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_63yi8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyho5"]
-size = Vector2(10, 14)
-
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
 length = 1.5
@@ -940,18 +937,17 @@ _data = {
 "Run_Up": SubResource("Animation_1momu")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ble6"]
+size = Vector2(6, 11)
+
 [node name="Katanita" type="CharacterBody2D"]
 collision_mask = 4
 script = ExtResource("1_qpobw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(8, 0)
 texture = ExtResource("2_ltnwp")
 hframes = 15
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -2)
-shape = SubResource("RectangleShape2D_fyho5")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_wm5g0")
@@ -984,3 +980,6 @@ libraries = {
 script = ExtResource("24_63yi8")
 animation_player = NodePath("../AnimationPlayer")
 emisioner = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7ble6")

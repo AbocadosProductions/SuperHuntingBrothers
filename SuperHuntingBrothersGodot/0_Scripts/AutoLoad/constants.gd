@@ -4,7 +4,6 @@ const FIRST_LEVEL: String = "res://Scenes/core.tscn"
 const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 const LOSE_MENU: String = "res://Scenes/lose_menu.tscn"
 
-
 # --------------------------------------------------------------------------- #
 
 # Save System constants
@@ -119,14 +118,12 @@ const DIRECTIONS = {
 	Vector2(0, -1): "_Up"
 }
 
-
 const CRASH_DIRECTIONS = {
 	Vector2(1, 0): [Vector2(0, 1), Vector2(0, -1)], 
 	Vector2(0, 1): [Vector2(1, 0), Vector2(-1, 0)], 
 	Vector2(-1, 0): [Vector2(0, 1), Vector2(0, -1)], 
 	Vector2(0, -1): [Vector2(-1, 0), Vector2(1, 0)]
 }
-
 
 # --------------------------------------------------------------------------- #
 
@@ -153,5 +150,14 @@ const ANIMATION_RELEASE_RIGHT = "Release_Right"
 const ANIMATION_RELEASE_LEFT = "Release_Left"
 const ANIMATION_RELEASE_UP = "Release_Up"
 const ANIMATION_RELEASE_DOWN = "Release_Down"
+
+# --------------------------------------------------------------------------- #
+
+# Music names constants
+
+const EFFECT_MUSIC = "res://Audios/prueba.wav"
+const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
+const MUSIC_SIGNALS = [EFFECT_MUSIC]
+const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
 
 # --------------------------------------------------------------------------- #

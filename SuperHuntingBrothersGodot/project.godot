@@ -68,8 +68,8 @@ pause={
 
 [navigation]
 
-2d/default_edge_connection_margin=10
-2d/default_link_connection_radius=10
+2d/default_edge_connection_margin=9
+2d/default_link_connection_radius=9
 
 [rendering]
 

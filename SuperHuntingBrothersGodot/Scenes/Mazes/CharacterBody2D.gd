@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-
-const speed = 150.0
+'''
+const speed = 75.0
 const accel = 10.0
 
 @export var navigator : NavigationAgent2D
-@export var target : Node2D
+@export var target : Sprite2D
 var actual_target 
 
 
@@ -31,3 +31,6 @@ func _physics_process(delta):
 	velocity = velocity.lerp(direction * speed, accel * delta)
 
 	move_and_slide()
+
+
+'''

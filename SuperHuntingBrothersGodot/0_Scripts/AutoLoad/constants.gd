@@ -153,6 +153,7 @@ const ANIMATION_RELEASE_DOWN = "Release_Down"
 
 # --------------------------------------------------------------------------- #
 
+
 # Navigation constants
 
 const MIN_X_CELL_RANGE = -10
@@ -160,5 +161,14 @@ const MAX_X_CELL_RANGE = 9
 const MIN_Y_CELL_RANGE = -10
 const MAX_Y_CELL_RANGE = 9
 const CELL_SIZE = 16
+
+# --------------------------------------------------------------------------- #
+
+# Music names constants
+
+const EFFECT_MUSIC = "res://Audios/prueba.wav"
+const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
+const MUSIC_SIGNALS = [EFFECT_MUSIC]
+const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
 
 # --------------------------------------------------------------------------- #

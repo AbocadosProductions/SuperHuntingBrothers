@@ -4,7 +4,6 @@ const FIRST_LEVEL: String = "res://Scenes/core.tscn"
 const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 const LOSE_MENU: String = "res://Scenes/lose_menu.tscn"
 
-
 # --------------------------------------------------------------------------- #
 
 # Save System constants
@@ -37,7 +36,6 @@ const MINUTES_FORMAT_STRING = "%dm"
 const SECONDS_FORMAT_STRING = "%ds"
 const NEW_RECORD_SIGNAL = "new_record_signal"
 const NEW_RECORD_BLINK_RATE = 6
-
 const POINTS_MENU_FINISHED_SIGNAL = "points_menu_finished"
 
 # --------------------------------------------------------------------------- #
@@ -91,6 +89,7 @@ const PAUSE_MENU_SIGNAL = "game_paused"
 # --------------------------------------------------------------------------- #
 
 # Lose Menu constants
+
 const END_MENU_LEVEL_RECORD_SIGNAL = "new_level_record"
 const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
@@ -100,13 +99,13 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
 const POSITIONS_PER_LEVEL = {
 	"maze_1" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+				"mouse" = [Vector2(-150, -155), Vector2(40, 110), Vector2(-54, 12), Vector2(106, 33)]},
 	"maze_2" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+				"mouse" = [Vector2(-150, -155), Vector2(40, 110), Vector2(-54, 12), Vector2(106, 33)]},
 	"maze_3" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
+				"mouse" = [Vector2(-150, -155), Vector2(40, 110), Vector2(-54, 12), Vector2(106, 33)]},
 	"maze_4" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]}
+				"mouse" = [Vector2(-150, -155), Vector2(40, 110), Vector2(-54, 12), Vector2(106, 33)]}
 				}
 # --------------------------------------------------------------------------- #
 
@@ -119,14 +118,12 @@ const DIRECTIONS = {
 	Vector2(0, -1): "_Up"
 }
 
-
 const CRASH_DIRECTIONS = {
 	Vector2(1, 0): [Vector2(0, 1), Vector2(0, -1)], 
 	Vector2(0, 1): [Vector2(1, 0), Vector2(-1, 0)], 
 	Vector2(-1, 0): [Vector2(0, 1), Vector2(0, -1)], 
 	Vector2(0, -1): [Vector2(-1, 0), Vector2(1, 0)]
 }
-
 
 # --------------------------------------------------------------------------- #
 
@@ -153,5 +150,15 @@ const ANIMATION_RELEASE_RIGHT = "Release_Right"
 const ANIMATION_RELEASE_LEFT = "Release_Left"
 const ANIMATION_RELEASE_UP = "Release_Up"
 const ANIMATION_RELEASE_DOWN = "Release_Down"
+
+# --------------------------------------------------------------------------- #
+
+# Navigation constants
+
+const MIN_X_CELL_RANGE = -10
+const MAX_X_CELL_RANGE = 9
+const MIN_Y_CELL_RANGE = -10
+const MAX_Y_CELL_RANGE = 9
+const CELL_SIZE = 16
 
 # --------------------------------------------------------------------------- #

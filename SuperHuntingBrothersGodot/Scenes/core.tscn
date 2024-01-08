@@ -49,15 +49,21 @@ cat = NodePath("../..")
 [node name="game_paused" parent="cat_cattanita/StateMachine" index="4" node_paths=PackedStringArray("cat")]
 cat = NodePath("../..")
 
-[node name="mouse_catta" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+[node name="mouse_catta" parent="." node_paths=PackedStringArray("scene_manager", "level_manager") instance=ExtResource("1_gkjlv")]
 top_level = true
-position = Vector2(568, 353)
+position = Vector2(260, 420)
 scene_manager = NodePath("../SceneManager")
+level_manager = NodePath("../level_manager")
 
-[node name="mouse_agua" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("1_gkjlv")]
+[node name="Area2D" parent="mouse_catta" index="2"]
+visible = true
+
+[node name="mouse_agua" parent="." node_paths=PackedStringArray("scene_manager", "level_manager") instance=ExtResource("1_gkjlv")]
+visible = false
 top_level = true
 position = Vector2(2200, 500)
 scene_manager = NodePath("../SceneManager")
+level_manager = NodePath("../level_manager")
 
 [node name="points_menu" parent="." node_paths=PackedStringArray("datamanager", "scene_manager") instance=ExtResource("7_iuo6b")]
 offset_left = -3000.0
@@ -71,7 +77,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("9_141fg")]
 top_level = true
-position = Vector2(219, 364)
+position = Vector2(611, 479)
 scene_manager = NodePath("../SceneManager")
 
 [node name="manual_control" parent="cat_aguacate/StateMachine" index="0"]

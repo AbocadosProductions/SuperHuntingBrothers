@@ -112,8 +112,6 @@ func scene_manager_signal_detected(signal_emited):
 func set_target_in_maze_coordinates(mouse : CharacterBody2D, coordinates : Vector2):
 	if mouse.name == mouse_1.name:
 		coordinates += maze_1_pos
-		print("maze_1_pos")
-		print(maze_1_pos)
 	else:
 		coordinates += maze_2_pos
 	return coordinates

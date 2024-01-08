@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cbbigmt7htk7r"]
+[gd_scene load_steps=44 format=3 uid="uid://g2hunplky2nq"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_kbeam"]
 [ext_resource type="Texture2D" uid="uid://dr16jceetyjt3" path="res://Sprites/Cattanita/Cattanita_Attack_Down.png" id="2_a032n"]

@@ -100,10 +100,10 @@ tracks/4/path = NodePath("Sprite2D:offset")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.6),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_x7g3r"]
@@ -231,7 +231,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_cxqu3"]
@@ -295,7 +295,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_enmd5"]
@@ -357,10 +357,10 @@ tracks/4/path = NodePath("Sprite2D:offset")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.4),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_xfjse"]
@@ -487,7 +487,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_embxj"]
@@ -617,7 +617,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_bwixv"]
@@ -682,7 +682,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 4)]
 }
 
 [sub_resource type="Animation" id="Animation_1fqmt"]
@@ -747,7 +747,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_qv7su"]
@@ -877,7 +877,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_2ux21"]
@@ -942,7 +942,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -6)]
+"values": [Vector2(0, 8)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pjfqh"]
@@ -973,6 +973,7 @@ shape = SubResource("RectangleShape2D_bn1m2")
 script = SubResource("GDScript_sa2yw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
 texture = ExtResource("2_kl5ym")
 hframes = 4
 

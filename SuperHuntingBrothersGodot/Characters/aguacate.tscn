@@ -1160,6 +1160,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ejrtm")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
+position = Vector2(-8, -2)
 script = ExtResource("3_3ye07")
 initial_state = NodePath("mice_captured")
 

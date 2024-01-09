@@ -164,9 +164,11 @@ const CELL_SIZE = 16
 
 # --------------------------------------------------------------------------- #
 
-# Music names constants
+# Music controller constants
 
+const MINIMUM_DB_VALUE = 25
 const EFFECT_MUSIC = "res://Audios/prueba.wav"
+const AUDIO_BUS = "Master"
 const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
 const MUSIC_SIGNALS = [EFFECT_MUSIC]
 const EFFECT_SIGNALS = [BACKGROUND_MUSIC]

@@ -17,6 +17,7 @@ signal Time_Signal
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+	time_label.visible = false
 	prepare_time_level()
 
 func scene_manager_signal_detected(signal_emited):
@@ -25,6 +26,8 @@ func scene_manager_signal_detected(signal_emited):
 		save_time()
 	elif signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
 		cats_are_running = true
+		time_label.visible = true
+		print("!")
 		prepare_time_level()
 	elif signal_emited == Constants.PAUSE_MENU_SIGNAL:
 		cats_are_running = !cats_are_running

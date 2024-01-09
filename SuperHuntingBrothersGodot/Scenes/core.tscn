@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0hp1ujxpbwb5"]
+[gd_scene load_steps=11 format=3 uid="uid://c0hp1ujxpbwb5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_gkjlv"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="1_joe5b"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://fe617ydt6xvu" path="res://Scenes/points_menu.tscn" id="7_iuo6b"]
 [ext_resource type="PackedScene" uid="uid://dxffchwk3pqdd" path="res://Scenes/pause_menu.tscn" id="8_s8chp"]
 [ext_resource type="PackedScene" uid="uid://n7tdin7f3yqb" path="res://Characters/aguacate.tscn" id="9_141fg"]
+[ext_resource type="PackedScene" uid="uid://8xmrwsop4lbt" path="res://Elements/Effects/Countdown.tscn" id="10_ciasn"]
 
 [node name="core" type="Node2D"]
 
@@ -16,12 +17,13 @@
 offset = Vector2(500, 350)
 zoom = Vector2(2.85, 2.85)
 
-[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu") instance=ExtResource("1_joe5b")]
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu", "countdown") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
 cat2_state_machine = NodePath("../cat_aguacate/StateMachine")
 time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 pause_menu = NodePath("../pause_menu")
+countdown = NodePath("../Countdown")
 
 [node name="mice_captured" parent="SceneManager/scene_manager_state_machine" index="3" node_paths=PackedStringArray("scene_manager")]
 scene_manager = NodePath("../..")
@@ -86,6 +88,10 @@ cat = NodePath("../..")
 position = Vector2(475, 292)
 scene_manager = NodePath("../SceneManager")
 data_manager = NodePath("../DataManager")
+
+[node name="Countdown" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("10_ciasn")]
+position = Vector2(489, 351)
+scene_manager = NodePath("../SceneManager")
 
 [editable path="SceneManager"]
 [editable path="cat_cattanita"]

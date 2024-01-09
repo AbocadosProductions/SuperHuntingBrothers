@@ -79,9 +79,6 @@ func _ready():
 	get_maze_scenes()
 	generate_level()
 
-func _on_button_pressed():
-	generate_level()
-
 func move_characters_to_positions():
 	# Load Positions accordint to the maze
 	var positions_maze_1 = Constants.POSITIONS_PER_LEVEL[new_maze_1_name]
@@ -112,8 +109,6 @@ func scene_manager_signal_detected(signal_emited):
 func set_target_in_maze_coordinates(mouse : CharacterBody2D, coordinates : Vector2):
 	if mouse.name == mouse_1.name:
 		coordinates += maze_1_pos
-		print("maze_1_pos")
-		print(maze_1_pos)
 	else:
 		coordinates += maze_2_pos
 	return coordinates

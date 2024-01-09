@@ -12,8 +12,8 @@ func _on_play_button_pressed():
 	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
 
 func _on_volumen_slider_value_changed(_value):
-	var value = -Constants.MINIMUM_DB_VALUE + Constants.MINIMUM_DB_VALUE * _value * 0.01
-	if value < -Constants.MINIMUM_DB_VALUE * 0.95 :
+	var value = - Constants.MINIMUM_DB_VALUE + Constants.MINIMUM_DB_VALUE * _value * 0.01
+	if value < - Constants.MINIMUM_DB_VALUE * 0.95 :
 		value = -80
 	AudioServer.set_bus_volume_db(audio_bus, value)
 

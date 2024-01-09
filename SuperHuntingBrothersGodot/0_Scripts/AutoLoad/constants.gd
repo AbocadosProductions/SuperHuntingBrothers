@@ -172,3 +172,10 @@ const MUSIC_SIGNALS = [EFFECT_MUSIC]
 const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
 
 # --------------------------------------------------------------------------- #
+
+# Countdown constants
+
+const END_COUNTDOWN = "END_COUNTDOWN"
+const ANIMATION_COUNTDOWN = "Countdown"
+
+# --------------------------------------------------------------------------- #

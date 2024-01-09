@@ -5,6 +5,7 @@ extends Node2D
 @export var time_manager : Node2D
 @export var points_menu : Control
 @export var pause_menu : Control
+@export var countdown : Sprite2D
 
 signal Internal_Signal
 signal External_Signal
@@ -19,6 +20,7 @@ func _ready():
 	points_menu.External_Signal.connect(scene_manager_state_controller)
 	pause_menu.External_Signal.connect(scene_manager_state_controller)
 	time_manager.Time_Signal.connect(scene_manager_state_controller)
+	countdown.External_Signal.connect(scene_manager_state_controller)
 
 
 func scene_manager_state_controller(_emisioner, signal_detected):

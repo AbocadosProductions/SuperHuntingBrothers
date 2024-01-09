@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dungrmp1f1lws"]
+
+[ext_resource type="Texture2D" uid="uid://c8sof3uslcr2s" path="res://Sprites/UI/Panel_Logo.png" id="1_snhyd"]
+[ext_resource type="Texture2D" uid="uid://c1fcjrq3mx8jg" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcwqy"]
+texture = ExtResource("1_snhyd")
+texture_margin_left = 6.0
+texture_margin_top = 7.0
+texture_margin_right = 6.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mhbnl"]
+texture = ExtResource("1_u7kp3")
+texture_margin_left = 5.0
+texture_margin_top = 4.0
+texture_margin_right = 5.0
+texture_margin_bottom = 4.0
+
+[resource]
+resource_local_to_scene = true
+Panel/styles/Logo = SubResource("StyleBoxTexture_jcwqy")
+Panel/styles/Menu = SubResource("StyleBoxTexture_mhbnl")

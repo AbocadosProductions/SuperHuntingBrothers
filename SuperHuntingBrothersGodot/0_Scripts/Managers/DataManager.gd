@@ -13,7 +13,6 @@ func _create_or_load_save_data() -> void:
 		_save_data = SaveSystem.new()
 		_save_data.write_savedata()
 
-
 # RECORD TIMES SECTIONS : SET, RETURN,
 
 func set_new_record_time() -> void:
@@ -44,7 +43,6 @@ func set_new_record_points() -> void:
 
 func return_record_points() -> int:
 	return _save_data.record_punctuation
-
 
 # RECORD LEVEL INDEX SECTIONS : SET, RETURN,
 
@@ -100,3 +98,13 @@ func reset_data_from_run() -> void:
 	_save_data.times_per_level = []
 	_save_data.actual_punctuation = 0
 	_save_game()
+	
+# DIFICULTY SECTION
+
+func get_difficulty() -> String:
+	return _save_data.difficulty
+
+func set_difficulty(difficulty : String) -> void:
+	_save_data.difficulty = difficulty
+	_save_data.write_savedata()
+

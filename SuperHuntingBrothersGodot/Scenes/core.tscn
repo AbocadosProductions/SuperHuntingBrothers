@@ -28,8 +28,9 @@ countdown = NodePath("../Countdown")
 [node name="mice_captured" parent="SceneManager/scene_manager_state_machine" index="3" node_paths=PackedStringArray("scene_manager")]
 scene_manager = NodePath("../..")
 
-[node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager", "cat_1", "cat_2", "mouse_1", "mouse_2") instance=ExtResource("2_fretg")]
+[node name="level_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager", "cat_1", "cat_2", "mouse_1", "mouse_2") instance=ExtResource("2_fretg")]
 scene_manager = NodePath("../SceneManager")
+data_manager = NodePath("../DataManager")
 cat_1 = NodePath("../cat_cattanita")
 cat_2 = NodePath("../cat_aguacate")
 mouse_1 = NodePath("../mouse_catta")

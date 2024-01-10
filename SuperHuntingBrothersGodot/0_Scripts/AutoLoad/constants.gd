@@ -14,7 +14,17 @@ const SAVE_PATH: String = "res://save_data.tres"
 
 # LevelManager constants
 
-const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
+const EASY_MODE = "Easy"
+const NORMAL_MODE = "Normal"
+
+const EASY_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Easy"
+const NORMAL_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Normal"
+
+const MAZES_PATH = {
+	EASY_MODE : EASY_MAZES_FOLDER_PATH,
+	NORMAL_MODE : NORMAL_MAZES_FOLDER_PATH
+}
+
 const MAZES_1_POSITION = Vector2 (300, 375)
 const MAZES_2_POSITION = Vector2 (715, 375)
 const MAZE_FILE_TERMINATION = ".tscn"

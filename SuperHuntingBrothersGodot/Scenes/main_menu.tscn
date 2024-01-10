@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=6 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/normal_menu.gd" id="2_skkcp"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
+[ext_resource type="Script" path="res://0_Scripts/Menu/difficulty_menu.gd" id="4_rua40"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="5_a2ppj"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -105,8 +107,38 @@ text = "Agradecimientos Especiales:
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="difficulty_menu" type="Node2D" parent="."]
+visible = false
+script = ExtResource("4_rua40")
+
+[node name="easy_mode" type="Button" parent="difficulty_menu"]
+offset_left = 498.0
+offset_top = 189.0
+offset_right = 629.0
+offset_bottom = 242.0
+text = "Modo Facil"
+
+[node name="normal_mode" type="Button" parent="difficulty_menu"]
+offset_left = 503.0
+offset_top = 283.0
+offset_right = 634.0
+offset_bottom = 336.0
+text = "Modo Normal"
+
+[node name="back_menu" type="Button" parent="difficulty_menu"]
+offset_left = 508.0
+offset_top = 427.0
+offset_right = 639.0
+offset_bottom = 480.0
+text = "Volver"
+
+[node name="DataManager" parent="." instance=ExtResource("5_a2ppj")]
+
 [connection signal="pressed" from="normal_menu/CenterContainer/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="value_changed" from="normal_menu/CenterContainer/VBoxContainer/volumen_label/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
 [connection signal="pressed" from="normal_menu/CenterContainer/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="normal_menu/CenterContainer/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="credits_menu/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="difficulty_menu/easy_mode" to="." method="_on_easy_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/normal_mode" to="." method="_on_normal_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/back_menu" to="." method="_on_back_menu_pressed"]

@@ -3,9 +3,9 @@ extends Node
 var maze_scenes = []
 var node_names_in_use = []
 var level : Node2D
-var path = Constants.MAZES_FOLDER_PATH
 var maze_1_pos = Constants.MAZES_1_POSITION
 var maze_2_pos = Constants.MAZES_2_POSITION
+var path : String
 var maze_path_1
 var maze_path_2
 var new_maze_1_name
@@ -13,12 +13,15 @@ var new_maze_2_name
 var possible_mazes = []
 
 @export var scene_manager : Node2D
+@export var data_manager : Node2D
 @export var cat_1 : Node2D
 @export var cat_2 : Node2D
 @export var mouse_1 : Node2D
 @export var mouse_2 : Node2D
 
 func get_maze_scenes():
+	var diff = data_manager.get_difficulty()
+	path = Constants.MAZES_PATH[diff]
 	var dir = DirAccess.open(path)
 
 	if not dir:

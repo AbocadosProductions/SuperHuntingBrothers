@@ -22,7 +22,6 @@ func set_new_record_time() -> void:
 		_save_data.record_times_per_level[_save_data.difficulty][actual_level_index] = actual_level_time
 	else:
 		_save_data.record_times_per_level[_save_data.difficulty].append(actual_level_time)
-
 	_save_game()
 
 func return_record_time() -> int:

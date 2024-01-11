@@ -47,6 +47,10 @@ region_rect = Rect2(0, 21, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cis87"]
 texture = ExtResource("5_oen3u")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i53oj"]
 texture = ExtResource("8_5k6j3")
@@ -124,19 +128,19 @@ size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_ycqsu")
 
 [node name="volumen_slider" type="HSlider" parent="normal_menu/Menu/VBoxContainer/Sonido"]
-custom_minimum_size = Vector2(39, 5)
+custom_minimum_size = Vector2(37, 5)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-value = 95.0
+value = 80.0
 
 [node name="Fondo_Slider" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = -0.25
-offset_top = 2.75
-offset_right = 38.75
-offset_bottom = 7.75
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 39.0
+offset_bottom = 8.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_cis87")
 
 [node name="credits_button" type="Button" parent="normal_menu/Menu/VBoxContainer"]

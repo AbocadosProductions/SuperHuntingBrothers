@@ -12,8 +12,8 @@ func play_music(track: String):
 	music_player.stream = load(track)
 	music_player.play()
 
-#func _ready():
-#	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+func _ready():
+	scene_manager.External_Signal.connect(scene_manager_signal_detected)
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited in Constants.MUSIC_SIGNALS:

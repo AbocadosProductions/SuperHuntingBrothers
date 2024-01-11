@@ -1,11 +1,50 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=14 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
+[ext_resource type="Texture2D" uid="uid://b8qi17wdpbj3j" path="res://Sprites/UI/Background.png" id="2_chsbi"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/normal_menu.gd" id="2_skkcp"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="3_hdgmk"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
-[ext_resource type="Texture2D" uid="uid://c1fcjrq3mx8jg" path="res://Sprites/UI/Panel_Menu.png" id="3_y1o3y"]
-[ext_resource type="Texture2D" uid="uid://c8sof3uslcr2s" path="res://Sprites/UI/Panel_Logo.png" id="4_ld7y1"]
-[ext_resource type="Theme" uid="uid://c28hewayxiery" path="res://Sprites/UI_Themes/pink_button_theme.tres" id="5_neafp"]
+[ext_resource type="Texture2D" uid="uid://cjpv3x8sp5eei" path="res://Sprites/UI/Panel_Logo.png" id="4_ld7y1"]
+[ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="5_oen3u"]
+[ext_resource type="Texture2D" uid="uid://fwpbcxjp2cec" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
+resource_name = "Background"
+texture = ExtResource("2_chsbi")
+texture_region_size = Vector2i(32, 32)
+0:0/animation_columns = 16
+0:0/animation_speed = 10.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pl51o"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_8phcu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhxln"]
+texture = ExtResource("4_ld7y1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cis87"]
+texture = ExtResource("5_oen3u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i53oj"]
+texture = ExtResource("8_5k6j3")
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -22,106 +61,113 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_odwai")
 
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pl51o")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, -327690, 0, 0, -262154, 0, 0, -196618, 0, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 0, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, -327689, 0, 0, -262153, 0, 0, -196617, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, -327688, 0, 0, -262152, 0, 0, -196616, 0, 0, -131080, 0, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 0, 393208, 0, 0, -327687, 0, 0, -262151, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, -327686, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, 393210, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, -327684, 0, 0, -262148, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, -327683, 0, 0, -262147, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, -393211, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -393209, 0, 0, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, -393208, 0, 0, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="normal_menu" type="Node2D" parent="."]
 script = ExtResource("2_skkcp")
 
-[node name="CenterContainer" type="CenterContainer" parent="normal_menu"]
-custom_minimum_size = Vector2(528, 216)
-offset_left = -600.0
-offset_top = -360.0
-offset_right = 600.0
-offset_bottom = -144.0
+[node name="Logo" type="Panel" parent="normal_menu"]
+offset_left = -142.0
+offset_top = -177.0
+offset_right = -10.0
+offset_bottom = -123.0
+scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxTexture_xhxln")
 
-[node name="Sprite2D" type="Sprite2D" parent="normal_menu/CenterContainer"]
-position = Vector2(600, 108)
-scale = Vector2(4, 4)
-texture = ExtResource("4_ld7y1")
+[node name="Menu" type="Panel" parent="normal_menu"]
+offset_left = -93.0
+offset_top = -67.0
+offset_right = -3.0
+offset_bottom = 33.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_hdgmk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="normal_menu"]
-offset_left = -600.0
-offset_top = -142.0
-offset_right = 600.0
-offset_bottom = 360.0
-theme_override_constants/separation = 20
+[node name="VBoxContainer" type="VBoxContainer" parent="normal_menu/Menu"]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+auto_translate = false
+localize_numeral_system = false
+theme = ExtResource("3_hdgmk")
+theme_override_constants/separation = 3
 alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="normal_menu/VBoxContainer"]
-position = Vector2(600, 184)
-scale = Vector2(4, 4)
-texture = ExtResource("3_y1o3y")
-
-[node name="play_button" type="Button" parent="normal_menu/VBoxContainer"]
-custom_minimum_size = Vector2(320, 68)
+[node name="play_button" type="Button" parent="normal_menu/Menu/VBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
-theme = ExtResource("5_neafp")
-text = "Empezar"
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="volumen_label" type="Label" parent="normal_menu/VBoxContainer"]
+[node name="Sonido" type="VBoxContainer" parent="normal_menu/Menu/VBoxContainer"]
 layout_mode = 2
-text = "VOLUMEN"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_constants/separation = -2
 
-[node name="volumen_slider" type="HSlider" parent="normal_menu/VBoxContainer/volumen_label"]
+[node name="Button" type="Button" parent="normal_menu/Menu/VBoxContainer/Sonido"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
-offset_left = 150.0
-offset_right = 273.0
-offset_bottom = 16.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Volume"
 
-[node name="credits_button" type="Button" parent="normal_menu/VBoxContainer"]
+[node name="volumen_slider" type="HSlider" parent="normal_menu/Menu/VBoxContainer/Sonido"]
+custom_minimum_size = Vector2(39, 5)
 layout_mode = 2
-text = "Creditos"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 95.0
 
-[node name="quit_button" type="Button" parent="normal_menu/VBoxContainer"]
+[node name="Panel" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -0.25
+offset_top = 2.75
+offset_right = 38.75
+offset_bottom = 7.75
+theme_override_styles/panel = SubResource("StyleBoxTexture_cis87")
+
+[node name="credits_button" type="Button" parent="normal_menu/Menu/VBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
-text = "Cerrar el Juego"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Credits"
+
+[node name="quit_button" type="Button" parent="normal_menu/Menu/VBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Quit"
 
 [node name="credits_menu" type="Node2D" parent="."]
 visible = false
 script = ExtResource("3_pytil")
 
-[node name="back_to_menu_button" type="Button" parent="credits_menu"]
-offset_left = 371.0
-offset_top = 522.0
-offset_right = 807.0
-offset_bottom = 640.0
-text = "Volver al Menu"
+[node name="Panel" type="Panel" parent="credits_menu"]
+custom_minimum_size = Vector2(261, 177)
+offset_left = -256.0
+offset_top = -177.0
+offset_right = 5.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_hdgmk")
+theme_override_styles/panel = SubResource("StyleBoxTexture_i53oj")
 
-[node name="Programmer" type="Label" parent="credits_menu"]
-offset_top = 175.0
-offset_right = 556.0
-offset_bottom = 276.0
-theme_override_font_sizes/font_size = 30
-text = "Programador: Chuckity Chuck"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="back_to_menu_button" type="Button" parent="credits_menu/Panel"]
+offset_left = 89.0
+offset_top = 150.5
+offset_right = 169.0
+offset_bottom = 167.5
+theme_type_variation = &"Button_Back"
 
-[node name="Artist" type="Label" parent="credits_menu"]
-offset_left = 600.0
-offset_top = 175.0
-offset_right = 1156.0
-offset_bottom = 276.0
-theme_override_font_sizes/font_size = 30
-text = "Artista: Juan Jose Garrido Bascaran"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Thanks" type="Label" parent="credits_menu"]
-offset_left = 293.0
-offset_top = 344.0
-offset_right = 849.0
-offset_bottom = 445.0
-theme_override_font_sizes/font_size = 30
-text = "Agradecimientos Especiales:
-- Aguacate
-- Catanitta"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="normal_menu/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
-[connection signal="value_changed" from="normal_menu/VBoxContainer/volumen_label/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
-[connection signal="pressed" from="normal_menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="normal_menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="credits_menu/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="normal_menu/Menu/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
+[connection signal="pressed" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="credits_menu/Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]

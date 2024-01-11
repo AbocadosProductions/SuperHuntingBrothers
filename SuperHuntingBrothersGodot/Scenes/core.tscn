@@ -14,8 +14,8 @@
 [node name="core" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 offset = Vector2(500, 350)
-zoom = Vector2(2.85, 2.85)
 
 [node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu", "countdown") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
@@ -75,7 +75,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("9_141fg")]
 top_level = true
-position = Vector2(611, 479)
+position = Vector2(358, 391)
 scene_manager = NodePath("../SceneManager")
 
 [node name="manual_control" parent="cat_aguacate/StateMachine" index="0"]

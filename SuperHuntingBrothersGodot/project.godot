@@ -18,6 +18,15 @@ config/icon="res://icon.svg"
 
 Constants="*res://0_Scripts/AutoLoad/constants.gd"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [input]
 
 keyboard_left={

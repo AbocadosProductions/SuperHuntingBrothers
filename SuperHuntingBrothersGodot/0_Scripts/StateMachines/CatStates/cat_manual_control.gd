@@ -1,6 +1,6 @@
 extends State
 
-const SPEED = 75.0
+const SPEED = 100.0
 
 var character_controls = null
 var character_left = null

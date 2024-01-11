@@ -1,77 +1,65 @@
 extends State
 
-const SPEED = 450.0
+const speed = 200.0
+const accel = 10.0
+var flee_time = 0 
+var actual_target 
 
-
-var move_direction : Vector2
-var flee_time : float
-
-var maze_directions = [Vector2(1, 0), Vector2(0, 1), Vector2(-1, 0), Vector2(0, -1)]
-var random_direction = null
-
-var time_since_last_collision = 0
-var max_time_since_last_collision = 0.01
-
-var collisions = []
-var valids_directions = []
-var last_time_collision = 0
-
+@export var navigator : NavigationAgent2D
 @export var mouse : CharacterBody2D
 
 
-func randomize_flee():
-	random_direction = maze_directions[randi() % maze_directions.size()]
-
 func Enter():
-	mouse.mouse_is_fleing = true
-	randomize_flee()
-	mouse.External_Signal.emit(Constants.ANIMATION_RELEASE)
+	wander()
 	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
-		
+	mouse.External_Signal.emit(Constants.ANIMATION_RELEASE)
+	flee_time = 0 
+
 func Exit():
-	mouse.mouse_is_fleing = false
-	flee_time = 0
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func Update(_delta : float):
 	if flee_time < Constants.MAX_FLEE_TIME:
-		time_since_last_collision += _delta
 		flee_time += _delta
 	else:
 		Transition.emit(self, "idle")
-	last_time_collision += _delta
-	if last_time_collision > 0.1:
-		collisions.pop_at(0)
- 
 
 func Physics_Update(_delta : float):
-	mouse.velocity = random_direction * SPEED
+	var distance = actual_target - mouse.global_position 
+	
+	if distance.length() < 20:
+		wander()
+
+	var direction = Vector2 ()
+	direction = navigator.get_next_path_position() - mouse.global_position 
+	direction = direction.normalized()
+	update_mouse_direction(direction)
+	mouse.velocity = mouse.velocity.lerp(direction * speed, accel * _delta)
 
 
 func on_mouse_signal_detected(signal_data):
-	if Constants.WALL_PREFIX == signal_data:
-		change_moving_direction()
-
 	if Constants.PAUSE_MENU_SIGNAL == signal_data:
 		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
 
-func change_moving_direction():
-	# Update last collisions list
-	if random_direction not in collisions:
-		collisions.append(random_direction)
-	# Refresh time since last collision
-	last_time_collision = 0
-	# Get possibles directions according to last collisions
-	for dir in maze_directions:
-		if dir not in collisions:
-			valids_directions.append(dir)
-	# Pick one of the possible directions if possible
-	if valids_directions.size() != 0:
-		random_direction = valids_directions[randi() % valids_directions.size()]
+
+func wander():
+	var random_x = randi_range(Constants.MIN_X_CELL_RANGE, Constants.MAX_X_CELL_RANGE)
+	var random_y = randi_range(Constants.MIN_Y_CELL_RANGE, Constants.MAX_Y_CELL_RANGE)
+	actual_target = Vector2((random_x * Constants.CELL_SIZE) - Constants.CELL_SIZE / 2, 
+							(random_y * Constants.CELL_SIZE) - Constants.CELL_SIZE / 2)
+	actual_target = mouse.set_target_in_maze_coordinates(actual_target)
+	navigator.target_position = actual_target
+
+
+func update_mouse_direction(dir : Vector2):
+	if abs(dir).x > 0:
+		if dir.x > 0:
+			mouse.direction = Constants.DIRECTIONS[Vector2(1,0)]
+		else:
+			mouse.direction = Constants.DIRECTIONS[Vector2(-1,0)]
 	else:
-		random_direction = maze_directions[randi() % maze_directions.size()]
-	# Send signals
-	mouse.direction = Constants.DIRECTIONS[random_direction]
+		if dir.y > 0:
+			mouse.direction = Constants.DIRECTIONS[Vector2(0,1)]
+		else:
+			mouse.direction = Constants.DIRECTIONS[Vector2(0,-1)]
 	mouse.External_Signal.emit(Constants.ANIMATION_RUN)
-	# Reset valid directions list
-	valids_directions = []

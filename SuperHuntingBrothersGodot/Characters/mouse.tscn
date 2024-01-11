@@ -23,7 +23,7 @@
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="21_bxq7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_770p8"]
-size = Vector2(10, 5.5)
+size = Vector2(14, 12)
 
 [sub_resource type="Animation" id="Animation_m013t"]
 resource_name = "Attack_Down"
@@ -964,6 +964,8 @@ func _process(delta):
 radius = 4.0
 
 [node name="mouse" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_66pqi")
@@ -986,8 +988,9 @@ mouse = NodePath("../..")
 script = ExtResource("4_lbgor")
 mouse = NodePath("../..")
 
-[node name="flee" type="Node" parent="StateMachine" node_paths=PackedStringArray("mouse")]
+[node name="flee" type="Node" parent="StateMachine" node_paths=PackedStringArray("navigator", "mouse")]
 script = ExtResource("5_ojtex")
+navigator = NodePath("../../NavigationAgent2D")
 mouse = NodePath("../..")
 
 [node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("mouse")]
@@ -1000,10 +1003,8 @@ mouse = NodePath("../..")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
-collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_770p8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

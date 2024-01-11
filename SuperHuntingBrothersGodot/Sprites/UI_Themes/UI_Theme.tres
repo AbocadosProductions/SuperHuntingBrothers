@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=36 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=37 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cr8n1nbaugxr1" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="2_iexnn"]
 [ext_resource type="Texture2D" uid="uid://c0vanov0hnyb" path="res://Sprites/UI/Sound_Slider_Handler.png" id="3_i4ok2"]
+[ext_resource type="Texture2D" uid="uid://crdqtu72flpom" path="res://Sprites/UI/Sound_Slider_Handler_Highlight.png" id="4_f8t05"]
 [ext_resource type="Texture2D" uid="uid://cfe7gom1is8rb" path="res://Sprites/UI/Sound_Slider_Fil.png" id="4_kgyos"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hccgy"]
@@ -116,14 +117,14 @@ region_rect = Rect2(80, 21, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylxvt"]
 texture = ExtResource("4_kgyos")
-expand_margin_top = 2.0
-expand_margin_bottom = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 2.0
 region_rect = Rect2(0, 0, 39, 5)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v18up"]
 texture = ExtResource("4_kgyos")
-expand_margin_top = 2.0
-expand_margin_bottom = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q7s3a"]
 
@@ -193,7 +194,7 @@ HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
 HSlider/icons/grabber = ExtResource("3_i4ok2")
 HSlider/icons/grabber_disabled = ExtResource("3_i4ok2")
-HSlider/icons/grabber_highlight = ExtResource("3_i4ok2")
+HSlider/icons/grabber_highlight = ExtResource("4_f8t05")
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = SubResource("StyleBoxTexture_ylxvt")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_v18up")

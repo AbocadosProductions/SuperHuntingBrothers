@@ -15,6 +15,8 @@ var pressed_button
 
 
 func _ready():
+	for child in array:
+		child.focus_mode = Control.FOCUS_ALL
 	normal_menu.focus()
 	
 func _on_play_button_pressed():

@@ -1,15 +1,11 @@
-[gd_scene load_steps=47 format=3 uid="uid://b2y0p2ejqfjgu"]
+[gd_scene load_steps=45 format=3 uid="uid://b2y0p2ejqfjgu"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/lose_menu.gd" id="1_d4mky"]
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="2_0r01c"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_d3xy5"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_punctuation_record.gd" id="2_v544t"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_level_record.gd" id="3_lqvoi"]
-[ext_resource type="Texture2D" uid="uid://cjla617kfu4yl" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4crmh"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y1g1y"]
+[ext_resource type="Texture2D" uid="uid://j48s3xrkr1nq" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
 atlas = ExtResource("5_w3vax")
@@ -279,7 +275,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="lose_menu" type="Control" node_paths=PackedStringArray("actual_punctuation_label", "record_punctuation_label", "actual_level_label", "record_level_label", "new_record_punctuation_announcer", "new_record_level_announcer", "data_manager")]
+[node name="lose_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -287,13 +283,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4mky")
-actual_punctuation_label = NodePath("Panel/actual_punctuation/punctuation_label")
-record_punctuation_label = NodePath("Panel/record_punctuation_label/punctuation_label")
-actual_level_label = NodePath("Panel/actual_level/punctuation_label")
-record_level_label = NodePath("Panel/record_level_label/punctuation_label")
-new_record_punctuation_announcer = NodePath("Panel/new_punctuation_record")
-new_record_level_announcer = NodePath("Panel/new_level_record")
-data_manager = NodePath("DataManager")
 
 [node name="DataManager" parent="." instance=ExtResource("2_0r01c")]
 
@@ -400,6 +389,7 @@ offset_top = 113.5
 offset_right = 111.0
 offset_bottom = 130.5
 theme_type_variation = &"Button_Menu"
+toggle_mode = true
 
 [node name="retry_button" type="Button" parent="Panel"]
 layout_mode = 0
@@ -408,26 +398,13 @@ offset_top = 114.0
 offset_right = 197.0
 offset_bottom = 131.0
 theme_type_variation = &"Button_Try_Again"
+toggle_mode = true
 
 [node name="new_punctuation_record" type="Node2D" parent="Panel" node_paths=PackedStringArray("lose_menu")]
 position = Vector2(226, -18.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_v544t")
 lose_menu = NodePath("../..")
-
-[node name="High" type="Sprite2D" parent="Panel/new_punctuation_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 213)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_4crmh")
-
-[node name="Low" type="Sprite2D" parent="Panel/new_punctuation_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 300)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
 
 [node name="High_2" type="AnimatedSprite2D" parent="Panel/new_punctuation_record"]
 position = Vector2(-108, 120)
@@ -447,20 +424,6 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("3_lqvoi")
 lose_menu = NodePath("../..")
 
-[node name="High" type="Sprite2D" parent="Panel/new_level_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 213)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
-[node name="Low" type="Sprite2D" parent="Panel/new_level_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 300)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
 [node name="High_2" type="AnimatedSprite2D" parent="Panel/new_level_record"]
 position = Vector2(-108, 46)
 scale = Vector2(2, 2)
@@ -473,5 +436,10 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_l33e1")
 speed_scale = 4.0
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="pressed" from="Panel/main_menu_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/retry_button" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

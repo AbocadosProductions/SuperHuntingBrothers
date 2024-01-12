@@ -6,8 +6,16 @@ extends Control
 @export var record_time_label : Label
 @export var points_label : Label
 @export var new_record_announcer : Node2D
-
 @export var scene_manager : Node2D
+
+@onready var next_level_button : Button = $Panel/next_level_button
+@onready var timer : Timer = $Timer
+@onready var array = [next_level_button]
+
+var func_to_call 
+var pressed_button
+
+
 
 signal External_Signal
 
@@ -64,12 +72,13 @@ func initialize_variables():
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+	for child in array:
+		child.focus_mode = Control.FOCUS_NONE
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == "show_points":
 		is_moving_to_the_screen = true
 		initialize_variables()
-
 
 # FUNCTIONS NEEDED TO DISPLAY BETTER THE INFO IN THE LABELS (FORMAT INTS TO TIME)
 func set_time_values_in_labels():
@@ -104,7 +113,6 @@ func get_points_obtained_in_level():
 	points_obtained_in_this_level = actual_time * multiplier
 	points_per_step = points_obtained_in_this_level / punctuation_steps
 
-
 func _process(_delta):
 	if is_showing_points:
 		# Updates the punctuation label
@@ -118,6 +126,9 @@ func _process(_delta):
 				added_points_in_last_frame = true
 		# When ends, activates next level button and checks for record
 		else:
+			for child in array:
+				child.focus_mode = Control.FOCUS_ALL
+			next_level_button.grab_focus()
 			can_go_to_next_level = true
 			check_for_record()
 			is_showing_points = false
@@ -146,9 +157,25 @@ func check_for_record():
 
 # LISTEN TO THE BUTTON SIGNAL AND WAITS FOR THE LOOP TO END
 func _on_next_level_button_pressed():
+	start_timer()
+	pressed_button = next_level_button
+	func_to_call = "next_level_funct"
+
+func start_timer():
+	timer.start()
+	for child in array:
+		child.focus_mode = Control.FOCUS_NONE
+
+func next_level_funct():
 	if can_go_to_next_level:
 		is_moving_out_the_screen = true
 		datamanager.set_points(updated_points)
 		External_Signal.emit(self, Constants.POINTS_MENU_FINISHED_SIGNAL)
 
 
+
+func _on_timer_timeout():
+	pressed_button.button_pressed = false
+	for child in array:
+		child.focus_mode = Control.FOCUS_ALL
+	call(func_to_call)

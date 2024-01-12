@@ -78,18 +78,16 @@ layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0
 script = ExtResource("2_skkcp")
 
 [node name="Logo" type="Panel" parent="normal_menu"]
-offset_left = -142.0
-offset_top = -177.0
-offset_right = -10.0
-offset_bottom = -123.0
+offset_left = -132.0
+offset_top = -176.0
+offset_bottom = -122.0
 scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
 theme_type_variation = &"Panel_Logo"
 
 [node name="Menu" type="Panel" parent="normal_menu"]
-offset_left = -93.0
+offset_left = -90.0
 offset_top = -67.0
-offset_right = -3.0
 offset_bottom = 33.0
 scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
@@ -164,9 +162,8 @@ script = ExtResource("3_pytil")
 
 [node name="Panel" type="Panel" parent="credits_menu"]
 custom_minimum_size = Vector2(261, 177)
-offset_left = -256.0
+offset_left = -261.0
 offset_top = -177.0
-offset_right = 5.0
 scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
 theme_override_styles/panel = SubResource("StyleBoxTexture_i53oj")
@@ -181,30 +178,56 @@ theme_type_variation = &"Button_Back"
 toggle_mode = true
 
 [node name="difficulty_menu" type="Node2D" parent="."]
+visible = false
 script = ExtResource("9_8phu2")
 
 [node name="Panel" type="Panel" parent="difficulty_menu"]
-offset_left = -93.0
-offset_top = -67.0
-offset_right = -3.0
+offset_left = -169.0
+offset_top = -43.0
 offset_bottom = 33.0
 scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("3_hdgmk")
 
-[node name="easy_mode" type="Button" parent="difficulty_menu/Panel"]
-custom_minimum_size = Vector2(80, 17)
-offset_right = 80.0
-offset_bottom = 17.0
+[node name="VBoxContainer" type="VBoxContainer" parent="difficulty_menu/Panel"]
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 76.0
+theme_override_constants/separation = 7
+alignment = 1
 
-[node name="normal_mode" type="Button" parent="difficulty_menu/Panel"]
+[node name="tutorial" type="Button" parent="difficulty_menu/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
-offset_right = 80.0
-offset_bottom = 17.0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Tutorial"
 
-[node name="back_menu" type="Button" parent="difficulty_menu/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="difficulty_menu/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="easy_mode" type="Button" parent="difficulty_menu/Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
-offset_right = 80.0
-offset_bottom = 17.0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Normal"
+
+[node name="normal_mode" type="Button" parent="difficulty_menu/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Hard"
+
+[node name="back_menu" type="Button" parent="difficulty_menu/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_type_variation = &"Button_Menu"
 
 [node name="Timer" type="Timer" parent="."]

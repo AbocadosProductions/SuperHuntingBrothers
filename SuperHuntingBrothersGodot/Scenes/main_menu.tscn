@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=14 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 [ext_resource type="Texture2D" uid="uid://b8qi17wdpbj3j" path="res://Sprites/UI/Background.png" id="2_chsbi"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/normal_menu.gd" id="2_skkcp"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="3_hdgmk"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
-[ext_resource type="Texture2D" uid="uid://cjpv3x8sp5eei" path="res://Sprites/UI/Panel_Logo.png" id="4_ld7y1"]
 [ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="5_oen3u"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="6_i84hv"]
 [ext_resource type="Texture2D" uid="uid://fwpbcxjp2cec" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
@@ -37,9 +36,6 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_pl51o"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_8phcu")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhxln"]
-texture = ExtResource("4_ld7y1")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycqsu"]
 texture = ExtResource("6_i84hv")
@@ -86,7 +82,8 @@ offset_top = -177.0
 offset_right = -10.0
 offset_bottom = -123.0
 scale = Vector2(2, 2)
-theme_override_styles/panel = SubResource("StyleBoxTexture_xhxln")
+theme = ExtResource("3_hdgmk")
+theme_type_variation = &"Panel_Logo"
 
 [node name="Menu" type="Panel" parent="normal_menu"]
 offset_left = -93.0
@@ -118,7 +115,7 @@ size_flags_vertical = 4
 layout_mode = 2
 theme_override_constants/separation = -2
 
-[node name="Boton" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido"]
+[node name="Panel_Volumen" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -126,7 +123,7 @@ size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_ycqsu")
 
 [node name="volumen_slider" type="HSlider" parent="normal_menu/Menu/VBoxContainer/Sonido"]
-custom_minimum_size = Vector2(37, 5)
+custom_minimum_size = Vector2(37, 12)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

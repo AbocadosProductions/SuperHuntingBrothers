@@ -1,10 +1,13 @@
-[gd_resource type="Theme" load_steps=36 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=49 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cr8n1nbaugxr1" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="2_iexnn"]
 [ext_resource type="Texture2D" uid="uid://c0vanov0hnyb" path="res://Sprites/UI/Sound_Slider_Handler.png" id="3_i4ok2"]
 [ext_resource type="Texture2D" uid="uid://crdqtu72flpom" path="res://Sprites/UI/Sound_Slider_Handler_Highlight.png" id="4_f8t05"]
+[ext_resource type="Texture2D" uid="uid://cjpv3x8sp5eei" path="res://Sprites/UI/Panel_Logo.png" id="6_andiy"]
+[ext_resource type="Texture2D" uid="uid://nf0ic5vyobbp" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
+[ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hccgy"]
 content_margin_left = 4.0
@@ -82,6 +85,22 @@ region_rect = Rect2(0, 0, 80, 17)
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 0, 80, 17)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxvch"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 147, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bcf4v"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 147, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7oj1"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 147, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvaj4"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 147, 80, 17)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxey8"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(80, 63, 80, 17)
@@ -97,6 +116,22 @@ region_rect = Rect2(0, 63, 80, 17)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dotb8"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 63, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfbip"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 126, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_emr8a"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 126, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxvbg"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 126, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfvby"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 126, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5r6a"]
 texture = ExtResource("2_iexnn")
@@ -126,15 +161,29 @@ expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q7s3a"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twmyv"]
-texture = ExtResource("2_iexnn")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kcfgb"]
 texture = ExtResource("1_u7kp3")
 texture_margin_left = 5.0
 texture_margin_top = 4.0
 texture_margin_right = 5.0
 texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sapj"]
+texture = ExtResource("6_hlbfh")
+texture_margin_left = 6.0
+texture_margin_top = 7.0
+texture_margin_right = 6.0
+texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_halqy"]
+texture = ExtResource("6_andiy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6uns"]
+texture = ExtResource("7_qmqof")
+texture_margin_left = 6.0
+texture_margin_top = 7.0
+texture_margin_right = 6.0
+texture_margin_bottom = 7.0
 
 [resource]
 resource_local_to_scene = true
@@ -178,11 +227,21 @@ Button_Credits/styles/focus = SubResource("StyleBoxTexture_hhbe7")
 Button_Credits/styles/hover = SubResource("StyleBoxTexture_b1vut")
 Button_Credits/styles/normal = SubResource("StyleBoxTexture_yqx4g")
 Button_Credits/styles/pressed = SubResource("StyleBoxTexture_c8mk7")
+Button_Menu/base_type = &"Button"
+Button_Menu/styles/focus = SubResource("StyleBoxTexture_bxvch")
+Button_Menu/styles/hover = SubResource("StyleBoxTexture_bcf4v")
+Button_Menu/styles/normal = SubResource("StyleBoxTexture_r7oj1")
+Button_Menu/styles/pressed = SubResource("StyleBoxTexture_dvaj4")
 Button_Quit/base_type = &"Button"
 Button_Quit/styles/focus = SubResource("StyleBoxTexture_lxey8")
 Button_Quit/styles/hover = SubResource("StyleBoxTexture_6d6py")
 Button_Quit/styles/normal = SubResource("StyleBoxTexture_rcmmw")
 Button_Quit/styles/pressed = SubResource("StyleBoxTexture_dotb8")
+Button_Try_Again/base_type = &"Button"
+Button_Try_Again/styles/focus = SubResource("StyleBoxTexture_sfbip")
+Button_Try_Again/styles/hover = SubResource("StyleBoxTexture_emr8a")
+Button_Try_Again/styles/normal = SubResource("StyleBoxTexture_vxvbg")
+Button_Try_Again/styles/pressed = SubResource("StyleBoxTexture_sfvby")
 Button_Volume/base_type = &"Button"
 Button_Volume/styles/focus = SubResource("StyleBoxTexture_b5r6a")
 Button_Volume/styles/hover = SubResource("StyleBoxTexture_dodoy")
@@ -198,7 +257,7 @@ HSlider/styles/grabber_area = SubResource("StyleBoxFlat_s3dhi")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_vc0wf")
 HSlider/styles/slider = SubResource("StyleBoxEmpty_q7s3a")
 Label/colors/font_color = Color(0, 0, 0, 1)
-Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)
 Label/constants/line_spacing = 0
 Label/constants/outline_size = 0
@@ -207,5 +266,10 @@ Label/constants/shadow_offset_y = 0
 Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 10
 Label/fonts/font = ExtResource("1_1bj03")
-Label/styles/normal = SubResource("StyleBoxTexture_twmyv")
 Panel/styles/panel = SubResource("StyleBoxTexture_kcfgb")
+Panel_Level_Lose/base_type = &"Panel"
+Panel_Level_Lose/styles/panel = SubResource("StyleBoxTexture_0sapj")
+Panel_Logo/base_type = &"Panel"
+Panel_Logo/styles/panel = SubResource("StyleBoxTexture_halqy")
+Panel_Pause/base_type = &"Panel"
+Panel_Pause/styles/panel = SubResource("StyleBoxTexture_y6uns")

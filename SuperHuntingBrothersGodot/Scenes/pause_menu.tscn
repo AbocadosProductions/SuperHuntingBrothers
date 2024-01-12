@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxffchwk3pqdd"]
+[gd_scene load_steps=7 format=3 uid="uid://dxffchwk3pqdd"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/pause_menu.gd" id="1_g40wr"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="1_oxqu3"]
+[ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="3_43b0g"]
+[ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="4_f0sua"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vapxq"]
+texture = ExtResource("3_43b0g")
+region_rect = Rect2(0, 21, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7o6dn"]
+texture = ExtResource("4_f0sua")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 
 [node name="pause_menu" type="Control"]
 layout_mode = 3
@@ -9,59 +23,68 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_oxqu3")
 script = ExtResource("1_g40wr")
 
-[node name="level_clear_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 238.0
-offset_top = 32.0
-offset_right = 904.0
-offset_bottom = 138.0
-theme_override_font_sizes/font_size = 75
-text = "PARTIDA EN PAUSA"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(171, 109)
+layout_mode = 2
+offset_left = 162.0
+offset_top = 68.0
+offset_right = 333.0
+offset_bottom = 177.0
+scale = Vector2(2, 2)
+theme_type_variation = &"Panel_Pause"
 
-[node name="continue_button" type="Button" parent="."]
+[node name="continue_button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 718.0
-offset_top = 520.0
-offset_right = 972.0
-offset_bottom = 607.0
-text = "Continuar la partida"
+offset_left = 5.0
+offset_top = 80.0
+offset_right = 85.0
+offset_bottom = 97.0
+theme_type_variation = &"Button_Continue"
 
-[node name="back_to_menu_button" type="Button" parent="."]
+[node name="back_to_menu_button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 284.0
-offset_top = 519.0
-offset_right = 538.0
-offset_bottom = 606.0
-text = "Volver al menu"
+offset_left = 86.0
+offset_top = 80.0
+offset_right = 166.0
+offset_bottom = 97.0
+theme_type_variation = &"Button_Quit"
 
-[node name="volumen_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 213.0
-offset_top = 288.0
-offset_right = 497.0
-offset_bottom = 361.0
-text = "Volumen"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="volumen_slider" type="HSlider" parent="volumen_label"]
+[node name="volumen_slider" type="HSlider" parent="Panel"]
+custom_minimum_size = Vector2(37, 12)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 156.5
-offset_top = -46.5
-offset_right = 665.5
-offset_bottom = 50.5
+offset_left = -18.5
+offset_top = 0.5
+offset_right = 18.5
+offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="continue_button" to="." method="_on_continue_button_pressed"]
-[connection signal="pressed" from="back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
-[connection signal="value_changed" from="volumen_label/volumen_slider" to="." method="_on_h_slider_value_changed"]
+[node name="Panel_Volumen" type="Panel" parent="Panel/volumen_slider"]
+custom_minimum_size = Vector2(80, 17)
+offset_left = -22.0
+offset_top = -16.0
+offset_right = 58.0
+offset_bottom = 1.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_vapxq")
+
+[node name="Fondo_Slider" type="Panel" parent="Panel/volumen_slider"]
+show_behind_parent = true
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 39.0
+offset_bottom = 8.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7o6dn")
+
+[connection signal="pressed" from="Panel/continue_button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="value_changed" from="Panel/volumen_slider" to="." method="_on_h_slider_value_changed"]

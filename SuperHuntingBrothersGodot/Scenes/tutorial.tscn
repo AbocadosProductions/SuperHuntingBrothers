@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bexhcb13ghv2o"]
+[gd_scene load_steps=3 format=3 uid="uid://bexhcb13ghv2o"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_hxm02"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_tl0yo"]
 
 [node name="tutorial" type="Control" node_paths=PackedStringArray("first_block", "second_block", "next_button", "menu_button", "play_button")]
 layout_mode = 3
@@ -10,110 +11,97 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hxm02")
-first_block = NodePath("first_to_show")
-second_block = NodePath("second_to_show")
-next_button = NodePath("Next_Button")
-menu_button = NodePath("Menu_Button")
-play_button = NodePath("Play_Button")
+first_block = NodePath("Panel/first_to_show")
+second_block = NodePath("Panel/second_to_show")
+next_button = NodePath("Panel/Next_Button")
+menu_button = NodePath("Panel/Menu_Button")
+play_button = NodePath("Panel/Play_Button")
 
-[node name="title_label" type="Label" parent="."]
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(261, 177)
 layout_mode = 0
-offset_left = 192.0
-offset_top = -3.0
-offset_right = 943.0
-offset_bottom = 132.0
-theme_override_font_sizes/font_size = 60
-text = "¿CÓMO SE JUEGA?"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 64.0
+offset_right = 325.0
+offset_bottom = 177.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_tl0yo")
+theme_type_variation = &"Panel_Tutorial"
 
-[node name="first_to_show" type="Node2D" parent="."]
+[node name="first_to_show" type="Node2D" parent="Panel"]
+position = Vector2(-32, 0)
+scale = Vector2(0.5, 0.5)
 
-[node name="goal" type="Label" parent="first_to_show"]
-offset_left = 586.0
-offset_top = 260.0
-offset_right = 1151.0
-offset_bottom = 556.0
-theme_override_font_sizes/font_size = 30
-text = "Cuando alcances al raton con el gatito 
-este se detendra un breve instante y 
-luego huirá muy rapido.
-¡Necesitas capturar los dos ratones a 
-la vez para completar el nivel!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="topic" type="Label" parent="first_to_show"]
-offset_left = 3.0
-offset_top = 105.0
-offset_right = 560.0
-offset_bottom = 358.0
-theme_override_font_sizes/font_size = 30
+[node name="topic" type="Label" parent="Panel/first_to_show"]
+offset_left = 92.0
+offset_top = 90.0
+offset_right = 280.0
+offset_bottom = 122.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_tl0yo")
 text = "En este juego controlaras a dos gatitos 
 que persiguen a su raton de juguete a
-través de unos laberintos que les han 
+traves de unos laberintos que les han 
 preparado sus humanos favoritos."
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="second_to_show" type="Node2D" parent="."]
-position = Vector2(0, 450)
+[node name="goal" type="Label" parent="Panel/first_to_show"]
+offset_left = 184.0
+offset_top = 182.0
+offset_right = 368.0
+offset_bottom = 234.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_tl0yo")
+text = "Cuando alcances al raton con el gatito 
+este se detendra un breve instante y 
+luego huira muy rapido.
+Necesitas capturar los dos ratones a 
+la vez para completar el nivel!"
+vertical_alignment = 1
 
-[node name="cattanita_control" type="Label" parent="second_to_show"]
-offset_left = 567.0
-offset_top = 356.0
-offset_right = 1145.0
-offset_bottom = 652.0
-theme_override_font_sizes/font_size = 30
+[node name="second_to_show" type="Node2D" parent="Panel"]
+position = Vector2(-32, 225)
+scale = Vector2(0.5, 0.5)
+
+[node name="cattanita_control" type="Label" parent="Panel/second_to_show"]
+offset_left = 570.0
+offset_top = 362.0
+offset_right = 766.0
+offset_bottom = 400.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_tl0yo")
 text = "¡Esta es catanitta! 
 Para controlarla usaras las teclas WASD.
 W - Arriba     S - Abajo
 A - Izquierda     D - Derecha   
 "
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="aguacate_control" type="Label" parent="second_to_show"]
-offset_left = 7.0
-offset_top = 180.0
-offset_right = 674.0
-offset_bottom = 433.0
-theme_override_font_sizes/font_size = 30
+[node name="aguacate_control" type="Label" parent="Panel/second_to_show"]
+offset_left = 10.0
+offset_top = 186.0
+offset_right = 239.0
+offset_bottom = 236.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_tl0yo")
 text = "¡Este es aguacate! 
 Para controlarle usaras las teclas de direccion.
 ↑ - Arriba     ↓ - Abajo
 ← - Izquierda     → - Derecha   
 "
-horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Next_Button" type="Button" parent="."]
+[node name="Next_Button" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 0
-offset_left = 443.0
-offset_top = 538.0
-offset_right = 720.0
-offset_bottom = 633.0
-theme_override_font_sizes/font_size = 30
-text = "¡Cuentame más!"
 
-[node name="Menu_Button" type="Button" parent="."]
+[node name="Menu_Button" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 0
-offset_left = 192.0
-offset_top = 540.0
-offset_right = 475.0
-offset_bottom = 630.0
-theme_override_font_sizes/font_size = 25
-text = "Volver al Menu"
 
-[node name="Play_Button" type="Button" parent="."]
+[node name="Play_Button" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 0
-offset_left = 700.0
-offset_top = 540.0
-offset_right = 983.0
-offset_bottom = 630.0
-theme_override_font_sizes/font_size = 35
-text = "¡JUGAR!"
 
-[connection signal="pressed" from="Next_Button" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="Menu_Button" to="." method="_on_menu_button_pressed"]
-[connection signal="pressed" from="Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/Next_Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Panel/Menu_Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Panel/Play_Button" to="." method="_on_play_button_pressed"]

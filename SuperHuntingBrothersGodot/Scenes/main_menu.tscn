@@ -1,13 +1,13 @@
 [gd_scene load_steps=14 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
-[ext_resource type="Texture2D" uid="uid://dlk11utn0yjh3" path="res://Sprites/UI/Background.png" id="2_chsbi"]
+[ext_resource type="Texture2D" uid="uid://b8qi17wdpbj3j" path="res://Sprites/UI/Background.png" id="2_chsbi"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/normal_menu.gd" id="2_skkcp"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="3_hdgmk"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
 [ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="5_oen3u"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="6_i84hv"]
-[ext_resource type="Texture2D" uid="uid://dl4i7vyj011qc" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
+[ext_resource type="Texture2D" uid="uid://fwpbcxjp2cec" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -104,7 +104,6 @@ localize_numeral_system = false
 theme = ExtResource("3_hdgmk")
 theme_override_constants/separation = 3
 alignment = 1
-metadata/_edit_group_ = true
 
 [node name="play_button" type="Button" parent="normal_menu/Menu/VBoxContainer"]
 custom_minimum_size = Vector2(80, 17)

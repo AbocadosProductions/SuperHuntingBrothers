@@ -69,6 +69,7 @@ grow_vertical = 2
 
 [node name="Panel_Volumen" type="Panel" parent="Panel/volumen_slider"]
 custom_minimum_size = Vector2(80, 17)
+layout_mode = 0
 offset_left = -22.0
 offset_top = -16.0
 offset_right = 58.0
@@ -79,6 +80,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_vapxq")
 
 [node name="Fondo_Slider" type="Panel" parent="Panel/volumen_slider"]
 show_behind_parent = true
+layout_mode = 0
 offset_left = -1.0
 offset_top = 3.0
 offset_right = 39.0

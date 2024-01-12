@@ -23,6 +23,7 @@ Constants="*res://0_Scripts/AutoLoad/constants.gd"
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/mode=3
+window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -76,8 +77,8 @@ pause={
 
 [navigation]
 
-2d/default_edge_connection_margin=10
-2d/default_link_connection_radius=10
+2d/default_edge_connection_margin=9
+2d/default_link_connection_radius=9
 
 [rendering]
 

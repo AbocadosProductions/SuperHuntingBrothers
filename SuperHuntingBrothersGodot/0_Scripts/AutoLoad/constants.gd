@@ -14,9 +14,19 @@ const SAVE_PATH: String = "res://save_data.tres"
 
 # LevelManager constants
 
-const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
-const MAZES_1_POSITION = Vector2 (300, 375)
-const MAZES_2_POSITION = Vector2 (715, 375)
+const EASY_MODE = "Easy"
+const NORMAL_MODE = "Normal"
+
+const EASY_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Easy"
+const NORMAL_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Normal"
+
+const MAZES_PATH = {
+	EASY_MODE : EASY_MAZES_FOLDER_PATH,
+	NORMAL_MODE : NORMAL_MAZES_FOLDER_PATH
+}
+
+const MAZES_1_POSITION = Vector2 (350, 400)
+const MAZES_2_POSITION = Vector2 (650, 400)
 const MAZE_FILE_TERMINATION = ".tscn"
 const MAZE_FILE_PREFIX = "maze"
 const MAZE_PATH_FORMAT_STRING = "/%s.tscn"
@@ -36,7 +46,6 @@ const MINUTES_FORMAT_STRING = "%dm"
 const SECONDS_FORMAT_STRING = "%ds"
 const NEW_RECORD_SIGNAL = "new_record_signal"
 const NEW_RECORD_BLINK_RATE = 6
-
 const POINTS_MENU_FINISHED_SIGNAL = "points_menu_finished"
 
 # --------------------------------------------------------------------------- #
@@ -57,7 +66,7 @@ const SCENE_MANAGER_PREPARATION_TIME = 1
 
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
-const DEFAULT_TIME_PER_LEVEL = 60
+const DEFAULT_TIME_PER_LEVEL = 5
 const TIME_PER_LEVEL_TO_SUSTRACT = 5
 const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15
@@ -90,6 +99,7 @@ const PAUSE_MENU_SIGNAL = "game_paused"
 # --------------------------------------------------------------------------- #
 
 # Lose Menu constants
+
 const END_MENU_LEVEL_RECORD_SIGNAL = "new_level_record"
 const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
@@ -98,14 +108,14 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 # Positions constants
 
 const POSITIONS_PER_LEVEL = {
-	"maze_1" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
-	"maze_2" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
-	"maze_3" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]},
-	"maze_4" = {"cat" = [Vector2(13, 9)],
-				"mouse" = [Vector2(-150, -157), Vector2(40, 115), Vector2(-54, 12), Vector2(106, 33)]}
+	"maze_1" = {"cat" = [Vector2(8, -9)],
+				"mouse" = [Vector2(-119, -86)]},
+	"maze_2" = {"cat" = [Vector2(8, -9)],
+				"mouse" = [Vector2(-119, -86)]},
+	"maze_3" = {"cat" = [Vector2(8, -9)],
+				"mouse" = [Vector2(-119, -86)]},
+	"maze_4" = {"cat" = [Vector2(8, -9)],
+				"mouse" = [Vector2(-119, -86)]}
 				}
 # --------------------------------------------------------------------------- #
 
@@ -153,11 +163,30 @@ const ANIMATION_RELEASE_DOWN = "Release_Down"
 
 # --------------------------------------------------------------------------- #
 
-# Music names constants
+# Navigation constants
 
+const MIN_X_CELL_RANGE = -9
+const MAX_X_CELL_RANGE = 8
+const MIN_Y_CELL_RANGE = -10
+const MAX_Y_CELL_RANGE = 7
+const CELL_SIZE = 16
+
+# --------------------------------------------------------------------------- #
+
+# Music controller constants
+
+const MINIMUM_DB_VALUE = 25
 const EFFECT_MUSIC = "res://Audios/prueba.wav"
+const AUDIO_BUS = "Master"
 const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
 const MUSIC_SIGNALS = [EFFECT_MUSIC]
 const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
+
+# --------------------------------------------------------------------------- #
+
+# Countdown constants
+
+const END_COUNTDOWN = "END_COUNTDOWN"
+const ANIMATION_COUNTDOWN = "Countdown"
 
 # --------------------------------------------------------------------------- #

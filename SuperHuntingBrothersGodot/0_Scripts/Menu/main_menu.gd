@@ -12,6 +12,9 @@ extends Control
 
 var func_to_call 
 var pressed_button
+@onready var difficulty_menu : Node2D = $difficulty_menu
+@onready var data_manager : Node2D = $DataManager
+@onready var audio_bus := AudioServer.get_bus_index(Constants.AUDIO_BUS)
 
 
 func _ready():
@@ -25,7 +28,10 @@ func _on_play_button_pressed():
 	func_to_call = "play_funct"
 
 func _on_volumen_slider_value_changed(_value):
-	pass # Replace with call to audio controller
+	var value = - Constants.MINIMUM_DB_VALUE + Constants.MINIMUM_DB_VALUE * _value * 0.01
+	if value < - Constants.MINIMUM_DB_VALUE * 0.95 :
+		value = -80
+	AudioServer.set_bus_volume_db(audio_bus, value)
 
 func _on_credits_button_pressed():
 	start_timer()
@@ -59,7 +65,9 @@ func credits_funct():
 	credits_menu.focus()
 
 func play_funct():
-	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
+	normal_menu.set_visible(false)
+	difficulty_menu.set_visible(true)
+	difficulty_menu.focus()
 	
 func quit_funct():
 	get_tree().quit()
@@ -67,4 +75,17 @@ func quit_funct():
 func back_funct():
 	normal_menu.set_visible(true)
 	credits_menu.set_visible(false)
+	normal_menu.focus()
+
+func _on_easy_mode_pressed():
+	data_manager.set_difficulty(Constants.EASY_MODE)
+	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
+
+func _on_normal_mode_pressed():
+	data_manager.set_difficulty(Constants.NORMAL_MODE)
+	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
+
+func _on_back_menu_pressed():
+	normal_menu.set_visible(true)
+	difficulty_menu.set_visible(false)
 	normal_menu.focus()

@@ -1,13 +1,13 @@
 [gd_resource type="Theme" load_steps=55 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
-[ext_resource type="Texture2D" uid="uid://cr8n1nbaugxr1" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
+[ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="2_iexnn"]
-[ext_resource type="Texture2D" uid="uid://c0vanov0hnyb" path="res://Sprites/UI/Sound_Slider_Handler.png" id="3_i4ok2"]
+[ext_resource type="Texture2D" uid="uid://0357cmgwiml1" path="res://Sprites/UI/Sound_Slider_Handler.png" id="3_i4ok2"]
 [ext_resource type="Texture2D" uid="uid://crdqtu72flpom" path="res://Sprites/UI/Sound_Slider_Handler_Highlight.png" id="4_f8t05"]
-[ext_resource type="Texture2D" uid="uid://cjpv3x8sp5eei" path="res://Sprites/UI/Panel_Logo.png" id="6_andiy"]
-[ext_resource type="Texture2D" uid="uid://nf0ic5vyobbp" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
-[ext_resource type="Texture2D" uid="uid://yd5clrwvkl2a" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
+[ext_resource type="Texture2D" uid="uid://c6f5q82lyfs6l" path="res://Sprites/UI/Panel_Logo.png" id="6_andiy"]
+[ext_resource type="Texture2D" uid="uid://b7m5i6g3mg0ex" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
+[ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 

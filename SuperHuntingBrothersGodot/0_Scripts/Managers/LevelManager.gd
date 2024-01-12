@@ -3,9 +3,9 @@ extends Node
 var maze_scenes = []
 var node_names_in_use = []
 var level : Node2D
-var path = Constants.MAZES_FOLDER_PATH
 var maze_1_pos = Constants.MAZES_1_POSITION
 var maze_2_pos = Constants.MAZES_2_POSITION
+var path : String
 var maze_path_1
 var maze_path_2
 var new_maze_1_name
@@ -13,12 +13,15 @@ var new_maze_2_name
 var possible_mazes = []
 
 @export var scene_manager : Node2D
+@export var data_manager : Node2D
 @export var cat_1 : Node2D
 @export var cat_2 : Node2D
 @export var mouse_1 : Node2D
 @export var mouse_2 : Node2D
 
 func get_maze_scenes():
+	var diff = data_manager.get_difficulty()
+	path = Constants.MAZES_PATH[diff]
 	var dir = DirAccess.open(path)
 
 	if not dir:
@@ -79,9 +82,6 @@ func _ready():
 	get_maze_scenes()
 	generate_level()
 
-func _on_button_pressed():
-	generate_level()
-
 func move_characters_to_positions():
 	# Load Positions accordint to the maze
 	var positions_maze_1 = Constants.POSITIONS_PER_LEVEL[new_maze_1_name]
@@ -108,3 +108,10 @@ func generate_level():
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL:
 		generate_level()
+
+func set_target_in_maze_coordinates(mouse : CharacterBody2D, coordinates : Vector2):
+	if mouse.name == mouse_1.name:
+		coordinates += maze_1_pos
+	else:
+		coordinates += maze_2_pos
+	return coordinates

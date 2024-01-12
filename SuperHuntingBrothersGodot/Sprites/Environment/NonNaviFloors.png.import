@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnby5ry4vyp32"
-path="res://.godot/imported/Panel_Menu.png-e9ebb327605ff28d1e3aa05baf3d1073.ctex"
+uid="uid://c7ivoxdtkkr5n"
+path="res://.godot/imported/NonNaviFloors.png-2ac693fbd7b6508cc16433898521b26d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/Panel_Menu.png"
-dest_files=["res://.godot/imported/Panel_Menu.png-e9ebb327605ff28d1e3aa05baf3d1073.ctex"]
+source_file="res://Sprites/Environment/NonNaviFloors.png"
+dest_files=["res://.godot/imported/NonNaviFloors.png-2ac693fbd7b6508cc16433898521b26d.ctex"]
 
 [params]
 

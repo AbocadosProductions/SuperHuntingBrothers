@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=15 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
-[ext_resource type="Texture2D" uid="uid://b8qi17wdpbj3j" path="res://Sprites/UI/Background.png" id="2_chsbi"]
+[ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_chsbi"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/normal_menu.gd" id="2_skkcp"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="3_hdgmk"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
 [ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="5_oen3u"]
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="6_i84hv"]
-[ext_resource type="Texture2D" uid="uid://fwpbcxjp2cec" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
+[ext_resource type="Texture2D" uid="uid://bc5tnfgdmcoe2" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
+[ext_resource type="Script" path="res://0_Scripts/Menu/difficulty_menu.gd" id="9_8phu2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -178,6 +179,33 @@ offset_right = 169.0
 offset_bottom = 167.5
 theme_type_variation = &"Button_Back"
 toggle_mode = true
+
+[node name="difficulty_menu" type="Node2D" parent="."]
+script = ExtResource("9_8phu2")
+
+[node name="Panel" type="Panel" parent="difficulty_menu"]
+offset_left = -93.0
+offset_top = -67.0
+offset_right = -3.0
+offset_bottom = 33.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_hdgmk")
+
+[node name="easy_mode" type="Button" parent="difficulty_menu/Panel"]
+custom_minimum_size = Vector2(80, 17)
+offset_right = 80.0
+offset_bottom = 17.0
+
+[node name="normal_mode" type="Button" parent="difficulty_menu/Panel"]
+custom_minimum_size = Vector2(80, 17)
+offset_right = 80.0
+offset_bottom = 17.0
+
+[node name="back_menu" type="Button" parent="difficulty_menu/Panel"]
+custom_minimum_size = Vector2(80, 17)
+offset_right = 80.0
+offset_bottom = 17.0
+theme_type_variation = &"Button_Menu"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

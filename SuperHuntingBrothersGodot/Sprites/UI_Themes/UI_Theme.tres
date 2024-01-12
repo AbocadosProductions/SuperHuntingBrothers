@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=53 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=55 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cr8n1nbaugxr1" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -200,6 +200,15 @@ texture_margin_left = 6.0
 texture_margin_top = 7.0
 texture_margin_right = 6.0
 texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 261, 177)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgeqc"]
+texture = ExtResource("10_1n380")
+region_rect = Rect2(261, 0, 261, 177)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqk0a"]
+texture = ExtResource("10_1n380")
+region_rect = Rect2(522, 0, 261, 177)
 
 [resource]
 resource_local_to_scene = true
@@ -293,3 +302,7 @@ Panel_Pause/base_type = &"Panel"
 Panel_Pause/styles/panel = SubResource("StyleBoxTexture_y6uns")
 Panel_Tutorial/base_type = &"Panel"
 Panel_Tutorial/styles/panel = SubResource("StyleBoxTexture_t0u56")
+Panel_Tutorial_1/base_type = &"Panel"
+Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
+Panel_Tutorial_2/base_type = &"Panel"
+Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")

@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_d3xy5"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_punctuation_record.gd" id="2_v544t"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_level_record.gd" id="3_lqvoi"]
-[ext_resource type="Texture2D" uid="uid://j48s3xrkr1nq" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
+[ext_resource type="Texture2D" uid="uid://cjla617kfu4yl" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
 atlas = ExtResource("5_w3vax")

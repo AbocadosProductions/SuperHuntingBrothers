@@ -14,7 +14,17 @@ const SAVE_PATH: String = "res://save_data.tres"
 
 # LevelManager constants
 
-const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
+const EASY_MODE = "Easy"
+const NORMAL_MODE = "Normal"
+
+const EASY_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Easy"
+const NORMAL_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Normal"
+
+const MAZES_PATH = {
+	EASY_MODE : EASY_MAZES_FOLDER_PATH,
+	NORMAL_MODE : NORMAL_MAZES_FOLDER_PATH
+}
+
 const MAZES_1_POSITION = Vector2 (350, 400)
 const MAZES_2_POSITION = Vector2 (650, 400)
 const MAZE_FILE_TERMINATION = ".tscn"
@@ -56,7 +66,7 @@ const SCENE_MANAGER_PREPARATION_TIME = 1
 
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
-const DEFAULT_TIME_PER_LEVEL = 60
+const DEFAULT_TIME_PER_LEVEL = 5
 const TIME_PER_LEVEL_TO_SUSTRACT = 5
 const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15

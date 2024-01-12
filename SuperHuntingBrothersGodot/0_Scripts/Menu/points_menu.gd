@@ -140,7 +140,7 @@ func _process(_delta):
 # CONTROLS THE RECORD SPRITES AND THE RECORD LABEL WHEN POINTS FINISH TO BE UPDATED
 func check_for_record():
 	if actual_time < record_time or record_time == 0:
-		datamanager.return_record_time()
+		datamanager.set_new_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=69 format=3 uid="uid://bexhcb13ghv2o"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_hxm02"]
-[ext_resource type="Texture2D" uid="uid://b8qi17wdpbj3j" path="res://Sprites/UI/Background.png" id="2_pacm0"]
+[ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_pacm0"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_tl0yo"]
 [ext_resource type="Texture2D" uid="uid://dlfjohpvd306w" path="res://Sprites/Raton/Mouse_Run_Left.png" id="3_louam"]
 [ext_resource type="Texture2D" uid="uid://cpsmhwvvb6lfx" path="res://Sprites/Raton/Mouse_Catch_Right.png" id="4_muyua"]
@@ -511,6 +511,7 @@ offset_top = 151.0
 offset_right = 172.0
 offset_bottom = 168.0
 theme_type_variation = &"Button_Continue"
+toggle_mode = true
 
 [node name="RatonNormal" type="AnimatedSprite2D" parent="Panel/first_to_show"]
 position = Vector2(231.5, 61)
@@ -539,6 +540,7 @@ offset_top = 151.0
 offset_right = 125.0
 offset_bottom = 168.0
 theme_type_variation = &"Button_Menu"
+toggle_mode = true
 
 [node name="Play_Button" type="Button" parent="Panel/second_to_show"]
 custom_minimum_size = Vector2(80, 17)
@@ -547,6 +549,7 @@ offset_left = 136.0
 offset_top = 151.0
 offset_right = 216.0
 offset_bottom = 168.0
+toggle_mode = true
 
 [node name="Cattanita" type="AnimatedSprite2D" parent="Panel/second_to_show"]
 position = Vector2(228, 67.5)
@@ -558,6 +561,11 @@ position = Vector2(33.5, 120)
 sprite_frames = SubResource("SpriteFrames_e58jt")
 speed_scale = 2.0
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
 [connection signal="pressed" from="Panel/first_to_show/Next_Button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Panel/second_to_show/Menu_Button" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Panel/second_to_show/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

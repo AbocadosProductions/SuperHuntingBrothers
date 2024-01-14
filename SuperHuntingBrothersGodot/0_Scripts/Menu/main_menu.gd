@@ -8,10 +8,15 @@ extends Control
 @onready var quit_button : Button = $normal_menu/Menu/VBoxContainer/quit_button
 @onready var back_button : Button = $credits_menu/Panel/back_to_menu_button
 @onready var vol_slider : HSlider = $normal_menu/Menu/VBoxContainer/Sonido/volumen_slider
-@onready var array = [cred_button, play_button, quit_button, vol_slider, back_button]
+@onready var tutorial_button : Button = $credits_menu/Panel/back_to_menu_button
+@onready var normal_button : Button = $difficulty_menu/Panel/VBoxContainer/HBoxContainer/normal_mode
+@onready var hard_button : Button = $difficulty_menu/Panel/VBoxContainer/HBoxContainer/hard_mode
+@onready var back_difficulty_button : Button = $difficulty_menu/Panel/VBoxContainer/back_menu
+@onready var array = [cred_button, play_button, quit_button, vol_slider, back_button, tutorial_button, normal_button, hard_button, back_difficulty_button]
 
 var func_to_call 
 var pressed_button
+
 @onready var difficulty_menu : Node2D = $difficulty_menu
 @onready var data_manager : Node2D = $DataManager
 @onready var audio_bus := AudioServer.get_bus_index(Constants.AUDIO_BUS)
@@ -77,15 +82,38 @@ func back_funct():
 	credits_menu.set_visible(false)
 	normal_menu.focus()
 
-func _on_easy_mode_pressed():
-	data_manager.set_difficulty(Constants.EASY_MODE)
-	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
-
 func _on_normal_mode_pressed():
+	start_timer()
+	pressed_button = normal_button
+	func_to_call = "normal_funct"
+
+func _on_hard_mode_pressed():
+	start_timer()
+	pressed_button = hard_button
+	func_to_call = "hard_funct"
+
+func _on_back_menu_pressed():
+	start_timer()
+	pressed_button = back_difficulty_button
+	func_to_call = "back_menu_funct"
+
+func _on_tutorial_pressed():
+	start_timer()
+	pressed_button = tutorial_button
+	func_to_call = "tutorial_funct"
+
+func tutorial_funct():
+	get_tree().change_scene_to_file(Constants.TUTORIAL_MENU)
+
+func normal_funct():
 	data_manager.set_difficulty(Constants.NORMAL_MODE)
 	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
 
-func _on_back_menu_pressed():
+func hard_funct():
+	data_manager.set_difficulty(Constants.HARD_MODE)
+	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
+
+func back_menu_funct():
 	normal_menu.set_visible(true)
 	difficulty_menu.set_visible(false)
 	normal_menu.focus()

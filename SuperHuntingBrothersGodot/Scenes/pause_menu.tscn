@@ -43,6 +43,7 @@ offset_top = 80.0
 offset_right = 85.0
 offset_bottom = 97.0
 theme_type_variation = &"Button_Continue"
+toggle_mode = true
 
 [node name="back_to_menu_button" type="Button" parent="Panel"]
 layout_mode = 0
@@ -51,6 +52,7 @@ offset_top = 80.0
 offset_right = 166.0
 offset_bottom = 97.0
 theme_type_variation = &"Button_Quit"
+toggle_mode = true
 
 [node name="volumen_slider" type="HSlider" parent="Panel"]
 custom_minimum_size = Vector2(37, 12)
@@ -87,6 +89,11 @@ offset_right = 39.0
 offset_bottom = 8.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_7o6dn")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
 [connection signal="pressed" from="Panel/continue_button" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
 [connection signal="value_changed" from="Panel/volumen_slider" to="." method="_on_h_slider_value_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

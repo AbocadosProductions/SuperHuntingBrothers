@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=16 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_chsbi"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="6_i84hv"]
 [ext_resource type="Texture2D" uid="uid://bc5tnfgdmcoe2" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/difficulty_menu.gd" id="9_8phu2"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="10_84r8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -203,25 +204,28 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_type_variation = &"Button_Tutorial"
+toggle_mode = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="difficulty_menu/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="easy_mode" type="Button" parent="difficulty_menu/Panel/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(80, 17)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"Button_Normal"
-
 [node name="normal_mode" type="Button" parent="difficulty_menu/Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_type_variation = &"Button_Normal"
+toggle_mode = true
+
+[node name="hard_mode" type="Button" parent="difficulty_menu/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_type_variation = &"Button_Hard"
+toggle_mode = true
 
 [node name="back_menu" type="Button" parent="difficulty_menu/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
@@ -229,14 +233,21 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_type_variation = &"Button_Menu"
+toggle_mode = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.25
 one_shot = true
+
+[node name="DataManager" parent="." instance=ExtResource("10_84r8m")]
 
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="credits_menu/Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="difficulty_menu/Panel/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="difficulty_menu/Panel/VBoxContainer/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/Panel/VBoxContainer/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/Panel/VBoxContainer/back_menu" to="." method="_on_back_menu_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

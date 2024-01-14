@@ -1,9 +1,277 @@
-[gd_scene load_steps=4 format=3 uid="uid://fe617ydt6xvu"]
+[gd_scene load_steps=43 format=3 uid="uid://fe617ydt6xvu"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/points_menu.gd" id="1_bi5c1"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_record_controller.gd" id="2_6xwme"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_am3t3"]
+[ext_resource type="Texture2D" uid="uid://cjla617kfu4yl" path="res://Sprites/UI/New_Record_VFX.png" id="4_ld0r7"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y1g1y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(0, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syaa5"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(74, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16f45"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(148, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr4gd"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(222, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hksl2"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(296, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdc1y"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(370, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gkps"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(444, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a4oj"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(518, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_843ry"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(592, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm648"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(666, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm4nn"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(740, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb363"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(814, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsnf5"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(888, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_levfy"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(962, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_futm3"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1036, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofsll"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1110, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylhnb"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1184, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqo6r"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1258, 0, 74, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpra4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5ihc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syaa5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16f45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr4gd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hksl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdc1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gkps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a4oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_843ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm648")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm4nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb363")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsnf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_levfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_futm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofsll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylhnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqo6r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umhot"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(0, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gllyg"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(74, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmc7i"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(148, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycuae"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(222, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fixh4"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(296, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x60k"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(370, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni3n4"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(444, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huer2"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(518, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dhp4"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(592, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ipbu"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(666, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y0no"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(740, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqpek"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(814, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0075"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(888, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hg6r"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(962, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ct3"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1036, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pieuo"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1110, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bryjd"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1184, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3t5i"]
+atlas = ExtResource("4_ld0r7")
+region = Rect2(1258, 27, 74, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlcea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umhot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gllyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmc7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycuae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fixh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x60k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni3n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huer2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dhp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ipbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y0no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqpek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0075")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hg6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ct3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pieuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bryjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3t5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="points_menu" type="Control" node_paths=PackedStringArray("actual_time_label", "record_time_label", "points_label", "new_record_announcer")]
 layout_mode = 3
@@ -13,109 +281,106 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bi5c1")
-actual_time_label = NodePath("actual_time_label/time_label")
-record_time_label = NodePath("record_time_label/time_label")
-points_label = NodePath("puntuation_label/points_label")
+actual_time_label = NodePath("Panel/actual_time_label/time_label")
+record_time_label = NodePath("Panel/record_time_label/time_label")
+points_label = NodePath("Panel/puntuation_label/points_label")
 new_record_announcer = NodePath("new_record")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(171, 121)
+layout_mode = 0
+offset_left = 160.0
+offset_top = 50.0
+offset_right = 331.0
+offset_bottom = 172.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_am3t3")
+theme_type_variation = &"Panel_Level_Success"
+
+[node name="actual_time_label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 50.0
+offset_bottom = 56.0
+text = "Tiempo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="Panel/actual_time_label"]
+layout_mode = 0
+offset_left = 30.5
+offset_right = 86.5
+offset_bottom = 8.0
+text = "00:00:00"
+vertical_alignment = 1
+
+[node name="record_time_label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 48.0
+offset_right = 130.0
+offset_bottom = 56.0
+text = "Record:"
+vertical_alignment = 1
+
+[node name="time_label" type="Label" parent="Panel/record_time_label"]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 90.0
+offset_bottom = 8.0
+text = "00:00:00"
+vertical_alignment = 1
+
+[node name="puntuation_label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 47.5
+offset_top = 73.5
+offset_right = 102.5
+offset_bottom = 87.5
+text = "Puntuacion:"
+vertical_alignment = 1
+
+[node name="points_label" type="Label" parent="Panel/puntuation_label"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 3.0
+offset_right = 80.0
+offset_bottom = 11.0
+text = "000000"
+vertical_alignment = 1
+
+[node name="next_level_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 96.0
+offset_right = 124.0
+offset_bottom = 113.0
+theme_type_variation = &"Button_Continue"
+toggle_mode = true
+text = "
+"
 
 [node name="new_record" type="Node2D" parent="." node_paths=PackedStringArray("points_menu")]
 position = Vector2(550, 0)
 script = ExtResource("2_6xwme")
 points_menu = NodePath("..")
 
-[node name="High" type="Sprite2D" parent="new_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 213)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
+[node name="High_2" type="AnimatedSprite2D" parent="new_record"]
+position = Vector2(-141, 125)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_lpra4")
+speed_scale = 4.0
 
-[node name="Low" type="Sprite2D" parent="new_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 300)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
+[node name="Low_2" type="AnimatedSprite2D" parent="new_record"]
+position = Vector2(-141, 179)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mlcea")
+speed_scale = 4.0
 
-[node name="level_clear_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 238.0
-offset_top = 32.0
-offset_right = 904.0
-offset_bottom = 138.0
-theme_override_font_sizes/font_size = 75
-text = "NIVEL SUPERADO"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 
-[node name="actual_time_label" type="Label" parent="."]
-layout_mode = 0
-offset_top = 200.0
-offset_right = 301.0
-offset_bottom = 306.0
-theme_override_font_sizes/font_size = 32
-text = "Tiempo  :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="time_label" type="Label" parent="actual_time_label"]
-layout_mode = 0
-offset_left = 175.0
-offset_right = 476.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "00 : 00 : 00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="record_time_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 200.0
-offset_right = 901.0
-offset_bottom = 306.0
-theme_override_font_sizes/font_size = 32
-text = "Tiempo Record  :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="time_label" type="Label" parent="record_time_label"]
-layout_mode = 0
-offset_left = 225.0
-offset_right = 526.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "00 : 00 : 00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="puntuation_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 350.0
-offset_right = 701.0
-offset_bottom = 456.0
-theme_override_font_sizes/font_size = 32
-text = "Puntuación :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="points_label" type="Label" parent="puntuation_label"]
-layout_mode = 0
-offset_left = 200.0
-offset_right = 501.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "000000"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="next_level_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 337.0
-offset_top = 514.0
-offset_right = 803.0
-offset_bottom = 616.0
-text = "Siguiente Nivel"
-
-[connection signal="pressed" from="next_level_button" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="Panel/next_level_button" to="." method="_on_next_level_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

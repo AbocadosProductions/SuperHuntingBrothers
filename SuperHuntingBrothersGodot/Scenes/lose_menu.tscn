@@ -1,13 +1,281 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2y0p2ejqfjgu"]
+[gd_scene load_steps=45 format=3 uid="uid://b2y0p2ejqfjgu"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/lose_menu.gd" id="1_d4mky"]
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="2_0r01c"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_d3xy5"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_punctuation_record.gd" id="2_v544t"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_level_record.gd" id="3_lqvoi"]
+[ext_resource type="Texture2D" uid="uid://yiipjgeht13h" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_y1g1y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(0, 0, 74, 27)
 
-[node name="lose_menu" type="Control" node_paths=PackedStringArray("actual_punctuation_label", "record_punctuation_label", "actual_level_label", "record_level_label", "new_record_punctuation_announcer", "new_record_level_announcer", "data_manager")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_syaa5"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(74, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16f45"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(148, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr4gd"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(222, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hksl2"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(296, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdc1y"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(370, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gkps"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(444, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a4oj"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(518, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_843ry"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(592, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm648"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(666, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm4nn"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(740, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb363"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(814, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsnf5"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(888, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_levfy"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(962, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_futm3"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1036, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofsll"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1110, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylhnb"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1184, 0, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqo6r"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1258, 0, 74, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytn71"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5ihc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syaa5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16f45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr4gd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hksl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdc1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gkps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a4oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_843ry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm648")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm4nn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb363")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsnf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_levfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_futm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofsll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylhnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqo6r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umhot"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(0, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gllyg"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(74, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmc7i"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(148, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycuae"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(222, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fixh4"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(296, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x60k"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(370, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni3n4"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(444, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huer2"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(518, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dhp4"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(592, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ipbu"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(666, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y0no"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(740, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqpek"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(814, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0075"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(888, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hg6r"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(962, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ct3"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1036, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pieuo"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1110, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bryjd"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1184, 27, 74, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3t5i"]
+atlas = ExtResource("5_w3vax")
+region = Rect2(1258, 27, 74, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l33e1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umhot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gllyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmc7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycuae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fixh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x60k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni3n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huer2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dhp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ipbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y0no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqpek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0075")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hg6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ct3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pieuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bryjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3t5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="lose_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,162 +283,163 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d4mky")
-actual_punctuation_label = NodePath("actual_punctuation/punctuation_label")
-record_punctuation_label = NodePath("record_punctuation_label/punctuation_label")
-actual_level_label = NodePath("actual_level/punctuation_label")
-record_level_label = NodePath("record_level_label/punctuation_label")
-new_record_punctuation_announcer = NodePath("new_punctuation_record")
-new_record_level_announcer = NodePath("new_level_record")
-data_manager = NodePath("DataManager")
-
-[node name="new_punctuation_record" type="Node2D" parent="." node_paths=PackedStringArray("lose_menu")]
-position = Vector2(550, 0)
-script = ExtResource("2_v544t")
-lose_menu = NodePath("..")
-
-[node name="High" type="Sprite2D" parent="new_punctuation_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 213)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
-[node name="Low" type="Sprite2D" parent="new_punctuation_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 300)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
-[node name="new_level_record" type="Node2D" parent="." node_paths=PackedStringArray("lose_menu")]
-position = Vector2(550, 150)
-script = ExtResource("3_lqvoi")
-lose_menu = NodePath("..")
-
-[node name="High" type="Sprite2D" parent="new_level_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 213)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
-[node name="Low" type="Sprite2D" parent="new_level_record"]
-modulate = Color(1, 1, 0, 1)
-self_modulate = Color(0.8, 1, 0, 1)
-position = Vector2(287, 300)
-scale = Vector2(497.5, 37)
-texture = SubResource("PlaceholderTexture2D_y1g1y")
-
-[node name="menu_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 238.0
-offset_top = 32.0
-offset_right = 904.0
-offset_bottom = 138.0
-theme_override_font_sizes/font_size = 75
-text = "Fin de la partida"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="actual_punctuation" type="Label" parent="."]
-layout_mode = 0
-offset_top = 200.0
-offset_right = 301.0
-offset_bottom = 306.0
-theme_override_font_sizes/font_size = 32
-text = "Puntuación  :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="punctuation_label" type="Label" parent="actual_punctuation"]
-layout_mode = 0
-offset_left = 247.0
-offset_right = 476.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "2500"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="record_punctuation_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 200.0
-offset_right = 901.0
-offset_bottom = 306.0
-theme_override_font_sizes/font_size = 32
-text = "Puntuación Record  :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="punctuation_label" type="Label" parent="record_punctuation_label"]
-layout_mode = 0
-offset_left = 325.0
-offset_right = 554.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "2500"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="actual_level" type="Label" parent="."]
-layout_mode = 0
-offset_top = 350.0
-offset_right = 301.0
-offset_bottom = 456.0
-theme_override_font_sizes/font_size = 32
-text = "Nivel Alcanzado :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="punctuation_label" type="Label" parent="actual_level"]
-layout_mode = 0
-offset_left = 279.0
-offset_right = 465.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="record_level_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 350.0
-offset_right = 901.0
-offset_bottom = 456.0
-theme_override_font_sizes/font_size = 32
-text = "Nivel Record  :"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="punctuation_label" type="Label" parent="record_level_label"]
-layout_mode = 0
-offset_left = 279.0
-offset_right = 465.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 32
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="main_menu_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 221.0
-offset_top = 533.0
-offset_right = 520.0
-offset_bottom = 613.0
-text = "Salir al Menu"
 
 [node name="DataManager" parent="." instance=ExtResource("2_0r01c")]
 
-[node name="retry_button" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(229, 144)
 layout_mode = 0
-offset_left = 703.0
-offset_top = 514.0
-offset_right = 974.0
-offset_bottom = 615.0
-text = "VOLVER A JUGAR"
+offset_left = 98.0
+offset_top = 37.0
+offset_right = 327.0
+offset_bottom = 181.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_d3xy5")
+theme_type_variation = &"Panel_Level_Lose"
 
-[connection signal="pressed" from="main_menu_button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="retry_button" to="." method="_on_retry_button_pressed"]
+[node name="actual_punctuation" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(62, 16)
+layout_mode = 2
+offset_left = 14.0
+offset_top = 48.0
+offset_right = 76.0
+offset_bottom = 64.0
+text = "Puntuacion:"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 1
+
+[node name="punctuation_label" type="Label" parent="Panel/actual_punctuation"]
+custom_minimum_size = Vector2(30, 11)
+layout_mode = 0
+offset_left = 56.0
+offset_top = 3.0
+offset_right = 86.0
+offset_bottom = 14.0
+text = "2500"
+vertical_alignment = 1
+
+[node name="record_punctuation_label" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(62, 16)
+layout_mode = 0
+offset_left = 129.0
+offset_top = 48.0
+offset_right = 191.0
+offset_bottom = 64.0
+text = "P. Record:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="Panel/record_punctuation_label"]
+custom_minimum_size = Vector2(30, 11)
+layout_mode = 0
+offset_left = 54.0
+offset_top = 3.0
+offset_right = 84.0
+offset_bottom = 14.0
+text = "2500"
+vertical_alignment = 1
+
+[node name="actual_level" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(80, 16)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 86.0
+offset_right = 93.0
+offset_bottom = 102.0
+text = "Nivel Alcanzado:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="Panel/actual_level"]
+custom_minimum_size = Vector2(30, 11)
+layout_mode = 0
+offset_left = 78.0
+offset_top = 3.0
+offset_right = 108.0
+offset_bottom = 14.0
+text = "1"
+vertical_alignment = 1
+
+[node name="record_level_label" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(70, 16)
+layout_mode = 0
+offset_left = 133.0
+offset_top = 86.0
+offset_right = 203.0
+offset_bottom = 102.0
+text = "n. record:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="punctuation_label" type="Label" parent="Panel/record_level_label"]
+custom_minimum_size = Vector2(30, 11)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 2.5
+offset_right = 88.0
+offset_bottom = 13.5
+text = "1"
+vertical_alignment = 1
+
+[node name="main_menu_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 113.5
+offset_right = 111.0
+offset_bottom = 130.5
+theme_type_variation = &"Button_Menu"
+toggle_mode = true
+
+[node name="retry_button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 114.0
+offset_right = 197.0
+offset_bottom = 131.0
+theme_type_variation = &"Button_Try_Again"
+toggle_mode = true
+
+[node name="new_punctuation_record" type="Node2D" parent="Panel" node_paths=PackedStringArray("lose_menu")]
+position = Vector2(226, -18.5)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_v544t")
+lose_menu = NodePath("../..")
+
+[node name="High_2" type="AnimatedSprite2D" parent="Panel/new_punctuation_record"]
+position = Vector2(-108, 120)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ytn71")
+speed_scale = 4.0
+
+[node name="Low_2" type="AnimatedSprite2D" parent="Panel/new_punctuation_record"]
+position = Vector2(-108, 174)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_l33e1")
+speed_scale = 4.0
+
+[node name="new_level_record" type="Node2D" parent="Panel" node_paths=PackedStringArray("lose_menu")]
+position = Vector2(226, 56.5)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_lqvoi")
+lose_menu = NodePath("../..")
+
+[node name="High_2" type="AnimatedSprite2D" parent="Panel/new_level_record"]
+position = Vector2(-108, 46)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ytn71")
+speed_scale = 4.0
+
+[node name="Low_2" type="AnimatedSprite2D" parent="Panel/new_level_record"]
+position = Vector2(-108, 100)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_l33e1")
+speed_scale = 4.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="pressed" from="Panel/main_menu_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/retry_button" to="." method="_on_retry_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

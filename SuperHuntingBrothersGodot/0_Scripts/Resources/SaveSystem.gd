@@ -4,17 +4,17 @@ class_name SaveSystem
 const path = Constants.SAVE_PATH
 
 @export var record_times_per_level = {
-	Constants.EASY_MODE : [],
+	Constants.HARD_MODE : [],
 	Constants.NORMAL_MODE : []
 }
 @export var times_per_level : Array
 @export var actual_punctuation : int
 @export var record_punctuation = {
-	Constants.EASY_MODE : 0,
+	Constants.HARD_MODE : 0,
 	Constants.NORMAL_MODE : 0
 }
 @export var record_level = {
-	Constants.EASY_MODE : 0,
+	Constants.HARD_MODE : 0,
 	Constants.NORMAL_MODE : 0
 }
 @export var difficulty : String

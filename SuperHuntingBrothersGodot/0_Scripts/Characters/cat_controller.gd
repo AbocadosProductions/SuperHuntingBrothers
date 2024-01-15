@@ -5,10 +5,12 @@ signal External_Signal
 
 @export var scene_manager : Node2D
 
-var direction = ""
+var direction = "_Right"
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+	External_Signal.emit(Constants.ANIMATION_IDLE)
+
 
 func _physics_process(_delta):
 	move_and_slide()

@@ -166,9 +166,9 @@ const ANIMATION_RELEASE_DOWN = "Release_Down"
 
 # Navigation constants
 
-const MIN_X_CELL_RANGE = -9
+const MIN_X_CELL_RANGE = -8
 const MAX_X_CELL_RANGE = 8
-const MIN_Y_CELL_RANGE = -10
+const MIN_Y_CELL_RANGE = -9
 const MAX_Y_CELL_RANGE = 7
 const CELL_SIZE = 16
 

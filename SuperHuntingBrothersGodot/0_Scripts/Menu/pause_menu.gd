@@ -11,6 +11,7 @@ var pressed_button
 @onready var back_button : Button = $Panel/back_to_menu_button
 @onready var array = [continue_button, back_button]
 @onready var audio_bus := AudioServer.get_bus_index(Constants.AUDIO_BUS)
+@onready var volumen_slider : HSlider = $Panel/volumen_slider
 
 @export var scene_manager : Node2D
 
@@ -18,6 +19,7 @@ var pressed_button
 func _ready():
 	self.set_visible(visibility)
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+	set_volume_bar()
 
 func _input(event):
 	if event.is_action_pressed("pause"):
@@ -63,3 +65,12 @@ func _on_timer_timeout():
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	call(func_to_call)
+
+func set_volume_bar():
+	var value = AudioServer.get_bus_volume_db(0)
+	if value == -80:
+		value = 0
+	else:
+		value = (value + Constants.MINIMUM_DB_VALUE) / Constants.MINIMUM_DB_VALUE * 100
+	volumen_slider.set_value_no_signal(value)
+

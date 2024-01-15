@@ -8,6 +8,7 @@ script = ExtResource("1_q2kcp")
 time_label = NodePath("time_label")
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 offset_left = -5.0
 offset_top = 1.0
 offset_right = 70.0
@@ -15,6 +16,7 @@ offset_bottom = 50.0
 theme = ExtResource("2_7r6nd")
 
 [node name="time_label" type="Label" parent="."]
+visible = false
 offset_top = 1.0
 offset_right = 57.0
 offset_bottom = 53.0

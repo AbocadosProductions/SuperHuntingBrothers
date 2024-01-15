@@ -19,15 +19,26 @@ func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
 	time_label.visible = false
 	prepare_time_level()
+	hide_childs()
+
+
+func show_childs():
+	for child in get_children():
+		child.visible = true
+		
+func hide_childs():
+	for child in get_children():
+		child.visible = false
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL:
 		cats_are_running = false
 		save_time()
+		hide_childs()
 	elif signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
 		cats_are_running = true
-		time_label.visible = true
 		prepare_time_level()
+		show_childs()
 	elif signal_emited == Constants.PAUSE_MENU_SIGNAL:
 		cats_are_running = !cats_are_running
 

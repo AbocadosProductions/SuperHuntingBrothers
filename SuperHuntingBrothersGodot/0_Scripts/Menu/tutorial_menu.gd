@@ -8,6 +8,10 @@ extends Control
 @export var menu_button : Button
 @export var play_button : Button
 @onready var RatonNormalAnim : AnimatedSprite2D = $Panel/first_to_show/RatonNormal
+@onready var TechnoMouse1 : CharacterBody2D = $Panel/first_to_show/TechnoMouse
+@onready var TechnoMouse2 : CharacterBody2D = $Panel/first_to_show/TechnoMouse2
+@onready var TechnoAguacate : CharacterBody2D = $Panel/second_to_show/TechnoAguacate
+@onready var TechnoCattanita : CharacterBody2D = $Panel/second_to_show/TechnoCattanita
 @onready var RatonCorriendoAnim : AnimatedSprite2D = $Panel/first_to_show/RatonCorriendo
 @onready var CattanitaAnim : AnimatedSprite2D = $Panel/second_to_show/Cattanita
 @onready var AguacateAnim : AnimatedSprite2D = $Panel/second_to_show/Aguacate
@@ -44,6 +48,12 @@ func _process(delta):
 			menu_button.set_visible(true)
 			play_button.set_visible(true)
 			menu_button.grab_focus()
+			TechnoAguacate.visible = true
+			TechnoAguacate.collision_layer = 1
+			TechnoAguacate.collision_mask = 1
+			TechnoCattanita.collision_layer = 1
+			TechnoCattanita.collision_mask = 1
+			TechnoCattanita.visible = true
 			CattanitaAnim.play()
 			AguacateAnim.play()
 
@@ -64,6 +74,8 @@ func next_funct():
 	if showing_first_block:
 		moving_blocks = true
 		next_button.set_visible(false)
+		TechnoMouse1.visible = false
+		TechnoMouse2.visible = false
 
 func _on_play_button_pressed():
 	start_timer()

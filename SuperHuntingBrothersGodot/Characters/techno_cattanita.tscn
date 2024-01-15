@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dogaqo33kvpe7"]
+[gd_scene load_steps=38 format=3 uid="uid://dh02w306ph4b7"]
 
 [ext_resource type="Script" path="res://0_Scripts/TutorialCharacters/cattanita.gd" id="1_1fn7w"]
 [ext_resource type="Texture2D" uid="uid://ddcw7my2ad7d7" path="res://Sprites/Cattanita/Cattanita_Attack_Left.png" id="3_tvkxd"]
@@ -1141,6 +1141,7 @@ _data = {
 [node name="TechnoCattanita" type="CharacterBody2D"]
 position = Vector2(276, 143)
 scale = Vector2(2, 2)
+collision_layer = 8
 script = ExtResource("1_1fn7w")
 type_of_control = "keyboard"
 

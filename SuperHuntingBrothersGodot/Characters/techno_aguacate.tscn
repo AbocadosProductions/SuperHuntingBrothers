@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://oxmmhbeyi0qd"]
+[gd_scene load_steps=39 format=3 uid="uid://dhujh4icx7pf0"]
 
 [ext_resource type="Script" path="res://0_Scripts/TutorialCharacters/aguacate.gd" id="1_oheg8"]
 [ext_resource type="Texture2D" uid="uid://vbsm5fw346w1" path="res://Sprites/Aguacate/Aguacate_Attack_Down.png" id="2_p7lps"]
@@ -1142,6 +1142,7 @@ radius = 6.5
 [node name="TechnoAguacate" type="CharacterBody2D"]
 position = Vector2(276, 143)
 scale = Vector2(2, 2)
+collision_layer = 8
 script = ExtResource("1_oheg8")
 type_of_control = "arrows"
 

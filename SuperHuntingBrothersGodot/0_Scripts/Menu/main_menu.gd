@@ -97,6 +97,7 @@ func _on_back_menu_pressed():
 	pressed_button = back_difficulty_button
 	func_to_call = "back_menu_funct"
 
+
 func _on_tutorial_pressed():
 	start_timer()
 	pressed_button = tutorial_button

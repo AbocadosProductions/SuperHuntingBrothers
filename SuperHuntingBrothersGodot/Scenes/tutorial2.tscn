@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cmyned4mwck" path="res://Sprites/Raton/Mouse_Run_Right.png" id="18_3vcya"]
 [ext_resource type="Texture2D" uid="uid://bhoi0kd40u72y" path="res://Sprites/Raton/Mouse_Run_Up.png" id="19_7y4xv"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="20_kux7l"]
-[ext_resource type="PackedScene" path="res://Characters/techno_aguacate.tscn" id="21_or5a5"]
-[ext_resource type="PackedScene" path="res://Characters/techno_cattanita.tscn" id="22_yed7l"]
+[ext_resource type="PackedScene" uid="uid://dhujh4icx7pf0" path="res://Characters/techno_aguacate.tscn" id="21_or5a5"]
+[ext_resource type="PackedScene" uid="uid://dh02w306ph4b7" path="res://Characters/techno_cattanita.tscn" id="22_yed7l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -1542,26 +1542,24 @@ offset_bottom = 168.0
 toggle_mode = true
 
 [node name="Cattanita" type="AnimatedSprite2D" parent="Panel/second_to_show"]
-position = Vector2(228, 67.5)
+position = Vector2(230, 73.5)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_bs8cb")
 speed_scale = 2.0
 
 [node name="Aguacate" type="AnimatedSprite2D" parent="Panel/second_to_show"]
-position = Vector2(33.5, 120)
+position = Vector2(31.5, 127)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e58jt")
 speed_scale = 2.0
 
 [node name="TechnoAguacate" parent="Panel/second_to_show" instance=ExtResource("21_or5a5")]
-visible = false
-position = Vector2(31.5, 115.5)
+position = Vector2(28, 115)
 collision_layer = 2
 collision_mask = 2
 
 [node name="TechnoCattanita" parent="Panel/second_to_show" instance=ExtResource("22_yed7l")]
-visible = false
-position = Vector2(229.5, 65.5)
+position = Vector2(234, 61.5)
 collision_layer = 2
 collision_mask = 2
 

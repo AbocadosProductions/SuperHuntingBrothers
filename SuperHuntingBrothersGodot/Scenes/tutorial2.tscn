@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://02hj3dkdc4ic"]
+[gd_scene load_steps=101 format=3 uid="uid://bl7xyllwogw73"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_u21mj"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_cvxst"]
@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cmyned4mwck" path="res://Sprites/Raton/Mouse_Run_Right.png" id="18_3vcya"]
 [ext_resource type="Texture2D" uid="uid://bhoi0kd40u72y" path="res://Sprites/Raton/Mouse_Run_Up.png" id="19_7y4xv"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="20_kux7l"]
-[ext_resource type="PackedScene" uid="uid://oxmmhbeyi0qd" path="res://Characters/techno_aguacate.tscn" id="21_or5a5"]
-[ext_resource type="PackedScene" uid="uid://dogaqo33kvpe7" path="res://Characters/techno_cattanita.tscn" id="22_yed7l"]
+[ext_resource type="PackedScene" path="res://Characters/techno_aguacate.tscn" id="21_or5a5"]
+[ext_resource type="PackedScene" path="res://Characters/techno_cattanita.tscn" id="22_yed7l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -1543,11 +1543,13 @@ toggle_mode = true
 
 [node name="Cattanita" type="AnimatedSprite2D" parent="Panel/second_to_show"]
 position = Vector2(228, 67.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_bs8cb")
 speed_scale = 2.0
 
 [node name="Aguacate" type="AnimatedSprite2D" parent="Panel/second_to_show"]
 position = Vector2(33.5, 120)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e58jt")
 speed_scale = 2.0
 

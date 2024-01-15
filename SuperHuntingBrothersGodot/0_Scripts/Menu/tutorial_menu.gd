@@ -74,8 +74,8 @@ func next_funct():
 	if showing_first_block:
 		moving_blocks = true
 		next_button.set_visible(false)
-		TechnoMouse1.visible = false
-		TechnoMouse2.visible = false
+		TechnoMouse1.queue_free()
+		TechnoMouse2.queue_free()
 
 func _on_play_button_pressed():
 	start_timer()

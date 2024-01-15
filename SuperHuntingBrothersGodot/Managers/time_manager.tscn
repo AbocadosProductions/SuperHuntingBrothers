@@ -1,17 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://63q7angp6o8w"]
+[gd_scene load_steps=3 format=3 uid="uid://63q7angp6o8w"]
 
 [ext_resource type="Script" path="res://0_Scripts/Managers/TimeManager.gd" id="1_q2kcp"]
+[ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_7r6nd"]
 
 [node name="time_manager" type="Node2D" node_paths=PackedStringArray("time_label")]
 script = ExtResource("1_q2kcp")
 time_label = NodePath("time_label")
 
+[node name="Panel" type="Panel" parent="."]
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 70.0
+offset_bottom = 50.0
+theme = ExtResource("2_7r6nd")
+
 [node name="time_label" type="Label" parent="."]
 offset_top = 1.0
 offset_right = 57.0
 offset_bottom = 53.0
-theme_override_font_sizes/font_size = 20
-text = "50
-"
+theme = ExtResource("2_7r6nd")
+theme_override_font_sizes/font_size = 40
+text = "50.0"
 horizontal_alignment = 1
 vertical_alignment = 1

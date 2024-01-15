@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=67 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=69 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b7m5i6g3mg0ex" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
 [ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
+[ext_resource type="Texture2D" uid="uid://dgd0qf6ss8ofc" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hccgy"]
@@ -235,6 +236,12 @@ texture_margin_bottom = 7.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_halqy"]
 texture = ExtResource("6_andiy")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvs5c"]
+texture = ExtResource("9_rgiju")
+texture_margin_right = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6uns"]
 texture = ExtResource("7_qmqof")
 texture_margin_left = 6.0
@@ -361,6 +368,8 @@ Panel_Level_Success/base_type = &"Panel"
 Panel_Level_Success/styles/panel = SubResource("StyleBoxTexture_inkce")
 Panel_Logo/base_type = &"Panel"
 Panel_Logo/styles/panel = SubResource("StyleBoxTexture_halqy")
+Panel_Maze/base_type = &"Panel"
+Panel_Maze/styles/panel = SubResource("StyleBoxTexture_dvs5c")
 Panel_Pause/base_type = &"Panel"
 Panel_Pause/styles/panel = SubResource("StyleBoxTexture_y6uns")
 Panel_Tutorial/base_type = &"Panel"

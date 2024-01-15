@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://chqdtujv5ogdt"]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://0_Scripts/Resources/SaveSystem.gd" id="1_ctaic"]
 
@@ -6,16 +6,16 @@
 script = ExtResource("1_ctaic")
 record_times_per_level = {
 "Easy": [50],
-"Normal": []
+"Normal": [27, 45, 5, 32]
 }
-times_per_level = [60, 60, 50, 50]
-actual_punctuation = 0
+times_per_level = [27, 45, 5, 32]
+actual_punctuation = 5100
 record_punctuation = {
 "Easy": 0,
 "Normal": 0
 }
 record_level = {
 "Easy": 0,
-"Normal": 0
+"Normal": 4
 }
-difficulty = "Easy"
+difficulty = "Normal"

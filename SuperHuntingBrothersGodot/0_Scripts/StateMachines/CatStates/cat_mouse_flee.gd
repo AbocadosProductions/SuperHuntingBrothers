@@ -22,3 +22,4 @@ func Update(_delta : float):
 func on_cat_signal_detected(signal_data):
 	if Constants.PAUSE_MENU_SIGNAL == signal_data:
 		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
+		cat.last_state = self.name

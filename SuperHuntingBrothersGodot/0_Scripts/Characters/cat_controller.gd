@@ -6,6 +6,7 @@ signal External_Signal
 @export var scene_manager : Node2D
 
 var direction = ""
+var last_state = ""
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)

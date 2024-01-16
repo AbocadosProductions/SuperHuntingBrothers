@@ -44,6 +44,7 @@ func on_mouse_signal_detected(signal_data):
 
 	if Constants.PAUSE_MENU_SIGNAL == signal_data:
 		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
+		mouse.last_state = self.name
 
 func update_mouse_direction(dir : Vector2):
 	if abs(dir).x > 0:

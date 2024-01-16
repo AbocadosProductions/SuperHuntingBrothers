@@ -9,6 +9,7 @@ extends Control
 @onready var quit_button : Button = $normal_menu/Menu/VBoxContainer/quit_button
 @onready var vol_button : Button = $normal_menu/Menu/VBoxContainer/volumen
 @onready var vol_panel : Panel = $normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen
+var show_vol_panel = false
 @onready var vol_slider : HSlider = $normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider
 
 @onready var back_button : Button = $credits_menu/Panel/back_to_menu_button
@@ -37,6 +38,18 @@ func _ready():
 	normal_menu.focus()
 	start_game_button.focus_mode = Control.FOCUS_NONE
 	data_manager.reset_data_from_run()
+	
+func _process(delta):
+	if show_vol_panel:
+		if vol_panel.position.x < 80:
+			vol_panel.position.x += 5
+			if vol_panel.position.x >= 80 :
+				vol_panel.position.x = 80
+	else:
+		if vol_panel.position.x > 0:
+			vol_panel.position.x -= 5
+			if vol_panel.position.x < 0 :
+				vol_panel.position.x = 0
 	
 func _on_play_button_pressed():
 	start_timer()
@@ -158,4 +171,11 @@ func _on_volumen_pressed():
 	func_to_call = "vol_funct"
 
 func vol_funct():
-	vol_panel.position = Vector2(80, 0)
+	show_vol_panel = true
+	vol_slider.focus_mode = Control.FOCUS_ALL
+	vol_slider.grab_focus()
+
+func _on_volumen_slider_focus_exited():
+	show_vol_panel = false
+	vol_slider.focus_mode = Control.FOCUS_NONE
+	

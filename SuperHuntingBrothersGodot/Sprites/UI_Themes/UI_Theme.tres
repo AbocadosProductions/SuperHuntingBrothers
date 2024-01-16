@@ -208,19 +208,19 @@ region_rect = Rect2(176, 210, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5r6a"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(80, 21, 80, 17)
+region_rect = Rect2(80, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dodoy"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(0, 21, 80, 17)
+region_rect = Rect2(0, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es46q"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(0, 21, 80, 17)
+region_rect = Rect2(0, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cowgn"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(80, 21, 80, 17)
+region_rect = Rect2(80, 20, 80, 17)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3dhi"]
 bg_color = Color(0.94902, 0.984314, 0.729412, 1)

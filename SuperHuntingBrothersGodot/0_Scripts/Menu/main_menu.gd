@@ -7,7 +7,9 @@ extends Control
 @onready var cred_button : Button = $normal_menu/Menu/VBoxContainer/credits_button
 @onready var play_button : Button = $normal_menu/Menu/VBoxContainer/play_button
 @onready var quit_button : Button = $normal_menu/Menu/VBoxContainer/quit_button
-@onready var vol_slider : HSlider = $normal_menu/Menu/VBoxContainer/Sonido/volumen_slider
+@onready var vol_button : Button = $normal_menu/Menu/VBoxContainer/volumen
+@onready var vol_panel : Panel = $normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen
+@onready var vol_slider : HSlider = $normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider
 
 @onready var back_button : Button = $credits_menu/Panel/back_to_menu_button
 @onready var tutorial_button : Button = $credits_menu/Panel/back_to_menu_button
@@ -148,3 +150,12 @@ func _on_start_game_button_pressed():
 	
 func start_game_funct():
 	get_tree().change_scene_to_file(Constants.FIRST_LEVEL)
+
+
+func _on_volumen_pressed():
+	start_timer()
+	pressed_button = vol_button
+	func_to_call = "vol_funct"
+
+func vol_funct():
+	vol_panel.position = Vector2(80, 0)

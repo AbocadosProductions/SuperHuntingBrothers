@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=14 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_chsbi"]
@@ -6,7 +6,6 @@
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="3_hdgmk"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/credits_menu.gd" id="3_pytil"]
 [ext_resource type="Texture2D" uid="uid://csv51eujo6hpp" path="res://Sprites/UI/Sound_Slider_Box.png" id="5_oen3u"]
-[ext_resource type="Texture2D" uid="uid://7dqbu1pfqg1n" path="res://Sprites/UI/Button_All.png" id="6_i84hv"]
 [ext_resource type="Texture2D" uid="uid://bc5tnfgdmcoe2" path="res://Sprites/UI/Panel_Creditos.png" id="8_5k6j3"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/difficulty_menu.gd" id="9_8phu2"]
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="10_84r8m"]
@@ -39,10 +38,6 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_8phcu")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ycqsu"]
-texture = ExtResource("6_i84hv")
-region_rect = Rect2(0, 21, 80, 17)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cis87"]
 texture = ExtResource("5_oen3u")
 texture_margin_left = 1.0
@@ -69,6 +64,7 @@ grow_vertical = 2
 script = ExtResource("1_odwai")
 
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -5
 tile_set = SubResource("TileSet_pl51o")
 format = 2
 layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, -327690, 0, 0, -262154, 0, 0, -196618, 0, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 0, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, -327689, 0, 0, -262153, 0, 0, -196617, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, -327688, 0, 0, -262152, 0, 0, -196616, 0, 0, -131080, 0, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 0, 393208, 0, 0, -327687, 0, 0, -262151, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, -327686, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, 393210, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, -327684, 0, 0, -262148, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, -327683, 0, 0, -262147, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, -393211, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -393209, 0, 0, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, -393208, 0, 0, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0)
@@ -89,14 +85,14 @@ theme_type_variation = &"Panel_Logo"
 [node name="Menu" type="Panel" parent="normal_menu"]
 offset_left = -90.0
 offset_top = -67.0
-offset_bottom = 33.0
+offset_bottom = 37.0
 scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="normal_menu/Menu"]
 layout_mode = 0
 offset_right = 90.0
-offset_bottom = 100.0
+offset_bottom = 103.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 auto_translate = false
@@ -112,30 +108,47 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 toggle_mode = true
 
-[node name="Sonido" type="VBoxContainer" parent="normal_menu/Menu/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = -2
-
-[node name="Panel_Volumen" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido"]
+[node name="tutorial" type="Button" parent="normal_menu/Menu/VBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_ycqsu")
+theme_type_variation = &"Button_Tutorial"
+toggle_mode = true
 
-[node name="volumen_slider" type="HSlider" parent="normal_menu/Menu/VBoxContainer/Sonido"]
-custom_minimum_size = Vector2(37, 12)
+[node name="volumen" type="Button" parent="normal_menu/Menu/VBoxContainer"]
+custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-value = 80.0
+theme_type_variation = &"Button_Volume"
 
-[node name="Fondo_Slider" type="Panel" parent="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider"]
+[node name="Panel_Volumen" type="Panel" parent="normal_menu/Menu/VBoxContainer/volumen"]
+z_index = -1
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+offset_right = 80.0
+offset_bottom = 17.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="volumen_slider" type="HSlider" parent="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen"]
+custom_minimum_size = Vector2(58, 12)
+layout_mode = 2
+offset_left = 12.0
+offset_top = 1.5
+offset_right = 70.0
+offset_bottom = 13.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+
+[node name="Fondo_Slider" type="Panel" parent="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider"]
 show_behind_parent = true
 layout_mode = 0
-offset_left = -1.0
+offset_left = -0.5
 offset_top = 3.0
-offset_right = 39.0
+offset_right = 59.5
 offset_bottom = 8.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_cis87")
 
@@ -191,17 +204,6 @@ scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_hdgmk")
-
-[node name="tutorial" type="Button" parent="difficulty_menu/Panel"]
-custom_minimum_size = Vector2(80, 17)
-layout_mode = 2
-offset_left = 44.0
-offset_right = 124.0
-offset_bottom = 17.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"Button_Tutorial"
-toggle_mode = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="difficulty_menu/Panel"]
 layout_mode = 2
@@ -277,11 +279,12 @@ one_shot = true
 [node name="DataManager" parent="." instance=ExtResource("10_84r8m")]
 
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
-[connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/Sonido/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
+[connection signal="pressed" from="normal_menu/Menu/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="normal_menu/Menu/VBoxContainer/volumen" to="." method="_on_volumen_pressed"]
+[connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="credits_menu/Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/back_menu" to="." method="_on_back_menu_pressed"]

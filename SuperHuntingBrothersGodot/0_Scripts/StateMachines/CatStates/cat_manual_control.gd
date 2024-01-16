@@ -67,4 +67,5 @@ func on_cat_signal_detected(signal_data):
 		Transition.emit(self, Constants.CAT_MOUSE_CAPTURED_SIGNAL)
 	if Constants.PAUSE_MENU_SIGNAL == signal_data:
 		Transition.emit(self, Constants.PAUSE_MENU_SIGNAL)
+		cat.last_state = self.name
 

@@ -2,7 +2,7 @@ extends State
 
 @export var scene_manager : Node2D
 
-var preparation_time : float = Constants.SCENE_MANAGER_PREPARATION_TIME
+var preparation_time : float = Constants.SCENE_MANAGER_TIME_OUT_TIME
 var time_passed_in_state : float = 0
 
 func Enter():

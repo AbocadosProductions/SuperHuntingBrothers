@@ -4,6 +4,9 @@ extends Node2D
 @export var scene_manager : Node2D
 @export var data_manager : Node2D
 
+@onready var sprite : Sprite2D = $Sprite2D
+@onready var animation_player : AnimationPlayer = $AnimationPlayer
+
 var time_in_level
 var const_level_time
 var minimum_time
@@ -17,18 +20,18 @@ signal Time_Signal
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
-	time_label.visible = false
+	animation_player.play(Constants.TIME_MANAGER_IDLE_ANIMATION)
 	prepare_time_level()
 	hide_childs()
 
 
 func show_childs():
-	for child in get_children():
-		child.visible = true
+	sprite.visible = true
+	time_label.visible = true
 		
 func hide_childs():
-	for child in get_children():
-		child.visible = false
+	sprite.visible = false
+	time_label.visible = false
 
 func scene_manager_signal_detected(signal_emited):
 	if signal_emited == Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL:
@@ -66,11 +69,13 @@ func _process(delta):
 	elif time_in_level <= 0:
 		time_label.text = "0.0"
 		Time_Signal.emit(self, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)
+		animation_player.play(Constants.TIME_MANAGER_TIME_OUT_ANIMATION)
 
 func check_for_treshold():
 	if time_in_level < time_treshold and not treshold_reached:
 		Time_Signal.emit(self, Constants.TIME_MANAGER_TRESHOLD_REACHED_SIGNAL)
 		treshold_reached = true
+		animation_player.play(Constants.TIME_MANAGER_THRESHOLD_ANIMATION)
 
 func get_remaining_time():
 	return time_in_level

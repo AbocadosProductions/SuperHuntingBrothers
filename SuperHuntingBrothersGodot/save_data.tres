@@ -18,4 +18,4 @@ record_level = {
 "Easy": 0,
 "Normal": 4
 }
-difficulty = "Normal"
+difficulty = ""

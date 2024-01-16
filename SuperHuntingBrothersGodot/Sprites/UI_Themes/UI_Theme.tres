@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=71 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=76 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b7m5i6g3mg0ex" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
 [ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
-[ext_resource type="Texture2D" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
+[ext_resource type="Texture2D" uid="uid://dgd0qf6ss8ofc" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="11_6eycr"]
 
@@ -104,6 +104,27 @@ region_rect = Rect2(0, 189, 80, 17)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1dggh"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 189, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lj0w"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+modulate_color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ma707"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b08y8"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtdwp"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktn4f"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 231, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxvch"]
 texture = ExtResource("2_iexnn")
@@ -316,6 +337,12 @@ Button_Hard/styles/focus = SubResource("StyleBoxTexture_mgv8i")
 Button_Hard/styles/hover = SubResource("StyleBoxTexture_jljeh")
 Button_Hard/styles/normal = SubResource("StyleBoxTexture_jn780")
 Button_Hard/styles/pressed = SubResource("StyleBoxTexture_1dggh")
+Button_Jugar/base_type = &"Button"
+Button_Jugar/styles/disabled = SubResource("StyleBoxTexture_3lj0w")
+Button_Jugar/styles/focus = SubResource("StyleBoxTexture_ma707")
+Button_Jugar/styles/hover = SubResource("StyleBoxTexture_b08y8")
+Button_Jugar/styles/normal = SubResource("StyleBoxTexture_mtdwp")
+Button_Jugar/styles/pressed = SubResource("StyleBoxTexture_ktn4f")
 Button_Menu/base_type = &"Button"
 Button_Menu/styles/focus = SubResource("StyleBoxTexture_bxvch")
 Button_Menu/styles/hover = SubResource("StyleBoxTexture_bcf4v")

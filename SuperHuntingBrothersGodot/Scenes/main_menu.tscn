@@ -179,7 +179,6 @@ theme_type_variation = &"Button_Back"
 toggle_mode = true
 
 [node name="difficulty_menu" type="Node2D" parent="."]
-visible = false
 position = Vector2(-4, -101)
 script = ExtResource("9_8phu2")
 
@@ -228,18 +227,17 @@ size_flags_vertical = 4
 theme_type_variation = &"Button_Hard"
 toggle_mode = true
 
-[node name="start_game_button" type="Button" parent="difficulty_menu/Panel"]
-custom_minimum_size = Vector2(80, 17)
-layout_mode = 2
-offset_left = 88.0
-offset_top = 129.0
-offset_right = 168.0
-offset_bottom = 146.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"Button_Play"
-disabled = true
-toggle_mode = true
+[node name="difficulty_label" type="Label" parent="difficulty_menu/Panel"]
+layout_mode = 0
+offset_left = 15.5
+offset_top = 46.5
+offset_right = 153.5
+offset_bottom = 115.5
+text = "Por favor, selecciona una difficultad"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
 
 [node name="back_menu" type="Button" parent="difficulty_menu/Panel"]
 custom_minimum_size = Vector2(80, 17)
@@ -253,17 +251,18 @@ size_flags_vertical = 4
 theme_type_variation = &"Button_Menu"
 toggle_mode = true
 
-[node name="difficulty_label" type="Label" parent="difficulty_menu/Panel"]
-layout_mode = 0
-offset_left = 15.5
-offset_top = 46.5
-offset_right = 153.5
-offset_bottom = 115.5
-text = "Por favor, selecciona una difficultad"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 2
+[node name="start_game_button" type="Button" parent="difficulty_menu/Panel"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 2
+offset_left = 88.0
+offset_top = 129.0
+offset_right = 168.0
+offset_bottom = 146.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"Button_Jugar"
+disabled = true
+toggle_mode = true
 
 [node name="Timer" type="Timer" parent="difficulty_menu"]
 wait_time = 0.25
@@ -283,6 +282,6 @@ one_shot = true
 [connection signal="pressed" from="difficulty_menu/Panel/tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/start_game_button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="difficulty_menu/Panel/back_menu" to="." method="_on_back_menu_pressed"]
+[connection signal="pressed" from="difficulty_menu/Panel/start_game_button" to="." method="_on_start_game_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

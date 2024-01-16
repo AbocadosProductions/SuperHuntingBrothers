@@ -3,7 +3,7 @@
 const FIRST_LEVEL: String = "res://Scenes/core.tscn"
 const MAIN_MENU: String = "res://Scenes/main_menu.tscn"
 const LOSE_MENU: String = "res://Scenes/lose_menu.tscn"
-const TUTORIAL_MENU: String = "res://Scenes/tutorial.tscn"
+const TUTORIAL_MENU: String = "res://Scenes/animated_tutorial.tscn"
 
 # --------------------------------------------------------------------------- #
 
@@ -190,5 +190,19 @@ const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
 
 const END_COUNTDOWN = "END_COUNTDOWN"
 const ANIMATION_COUNTDOWN = "Countdown"
+
+# --------------------------------------------------------------------------- #
+
+# Difficulty Selector constants
+
+const DEFAULT_TEXT = "Por favor, selecciona una difficultad"
+const DIFFICULTY_TEXTS = {
+	NORMAL_MODE : "- Tiempo Maximo de Nivel : 90 s
+					\n- Reduccion de tiempo por Nivel : 3 s
+					\n- Tiempo para capturar los dos ratones : 3 s",
+	HARD_MODE : "- Tiempo Maximo de Nivel : 60 s
+					\n- Reduccion de tiempo por Nivel : 5 s
+					\n- Tiempo para capturar los dos ratones : 2 s"
+}
 
 # --------------------------------------------------------------------------- #

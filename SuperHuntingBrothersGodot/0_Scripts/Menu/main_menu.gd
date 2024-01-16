@@ -26,6 +26,7 @@ func _ready():
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	normal_menu.focus()
+	data_manager.reset_data_from_run()
 	
 func _on_play_button_pressed():
 	start_timer()

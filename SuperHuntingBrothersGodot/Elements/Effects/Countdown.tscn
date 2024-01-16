@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://8xmrwsop4lbt"]
 
-[ext_resource type="Texture2D" uid="uid://cayn54mco4c5e" path="res://Sprites/UI/Countdown.png" id="1_7s5yb"]
+[ext_resource type="Texture2D" uid="uid://wj3fd740e042" path="res://Sprites/UI/Countdown.png" id="1_7s5yb"]
 [ext_resource type="Script" path="res://0_Scripts/Effects/Countdown.gd" id="2_8l4em"]
 
 [sub_resource type="Animation" id="Animation_elqll"]
@@ -176,7 +176,6 @@ _data = {
 }
 
 [node name="Countdown" type="Sprite2D"]
-modulate = Color(1, 1, 1, 0)
 rotation = 0.340339
 scale = Vector2(5, 5)
 texture = ExtResource("1_7s5yb")

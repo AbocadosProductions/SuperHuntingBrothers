@@ -60,6 +60,7 @@ const SCENE_MANAGER_ONE_MOUSE_CAPTURED_SIGNAL = "mouse_captured"
 const SCENE_MANAGER_MICE_CAPTURED_SIGNAL = "mice_captured"
 const SCENE_MANAGER_SHOW_POINTS_SIGNAL = "show_points"
 const SCENE_MANAGER_PREPARATION_TIME = 1
+const SCENE_MANAGER_TIME_OUT_TIME = 3
 
 # --------------------------------------------------------------------------- #
 
@@ -71,6 +72,9 @@ const DEFAULT_TIME_PER_LEVEL = 60
 const TIME_PER_LEVEL_TO_SUSTRACT = 5
 const MINIMUM_TIME_PER_LEVEL = 5
 const TRESHOLD_TIME = 15
+const TIME_MANAGER_IDLE_ANIMATION = "Idle"
+const TIME_MANAGER_THRESHOLD_ANIMATION = "Last_Seconds"
+const TIME_MANAGER_TIME_OUT_ANIMATION = "Time_Out"
 
 # --------------------------------------------------------------------------- #
 

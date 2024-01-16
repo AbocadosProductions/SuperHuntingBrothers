@@ -942,6 +942,8 @@ size = Vector2(6, 11)
 
 [node name="Katanita" type="CharacterBody2D"]
 collision_mask = 4
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_qpobw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

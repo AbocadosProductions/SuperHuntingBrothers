@@ -1148,6 +1148,8 @@ _data = {
 
 [node name="aguacate" type="CharacterBody2D"]
 collision_mask = 4
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_nmf7v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

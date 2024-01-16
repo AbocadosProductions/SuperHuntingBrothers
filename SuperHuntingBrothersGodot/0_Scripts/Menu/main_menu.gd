@@ -33,6 +33,7 @@ func _ready():
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	normal_menu.focus()
+	start_game_button.focus_mode = Control.FOCUS_NONE
 	data_manager.reset_data_from_run()
 	
 func _on_play_button_pressed():
@@ -80,6 +81,7 @@ func credits_funct():
 func play_funct():
 	normal_menu.set_visible(false)
 	difficulty_menu.set_visible(true)
+	start_game_button.focus_mode = Control.FOCUS_NONE
 	difficulty_menu.focus()
 	
 func quit_funct():
@@ -134,7 +136,7 @@ func back_menu_funct():
 	data_manager.set_difficulty("")
 	difficulty_label.text = Constants.DEFAULT_TEXT
 	start_game_button.disabled = true
-	
+	start_game_button.focus_mode = Control.FOCUS_NONE
 	normal_menu.set_visible(true)
 	difficulty_menu.set_visible(false)
 	normal_menu.focus()

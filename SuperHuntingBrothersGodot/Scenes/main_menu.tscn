@@ -179,6 +179,7 @@ theme_type_variation = &"Button_Back"
 toggle_mode = true
 
 [node name="difficulty_menu" type="Node2D" parent="."]
+visible = false
 position = Vector2(-4, -101)
 script = ExtResource("9_8phu2")
 
@@ -260,6 +261,7 @@ offset_right = 168.0
 offset_bottom = 146.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_type_variation = &"Button_Jugar"
 disabled = true
 toggle_mode = true

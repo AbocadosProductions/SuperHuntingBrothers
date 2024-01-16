@@ -192,7 +192,6 @@ theme_type_variation = &"Button_Back"
 toggle_mode = true
 
 [node name="difficulty_menu" type="Node2D" parent="."]
-visible = false
 position = Vector2(-4, -101)
 script = ExtResource("9_8phu2")
 
@@ -200,6 +199,27 @@ script = ExtResource("9_8phu2")
 offset_left = -169.0
 offset_top = -43.0
 offset_bottom = 110.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_hdgmk")
+
+[node name="normal_panel" type="Panel" parent="difficulty_menu/Panel"]
+z_index = -1
+offset_top = 30.0
+offset_right = 50.0
+offset_bottom = 80.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_hdgmk")
+
+[node name="hard_panel" type="Panel" parent="difficulty_menu/Panel"]
+z_index = -1
+offset_left = 69.0
+offset_top = 30.0
+offset_right = 119.0
+offset_bottom = 80.0
 scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 4

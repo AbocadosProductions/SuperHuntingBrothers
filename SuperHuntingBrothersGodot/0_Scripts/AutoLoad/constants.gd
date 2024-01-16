@@ -89,6 +89,7 @@ const MOUSE_CAT_DETECTED_SIGNAL = "captured"
 const CAT_PREFIX = "cat"
 const WALL_PREFIX = "wall"
 const MAX_CAPTURE_TIME = 2.0
+const MAX_BEGINING_TIME = 2.0
 const MAX_FLEE_TIME = 1.5
 
 # --------------------------------------------------------------------------- #

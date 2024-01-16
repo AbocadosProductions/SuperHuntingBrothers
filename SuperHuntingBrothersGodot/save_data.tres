@@ -6,10 +6,10 @@
 script = ExtResource("1_ctaic")
 record_times_per_level = {
 "Easy": [50],
-"Normal": [27, 45, 5, 32]
+"Normal": [27, 45, 5, 32, 16]
 }
-times_per_level = [27, 45, 5, 32]
-actual_punctuation = 5100
+times_per_level = [27, 45, 5, 32, 16]
+actual_punctuation = 7500
 record_punctuation = {
 "Easy": 0,
 "Normal": 0

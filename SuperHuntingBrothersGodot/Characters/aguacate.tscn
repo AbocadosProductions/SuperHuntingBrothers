@@ -27,8 +27,8 @@
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_211rw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejrtm"]
-radius = 5.0
-height = 10.0
+radius = 3.0
+height = 6.0
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"

@@ -1,33 +1,29 @@
-[gd_scene load_steps=44 format=3 uid="uid://g2hunplky2nq"]
+[gd_scene load_steps=44 format=3 uid="uid://c8a5gceuocnf1"]
 
-[ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_kbeam"]
-[ext_resource type="Texture2D" uid="uid://dr16jceetyjt3" path="res://Sprites/Cattanita/Cattanita_Attack_Down.png" id="2_a032n"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="3_lln8u"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_manual_control.gd" id="4_f6rh0"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_captured.gd" id="5_6pder"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="6_7b65y"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="7_21jjn"]
-[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_flee.gd" id="8_fbbb0"]
-[ext_resource type="Texture2D" uid="uid://ddcw7my2ad7d7" path="res://Sprites/Cattanita/Cattanita_Attack_Left.png" id="9_rv2b6"]
-[ext_resource type="Texture2D" uid="uid://dptne7c12b0gw" path="res://Sprites/Cattanita/Cattanita_Attack_Right.png" id="10_aqhat"]
-[ext_resource type="Texture2D" uid="uid://bcfm3wfdotk2f" path="res://Sprites/Cattanita/Cattanita_Attack_Up.png" id="11_ofh8l"]
-[ext_resource type="Texture2D" uid="uid://by073affwk71a" path="res://Sprites/Cattanita/Cattanita_Idle_Down.png" id="12_te6w2"]
-[ext_resource type="Texture2D" uid="uid://bmlq3u3ntutct" path="res://Sprites/Cattanita/Cattanita_Idle_Left.png" id="13_b86n6"]
-[ext_resource type="Texture2D" uid="uid://ej07a8nebnm1" path="res://Sprites/Cattanita/Cattanita_Idle_Right.png" id="14_s7o50"]
-[ext_resource type="Texture2D" uid="uid://dfrf85mi35u8y" path="res://Sprites/Cattanita/Cattanita_Idle_Up.png" id="15_l73w3"]
-[ext_resource type="Texture2D" uid="uid://bepobrp7eglio" path="res://Sprites/Cattanita/Cattanita_Release_Down.png" id="16_t24k1"]
-[ext_resource type="Texture2D" uid="uid://dhxaeeismxgdq" path="res://Sprites/Cattanita/Cattanita_Release_Left.png" id="17_vftmx"]
-[ext_resource type="Texture2D" uid="uid://bt0155qb1d2ur" path="res://Sprites/Cattanita/Cattanita_Release_Right.png" id="18_vv6fm"]
-[ext_resource type="Texture2D" uid="uid://dy2wx2qt8k8u7" path="res://Sprites/Cattanita/Cattanita_Release_Up.png" id="19_bqy7u"]
-[ext_resource type="Texture2D" uid="uid://d276k6n0onf4k" path="res://Sprites/Cattanita/Cattanita_Run_Down.png" id="20_lokgw"]
-[ext_resource type="Texture2D" uid="uid://q05x4g0qfet8" path="res://Sprites/Cattanita/Cattanita_Run_Left.png" id="21_86dxi"]
-[ext_resource type="Texture2D" uid="uid://cp4p2qma2sfl4" path="res://Sprites/Cattanita/Cattanita_Run_Right.png" id="22_t7su5"]
-[ext_resource type="Texture2D" uid="uid://58t2i41i7iba" path="res://Sprites/Cattanita/Cattanita_Run_Up.png" id="23_x0yn3"]
-[ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_ifqx0"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ejrtm"]
-radius = 5.0
-height = 10.0
+[ext_resource type="Script" path="res://0_Scripts/Characters/cat_controller.gd" id="1_qpobw"]
+[ext_resource type="Texture2D" uid="uid://dr16jceetyjt3" path="res://Sprites/Cattanita/Cattanita_Attack_Down.png" id="2_ltnwp"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/state_machine.gd" id="2_wm5g0"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_manual_control.gd" id="3_iqtod"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_captured.gd" id="4_e4vxt"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mouse_flee.gd" id="5_8lib7"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_mice_captured.gd" id="5_q4oty"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/CatStates/cat_game_paused.gd" id="6_isxei"]
+[ext_resource type="Texture2D" uid="uid://ddcw7my2ad7d7" path="res://Sprites/Cattanita/Cattanita_Attack_Left.png" id="8_e8s4i"]
+[ext_resource type="Texture2D" uid="uid://dptne7c12b0gw" path="res://Sprites/Cattanita/Cattanita_Attack_Right.png" id="9_jfjqd"]
+[ext_resource type="Texture2D" uid="uid://bcfm3wfdotk2f" path="res://Sprites/Cattanita/Cattanita_Attack_Up.png" id="10_wcmyr"]
+[ext_resource type="Texture2D" uid="uid://by073affwk71a" path="res://Sprites/Cattanita/Cattanita_Idle_Down.png" id="11_gmdhe"]
+[ext_resource type="Texture2D" uid="uid://bmlq3u3ntutct" path="res://Sprites/Cattanita/Cattanita_Idle_Left.png" id="12_kamp2"]
+[ext_resource type="Texture2D" uid="uid://ej07a8nebnm1" path="res://Sprites/Cattanita/Cattanita_Idle_Right.png" id="13_vfd0q"]
+[ext_resource type="Texture2D" uid="uid://dfrf85mi35u8y" path="res://Sprites/Cattanita/Cattanita_Idle_Up.png" id="14_wi4dr"]
+[ext_resource type="Texture2D" uid="uid://bepobrp7eglio" path="res://Sprites/Cattanita/Cattanita_Release_Down.png" id="15_wc6r7"]
+[ext_resource type="Texture2D" uid="uid://dhxaeeismxgdq" path="res://Sprites/Cattanita/Cattanita_Release_Left.png" id="16_rp7gm"]
+[ext_resource type="Texture2D" uid="uid://bt0155qb1d2ur" path="res://Sprites/Cattanita/Cattanita_Release_Right.png" id="17_8tpq7"]
+[ext_resource type="Texture2D" uid="uid://dy2wx2qt8k8u7" path="res://Sprites/Cattanita/Cattanita_Release_Up.png" id="18_p4kjc"]
+[ext_resource type="Texture2D" uid="uid://d276k6n0onf4k" path="res://Sprites/Cattanita/Cattanita_Run_Down.png" id="19_0uxyq"]
+[ext_resource type="Texture2D" uid="uid://q05x4g0qfet8" path="res://Sprites/Cattanita/Cattanita_Run_Left.png" id="20_g03aj"]
+[ext_resource type="Texture2D" uid="uid://cp4p2qma2sfl4" path="res://Sprites/Cattanita/Cattanita_Run_Right.png" id="21_02tr2"]
+[ext_resource type="Texture2D" uid="uid://58t2i41i7iba" path="res://Sprites/Cattanita/Cattanita_Run_Up.png" id="22_fivuc"]
+[ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="24_63yi8"]
 
 [sub_resource type="Animation" id="Animation_gu52p"]
 resource_name = "Attack_Down"
@@ -42,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_a032n")]
+"values": [ExtResource("2_ltnwp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -83,14 +79,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, 0)]
+"values": [Vector2(8, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_34t5a"]
@@ -106,7 +102,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_rv2b6")]
+"values": [ExtResource("8_e8s4i")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -147,14 +143,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-8, 7)]
+"values": [Vector2(-8, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_y7242"]
@@ -170,7 +166,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("10_aqhat")]
+"values": [ExtResource("9_jfjqd")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -211,14 +207,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, 7)]
+"values": [Vector2(9, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_fyupl"]
@@ -234,7 +230,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("11_ofh8l")]
+"values": [ExtResource("10_wcmyr")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -275,14 +271,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(9, -1)]
+"values": [Vector2(9, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ymk0d"]
@@ -299,7 +295,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("12_te6w2")]
+"values": [ExtResource("11_gmdhe")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -340,14 +336,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(7, -2)]
+"values": [Vector2(7, -3)]
 }
 
 [sub_resource type="Animation" id="Animation_fkt2n"]
@@ -364,7 +360,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("13_b86n6")]
+"values": [ExtResource("12_kamp2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -405,14 +401,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-2, 6)]
+"values": [Vector2(-1, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_isqy6"]
@@ -429,7 +425,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("14_s7o50")]
+"values": [ExtResource("13_vfd0q")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -470,14 +466,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2, 6)]
+"values": [Vector2(1, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_tmkxp"]
@@ -494,7 +490,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("15_l73w3")]
+"values": [ExtResource("14_wi4dr")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -535,14 +531,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(6, 0)]
+"values": [Vector2(7, -5)]
 }
 
 [sub_resource type="Animation" id="Animation_pq1rt"]
@@ -557,7 +553,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_a032n")]
+"values": [ExtResource("2_ltnwp")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -598,7 +594,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -621,7 +617,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("16_t24k1")]
+"values": [ExtResource("15_wc6r7")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -662,7 +658,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -685,7 +681,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("17_vftmx")]
+"values": [ExtResource("16_rp7gm")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -726,14 +722,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-8, 7)]
+"values": [Vector2(-9, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_irrg5"]
@@ -749,7 +745,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("18_vv6fm")]
+"values": [ExtResource("17_8tpq7")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -790,14 +786,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, 7)]
+"values": [Vector2(9, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_70yvk"]
@@ -813,7 +809,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("19_bqy7u")]
+"values": [ExtResource("18_p4kjc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -854,7 +850,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -878,7 +874,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("20_lokgw")]
+"values": [ExtResource("19_0uxyq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -919,14 +915,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, 0)]
+"values": [Vector2(8, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_gi0is"]
@@ -943,7 +939,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("21_86dxi")]
+"values": [ExtResource("20_g03aj")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -984,14 +980,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-2, 6)]
+"values": [Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_6svau"]
@@ -1008,7 +1004,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("22_t7su5")]
+"values": [ExtResource("21_02tr2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1049,14 +1045,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2, 6)]
+"values": [Vector2(0, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_1momu"]
@@ -1073,7 +1069,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("23_x0yn3")]
+"values": [ExtResource("22_fivuc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1114,7 +1110,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:offset")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1145,42 +1141,42 @@ _data = {
 "Run_Up": SubResource("Animation_1momu")
 }
 
-[node name="cattanita" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5jvbw"]
+radius = 3.0
+height = 6.0
+
+[node name="Katanita" type="CharacterBody2D"]
 collision_mask = 4
-script = ExtResource("1_kbeam")
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_qpobw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_a032n")
-offset = Vector2(8, 0)
+position = Vector2(8, 0)
+texture = ExtResource("2_ltnwp")
 hframes = 15
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_ejrtm")
-
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("3_lln8u")
+script = ExtResource("2_wm5g0")
 initial_state = NodePath("mice_captured")
 
-[node name="manual_control" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
-script = ExtResource("4_f6rh0")
+[node name="manual_control" type="Node" parent="StateMachine"]
+script = ExtResource("3_iqtod")
 type_of_control = "asiduyhaiu"
-cat = NodePath("../..")
 
 [node name="mouse_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
-script = ExtResource("5_6pder")
+script = ExtResource("4_e4vxt")
 cat = NodePath("../..")
 
+[node name="flee" type="Node" parent="StateMachine"]
+script = ExtResource("5_8lib7")
+
 [node name="mice_captured" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
-script = ExtResource("6_7b65y")
+script = ExtResource("5_q4oty")
 cat = NodePath("../..")
 
 [node name="game_paused" type="Node" parent="StateMachine"]
-script = ExtResource("7_21jjn")
-
-[node name="flee" type="Node" parent="StateMachine" node_paths=PackedStringArray("cat")]
-script = ExtResource("8_fbbb0")
-cat = NodePath("../..")
+script = ExtResource("6_isxei")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1188,6 +1184,9 @@ libraries = {
 }
 
 [node name="animation_controller" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "emisioner")]
-script = ExtResource("24_ifqx0")
+script = ExtResource("24_63yi8")
 animation_player = NodePath("../AnimationPlayer")
 emisioner = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5jvbw")

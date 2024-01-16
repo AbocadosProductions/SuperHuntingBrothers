@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b1wrtriir6fy0"]
+[gd_scene load_steps=41 format=3 uid="uid://b1wrtriir6fy0"]
 
 [ext_resource type="Script" path="res://0_Scripts/Characters/mouse_controller.gd" id="1_66pqi"]
 [ext_resource type="Texture2D" uid="uid://dlq0xin5ljdys" path="res://Sprites/Raton/Mouse_Beggining.png" id="2_kl5ym"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_flee.gd" id="5_ojtex"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_mice_captured.gd" id="6_qacun"]
 [ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_game_paused.gd" id="7_raiq5"]
+[ext_resource type="Script" path="res://0_Scripts/StateMachines/MouseStates/mouse_begining.gd" id="9_hfwfn"]
 [ext_resource type="Texture2D" uid="uid://csxw63dittafc" path="res://Sprites/Raton/Mouse_Catch_Down.png" id="9_iad1n"]
 [ext_resource type="Texture2D" uid="uid://cssem74qsy3xy" path="res://Sprites/Raton/Mouse_Catch_Left.png" id="10_kteyg"]
 [ext_resource type="Texture2D" uid="uid://cpsmhwvvb6lfx" path="res://Sprites/Raton/Mouse_Catch_Right.png" id="11_pajy2"]
@@ -977,7 +978,7 @@ hframes = 4
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_rr5mu")
-initial_state = NodePath("idle")
+initial_state = NodePath("begining")
 
 [node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("navigator", "mouse")]
 script = ExtResource("3_jmsit")
@@ -1001,6 +1002,10 @@ mouse = NodePath("../..")
 script = ExtResource("7_raiq5")
 mouse = NodePath("../..")
 
+[node name="begining" type="Node" parent="StateMachine" node_paths=PackedStringArray("mouse")]
+script = ExtResource("9_hfwfn")
+mouse = NodePath("../..")
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
 
@@ -1008,6 +1013,7 @@ collision_layer = 8
 shape = SubResource("RectangleShape2D_770p8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Beggining"
 libraries = {
 "": SubResource("AnimationLibrary_pjfqh")
 }

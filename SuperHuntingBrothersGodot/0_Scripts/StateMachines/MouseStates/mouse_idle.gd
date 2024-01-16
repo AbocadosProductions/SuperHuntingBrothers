@@ -47,7 +47,7 @@ func on_mouse_signal_detected(signal_data):
 		mouse.last_state = self.name
 
 func update_mouse_direction(dir : Vector2):
-	if abs(dir).x > 0:
+	if abs(dir).x > abs(dir).y:
 		if dir.x > 0:
 			mouse.direction = Constants.DIRECTIONS[Vector2(1,0)]
 		else:

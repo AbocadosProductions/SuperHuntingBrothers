@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var button : Button = $Panel/VBoxContainer/tutorial
+@onready var button : Button = $Panel/tutorial
 
 
 func focus():

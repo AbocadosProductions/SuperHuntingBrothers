@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b1r81jjc4inft"]
 
-[ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/katanita.tscn" id="1_87xxr"]
+[ext_resource type="PackedScene" uid="uid://c8a5gceuocnf1" path="res://Characters/cattanita.tscn" id="1_87xxr"]
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="2_qx38q"]
-[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/walls.tscn" id="3_fj7uf"]
+[ext_resource type="PackedScene" uid="uid://c2hhokjf7j5ap" path="res://Elements/Walls/walls.tscn" id="3_fj7uf"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="4_wkkfp"]
 [ext_resource type="PackedScene" uid="uid://63q7angp6o8w" path="res://Managers/time_manager.tscn" id="5_1sxwp"]
 

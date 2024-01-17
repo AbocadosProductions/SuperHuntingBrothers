@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=71 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=90 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -7,11 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://crdqtu72flpom" path="res://Sprites/UI/Sound_Slider_Handler_Highlight.png" id="4_f8t05"]
 [ext_resource type="Texture2D" uid="uid://c6f5q82lyfs6l" path="res://Sprites/UI/Panel_Logo.png" id="6_andiy"]
 [ext_resource type="Texture2D" uid="uid://b7m5i6g3mg0ex" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
+[ext_resource type="Texture2D" uid="uid://oelts623r581" path="res://Sprites/UI/Panel_Difficulty.png" id="6_ogphh"]
 [ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
-[ext_resource type="Texture2D" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
+[ext_resource type="Texture2D" uid="uid://dgd0qf6ss8ofc" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="11_6eycr"]
+[ext_resource type="Texture2D" uid="uid://nvm5a1ou8xm5" path="res://Sprites/UI/Panel_Records.png" id="12_85kcc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hccgy"]
 content_margin_left = 4.0
@@ -56,6 +58,22 @@ region_rect = Rect2(0, 105, 80, 17)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ica5j"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 105, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7v7r"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 273, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3o2bn"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 273, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2fkf4"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 273, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdmnr"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 273, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05br0"]
 texture = ExtResource("2_iexnn")
@@ -105,6 +123,27 @@ region_rect = Rect2(0, 189, 80, 17)
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 189, 80, 17)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3lj0w"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+modulate_color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ma707"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b08y8"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtdwp"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 231, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktn4f"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 231, 80, 17)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bxvch"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(80, 147, 80, 17)
@@ -120,6 +159,22 @@ region_rect = Rect2(0, 147, 80, 17)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvaj4"]
 texture = ExtResource("2_iexnn")
 region_rect = Rect2(176, 147, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awi6s"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(80, 252, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28oss"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 252, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sw7ad"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(0, 252, 80, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cm8kb"]
+texture = ExtResource("2_iexnn")
+region_rect = Rect2(176, 252, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxjpc"]
 texture = ExtResource("2_iexnn")
@@ -187,19 +242,19 @@ region_rect = Rect2(176, 210, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5r6a"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(80, 21, 80, 17)
+region_rect = Rect2(80, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dodoy"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(0, 21, 80, 17)
+region_rect = Rect2(0, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_es46q"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(0, 21, 80, 17)
+region_rect = Rect2(0, 20, 80, 17)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cowgn"]
 texture = ExtResource("2_iexnn")
-region_rect = Rect2(80, 21, 80, 17)
+region_rect = Rect2(80, 20, 80, 17)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3dhi"]
 bg_color = Color(0.94902, 0.984314, 0.729412, 1)
@@ -219,6 +274,9 @@ texture_margin_left = 5.0
 texture_margin_top = 4.0
 texture_margin_right = 5.0
 texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grj0u"]
+texture = ExtResource("6_ogphh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sapj"]
 texture = ExtResource("6_hlbfh")
@@ -249,6 +307,18 @@ texture_margin_left = 6.0
 texture_margin_top = 7.0
 texture_margin_right = 6.0
 texture_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kfe7"]
+texture = ExtResource("12_85kcc")
+region_rect = Rect2(0, 0, 71, 68)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2kkm"]
+texture = ExtResource("12_85kcc")
+region_rect = Rect2(71, 0, 71, 68)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7oqxl"]
+texture = ExtResource("12_85kcc")
+region_rect = Rect2(142, 0, 71, 68)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6cv8a"]
 texture = ExtResource("11_6eycr")
@@ -301,6 +371,11 @@ Button_Back/styles/focus = SubResource("StyleBoxTexture_2d6td")
 Button_Back/styles/hover = SubResource("StyleBoxTexture_vlwrl")
 Button_Back/styles/normal = SubResource("StyleBoxTexture_cj8o8")
 Button_Back/styles/pressed = SubResource("StyleBoxTexture_ica5j")
+Button_Cats/base_type = &"Button"
+Button_Cats/styles/focus = SubResource("StyleBoxTexture_x7v7r")
+Button_Cats/styles/hover = SubResource("StyleBoxTexture_3o2bn")
+Button_Cats/styles/normal = SubResource("StyleBoxTexture_2fkf4")
+Button_Cats/styles/pressed = SubResource("StyleBoxTexture_hdmnr")
 Button_Continue/base_type = &"Button"
 Button_Continue/styles/focus = SubResource("StyleBoxTexture_05br0")
 Button_Continue/styles/hover = SubResource("StyleBoxTexture_6afwn")
@@ -316,11 +391,22 @@ Button_Hard/styles/focus = SubResource("StyleBoxTexture_mgv8i")
 Button_Hard/styles/hover = SubResource("StyleBoxTexture_jljeh")
 Button_Hard/styles/normal = SubResource("StyleBoxTexture_jn780")
 Button_Hard/styles/pressed = SubResource("StyleBoxTexture_1dggh")
+Button_Jugar/base_type = &"Button"
+Button_Jugar/styles/disabled = SubResource("StyleBoxTexture_3lj0w")
+Button_Jugar/styles/focus = SubResource("StyleBoxTexture_ma707")
+Button_Jugar/styles/hover = SubResource("StyleBoxTexture_b08y8")
+Button_Jugar/styles/normal = SubResource("StyleBoxTexture_mtdwp")
+Button_Jugar/styles/pressed = SubResource("StyleBoxTexture_ktn4f")
 Button_Menu/base_type = &"Button"
 Button_Menu/styles/focus = SubResource("StyleBoxTexture_bxvch")
 Button_Menu/styles/hover = SubResource("StyleBoxTexture_bcf4v")
 Button_Menu/styles/normal = SubResource("StyleBoxTexture_r7oj1")
 Button_Menu/styles/pressed = SubResource("StyleBoxTexture_dvaj4")
+Button_Mice/base_type = &"Button"
+Button_Mice/styles/focus = SubResource("StyleBoxTexture_awi6s")
+Button_Mice/styles/hover = SubResource("StyleBoxTexture_28oss")
+Button_Mice/styles/normal = SubResource("StyleBoxTexture_sw7ad")
+Button_Mice/styles/pressed = SubResource("StyleBoxTexture_cm8kb")
 Button_Normal/base_type = &"Button"
 Button_Normal/styles/focus = SubResource("StyleBoxTexture_cxjpc")
 Button_Normal/styles/hover = SubResource("StyleBoxTexture_piy8n")
@@ -358,7 +444,7 @@ HSlider/styles/slider = SubResource("StyleBoxEmpty_q7s3a")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)
-Label/constants/line_spacing = 0
+Label/constants/line_spacing = 2
 Label/constants/outline_size = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
@@ -366,6 +452,8 @@ Label/constants/shadow_outline_size = 0
 Label/font_sizes/font_size = 10
 Label/fonts/font = ExtResource("1_1bj03")
 Panel/styles/panel = SubResource("StyleBoxTexture_kcfgb")
+Panel_Difficulty/base_type = &"Panel"
+Panel_Difficulty/styles/panel = SubResource("StyleBoxTexture_grj0u")
 Panel_Level_Lose/base_type = &"Panel"
 Panel_Level_Lose/styles/panel = SubResource("StyleBoxTexture_0sapj")
 Panel_Level_Success/base_type = &"Panel"
@@ -376,6 +464,12 @@ Panel_Maze/base_type = &"Panel"
 Panel_Maze/styles/panel = SubResource("StyleBoxTexture_dvs5c")
 Panel_Pause/base_type = &"Panel"
 Panel_Pause/styles/panel = SubResource("StyleBoxTexture_y6uns")
+Panel_Records/base_type = &"Panel"
+Panel_Records/styles/panel = SubResource("StyleBoxTexture_6kfe7")
+Panel_Records_Hard/base_type = &"Panel"
+Panel_Records_Hard/styles/panel = SubResource("StyleBoxTexture_d2kkm")
+Panel_Records_Normal/base_type = &"Panel"
+Panel_Records_Normal/styles/panel = SubResource("StyleBoxTexture_7oqxl")
 Panel_Time_Manager/base_type = &"Panel"
 Panel_Time_Manager/styles/panel = SubResource("StyleBoxTexture_6cv8a")
 Panel_Tutorial/base_type = &"Panel"

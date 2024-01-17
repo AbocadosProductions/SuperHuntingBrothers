@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://bl7xyllwogw73"]
+[gd_scene load_steps=99 format=3 uid="uid://bla8j2nnaafjm"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_ebra5"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_w1fm7"]
@@ -20,8 +20,6 @@
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="18_wb3kp"]
 [ext_resource type="Texture2D" uid="uid://bmlq3u3ntutct" path="res://Sprites/Cattanita/Cattanita_Idle_Left.png" id="19_rbhkk"]
 [ext_resource type="Texture2D" uid="uid://cwy1ue0e4pqy4" path="res://Sprites/Aguacate/Aguacate_Idle_Right.png" id="20_8htkl"]
-[ext_resource type="PackedScene" uid="uid://dhujh4icx7pf0" path="res://Characters/techno_aguacate.tscn" id="21_7fb4b"]
-[ext_resource type="PackedScene" uid="uid://dh02w306ph4b7" path="res://Characters/techno_cattanita.tscn" id="22_6dflj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -1553,16 +1551,6 @@ position = Vector2(31.5, 127)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e58jt")
 speed_scale = 2.0
-
-[node name="TechnoAguacate" parent="tutorial_panel/second_to_show" instance=ExtResource("21_7fb4b")]
-position = Vector2(28, 115)
-collision_layer = 2
-collision_mask = 2
-
-[node name="TechnoCattanita" parent="tutorial_panel/second_to_show" instance=ExtResource("22_6dflj")]
-position = Vector2(234, 61.5)
-collision_layer = 2
-collision_mask = 2
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25

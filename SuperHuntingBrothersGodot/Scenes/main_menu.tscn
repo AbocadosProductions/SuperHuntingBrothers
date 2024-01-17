@@ -73,16 +73,18 @@ layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="normal_menu" type="Node2D" parent="."]
-script = ExtResource("2_skkcp")
-
-[node name="Logo" type="Panel" parent="normal_menu"]
+[node name="Logo" type="Panel" parent="."]
+layout_mode = 0
 offset_left = -132.0
-offset_top = -176.0
-offset_bottom = -122.0
+offset_top = -178.0
+offset_bottom = -124.0
 scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
 theme_type_variation = &"Panel_Logo"
+
+[node name="normal_menu" type="Node2D" parent="."]
+position = Vector2(0, -2)
+script = ExtResource("2_skkcp")
 
 [node name="Menu" type="Panel" parent="normal_menu"]
 offset_left = -90.0
@@ -176,7 +178,7 @@ toggle_mode = true
 visible = false
 script = ExtResource("3_pytil")
 
-[node name="Panel" type="Panel" parent="credits_menu"]
+[node name="credits_menu_panel" type="Panel" parent="credits_menu"]
 custom_minimum_size = Vector2(261, 177)
 offset_left = -261.0
 offset_top = -177.0
@@ -184,7 +186,7 @@ scale = Vector2(2, 2)
 theme = ExtResource("3_hdgmk")
 theme_override_styles/panel = SubResource("StyleBoxTexture_i53oj")
 
-[node name="back_to_menu_button" type="Button" parent="credits_menu/Panel"]
+[node name="back_to_menu_button" type="Button" parent="credits_menu/credits_menu_panel"]
 layout_mode = 0
 offset_left = 89.0
 offset_top = 150.5
@@ -195,141 +197,170 @@ toggle_mode = true
 
 [node name="difficulty_menu" type="Node2D" parent="."]
 visible = false
-position = Vector2(-4, -101)
+position = Vector2(0, -101)
 script = ExtResource("9_8phu2")
 
-[node name="Panel" type="Panel" parent="difficulty_menu"]
+[node name="difficulty_menu_panel" type="Panel" parent="difficulty_menu"]
 offset_left = -169.0
-offset_top = -43.0
-offset_bottom = 110.0
+offset_top = 33.0
+offset_bottom = 156.0
 scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_hdgmk")
+theme_type_variation = &"Panel_Difficulty"
 
-[node name="normal_panel" type="Panel" parent="difficulty_menu/Panel" node_paths=PackedStringArray("data_manager")]
+[node name="normal_panel" type="Panel" parent="difficulty_menu/difficulty_menu_panel" node_paths=PackedStringArray("data_manager")]
 z_index = -1
+custom_minimum_size = Vector2(71, 68)
 layout_mode = 0
-offset_top = 30.0
-offset_right = 50.0
-offset_bottom = 80.0
-scale = Vector2(2, 2)
+offset_top = 27.0
+offset_right = 71.0
+offset_bottom = 95.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_hdgmk")
+theme_type_variation = &"Panel_Records"
 script = ExtResource("9_m6puc")
 data_manager = NodePath("../../../DataManager")
 
-[node name="max_lv" type="Label" parent="difficulty_menu/Panel/normal_panel"]
-offset_top = 1.25
-offset_right = 33.0
-offset_bottom = 16.25
-text = "NIVEL MAXIMO"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 2
-
-[node name="max_lv_data" type="Label" parent="difficulty_menu/Panel/normal_panel"]
-offset_top = 9.75
-offset_right = 33.0
-offset_bottom = 24.75
-text = "NIVEL MAXIMO"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 2
-
-[node name="max_punctuation" type="Label" parent="difficulty_menu/Panel/normal_panel"]
-offset_left = -0.25
-offset_top = 21.0
-offset_right = 32.75
-offset_bottom = 36.0
-text = "PUNCTUACION MAXIMA"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 2
-
-[node name="max_punctuation_data" type="Label" parent="difficulty_menu/Panel/normal_panel"]
-offset_left = -0.25
-offset_top = 31.5
-offset_right = 32.75
-offset_bottom = 46.5
-text = "PUNCTUACION MAXIMA"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-text_overrun_behavior = 2
-
-[node name="hard_panel" type="Panel" parent="difficulty_menu/Panel" node_paths=PackedStringArray("data_manager")]
-z_index = -1
+[node name="normal_subpanel" type="Panel" parent="difficulty_menu/difficulty_menu_panel/normal_panel"]
 layout_mode = 0
-offset_left = 69.0
-offset_top = 30.0
-offset_right = 119.0
-offset_bottom = 80.0
-scale = Vector2(2, 2)
+offset_right = 71.0
+offset_bottom = 68.0
+theme_type_variation = &"Panel_Records_Normal"
+
+[node name="max_lv" type="Label" parent="difficulty_menu/difficulty_menu_panel/normal_panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 51.0
+offset_bottom = 29.0
+text = "NIVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[node name="max_lv_data" type="Label" parent="difficulty_menu/difficulty_menu_panel/normal_panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 23.0
+offset_right = 51.0
+offset_bottom = 38.0
+text = "Nivel"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[node name="max_punctuation" type="Label" parent="difficulty_menu/difficulty_menu_panel/normal_panel"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 55.0
+text = "PUNTUACION"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[node name="max_punctuation_data" type="Label" parent="difficulty_menu/difficulty_menu_panel/normal_panel"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 49.0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "Puntuacion"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 2
+
+[node name="hard_panel" type="Panel" parent="difficulty_menu/difficulty_menu_panel" node_paths=PackedStringArray("data_manager")]
+z_index = -1
+custom_minimum_size = Vector2(71, 68)
+layout_mode = 0
+offset_left = 98.0
+offset_top = 27.0
+offset_right = 169.0
+offset_bottom = 95.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_hdgmk")
+theme_type_variation = &"Panel_Records"
 script = ExtResource("10_1e0em")
 data_manager = NodePath("../../../DataManager")
 
-[node name="max_lv" type="Label" parent="difficulty_menu/Panel/hard_panel"]
-offset_left = 17.5
-offset_top = 0.5
-offset_right = 50.5
-offset_bottom = 15.5
-text = "NIVEL MAXIMO"
+[node name="hard_subpanel" type="Panel" parent="difficulty_menu/difficulty_menu_panel/hard_panel"]
+custom_minimum_size = Vector2(71, 68)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_type_variation = &"Panel_Records_Hard"
+
+[node name="max_lv" type="Label" parent="difficulty_menu/difficulty_menu_panel/hard_panel"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 56.0
+offset_bottom = 29.0
+text = "NIVEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 2
 
-[node name="max_lv_data" type="Label" parent="difficulty_menu/Panel/hard_panel"]
-offset_left = 17.5
-offset_top = 8.75
-offset_right = 50.5
-offset_bottom = 23.75
-text = "NIVEL MAXIMO"
+[node name="max_lv_data" type="Label" parent="difficulty_menu/difficulty_menu_panel/hard_panel"]
+layout_mode = 0
+offset_left = 22.5
+offset_top = 23.0
+offset_right = 55.5
+offset_bottom = 38.0
+text = "12"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 2
 
-[node name="max_punctuation" type="Label" parent="difficulty_menu/Panel/hard_panel"]
-offset_left = 18.0
-offset_top = 20.25
-offset_right = 51.0
-offset_bottom = 35.25
-text = "PUNCTUACION MAXIMA"
+[node name="max_punctuation" type="Label" parent="difficulty_menu/difficulty_menu_panel/hard_panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 69.0
+offset_bottom = 55.0
+text = "PUNTUACION
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 2
 
-[node name="max_punctuation_data" type="Label" parent="difficulty_menu/Panel/hard_panel"]
-offset_left = 17.75
-offset_top = 30.5
-offset_right = 50.75
-offset_bottom = 45.5
-text = "PUNCTUACION MAXIMA"
+[node name="max_punctuation_data" type="Label" parent="difficulty_menu/difficulty_menu_panel/hard_panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 49.0
+offset_right = 69.0
+offset_bottom = 64.0
+text = "puntuacion"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="difficulty_menu/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="difficulty_menu/difficulty_menu_panel"]
 layout_mode = 2
 offset_left = 0.5
-offset_top = 24.5
+offset_top = 3.0
 offset_right = 168.5
-offset_bottom = 41.5
+offset_bottom = 20.0
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="normal_mode" type="Button" parent="difficulty_menu/Panel/HBoxContainer"]
+[node name="normal_mode" type="Button" parent="difficulty_menu/difficulty_menu_panel/HBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -337,7 +368,7 @@ size_flags_vertical = 4
 theme_type_variation = &"Button_Normal"
 toggle_mode = true
 
-[node name="hard_mode" type="Button" parent="difficulty_menu/Panel/HBoxContainer"]
+[node name="hard_mode" type="Button" parent="difficulty_menu/difficulty_menu_panel/HBoxContainer"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -345,37 +376,37 @@ size_flags_vertical = 4
 theme_type_variation = &"Button_Hard"
 toggle_mode = true
 
-[node name="difficulty_label" type="Label" parent="difficulty_menu/Panel"]
+[node name="difficulty_label" type="Label" parent="difficulty_menu/difficulty_menu_panel"]
 layout_mode = 0
-offset_left = 15.5
-offset_top = 46.5
-offset_right = 153.5
-offset_bottom = 115.5
+offset_left = 14.0
+offset_top = 27.0
+offset_right = 155.0
+offset_bottom = 95.0
 text = "Por favor, selecciona una difficultad"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 2
 
-[node name="back_menu" type="Button" parent="difficulty_menu/Panel"]
+[node name="back_menu" type="Button" parent="difficulty_menu/difficulty_menu_panel"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 offset_left = 1.0
-offset_top = 128.5
+offset_top = 102.0
 offset_right = 81.0
-offset_bottom = 145.5
+offset_bottom = 119.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_type_variation = &"Button_Menu"
+theme_type_variation = &"Button_Back"
 toggle_mode = true
 
-[node name="start_game_button" type="Button" parent="difficulty_menu/Panel"]
+[node name="start_game_button" type="Button" parent="difficulty_menu/difficulty_menu_panel"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 2
 offset_left = 88.0
-offset_top = 129.0
+offset_top = 102.0
 offset_right = 168.0
-offset_bottom = 146.0
+offset_bottom = 119.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_mode = 0
@@ -400,9 +431,9 @@ one_shot = true
 [connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="credits_menu/Panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/back_menu" to="." method="_on_back_menu_pressed"]
-[connection signal="pressed" from="difficulty_menu/Panel/start_game_button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="credits_menu/credits_menu_panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
+[connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/back_menu" to="." method="_on_back_menu_pressed"]
+[connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/start_game_button" to="." method="_on_start_game_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

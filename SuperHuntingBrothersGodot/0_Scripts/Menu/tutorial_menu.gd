@@ -7,14 +7,14 @@ extends Control
 @export var next_button : Button
 @export var menu_button : Button
 @export var play_button : Button
-@onready var RatonNormalAnim : AnimatedSprite2D = $Panel/first_to_show/RatonNormal
-@onready var TechnoMouse1 : CharacterBody2D = $Panel/first_to_show/TechnoMouse
-@onready var TechnoMouse2 : CharacterBody2D = $Panel/first_to_show/TechnoMouse2
-@onready var TechnoAguacate : CharacterBody2D = $Panel/second_to_show/TechnoAguacate
-@onready var TechnoCattanita : CharacterBody2D = $Panel/second_to_show/TechnoCattanita
-@onready var RatonCorriendoAnim : AnimatedSprite2D = $Panel/first_to_show/RatonCorriendo
-@onready var CattanitaAnim : AnimatedSprite2D = $Panel/second_to_show/Cattanita
-@onready var AguacateAnim : AnimatedSprite2D = $Panel/second_to_show/Aguacate
+@onready var RatonNormalAnim : AnimatedSprite2D = $tutorial_panel/first_to_show/RatonNormal
+@onready var TechnoMouse1 : CharacterBody2D = $tutorial_panel/first_to_show/TechnoMouse
+@onready var TechnoMouse2 : CharacterBody2D = $tutorial_panel/first_to_show/TechnoMouse2
+@onready var TechnoAguacate : CharacterBody2D = $tutorial_panel/second_to_show/TechnoAguacate
+@onready var TechnoCattanita : CharacterBody2D = $tutorial_panel/second_to_show/TechnoCattanita
+@onready var RatonCorriendoAnim : AnimatedSprite2D = $tutorial_panel/first_to_show/RatonCorriendo
+@onready var CattanitaAnim : AnimatedSprite2D = $tutorial_panel/second_to_show/Cattanita
+@onready var AguacateAnim : AnimatedSprite2D = $tutorial_panel/second_to_show/Aguacate
 
 @onready var array = [next_button, menu_button, play_button]
 

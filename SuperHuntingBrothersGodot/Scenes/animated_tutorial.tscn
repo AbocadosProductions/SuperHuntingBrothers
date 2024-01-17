@@ -1417,11 +1417,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ebra5")
-first_block = NodePath("Panel/first_to_show")
-second_block = NodePath("Panel/second_to_show")
-next_button = NodePath("Panel/first_to_show/Next_Button")
-menu_button = NodePath("Panel/second_to_show/Menu_Button")
-play_button = NodePath("Panel/second_to_show/Play_Button")
+first_block = NodePath("tutorial_panel/first_to_show")
+second_block = NodePath("tutorial_panel/second_to_show")
+next_button = NodePath("tutorial_panel/first_to_show/Cats_Button")
+menu_button = NodePath("tutorial_panel/second_to_show/Menu_Button")
+play_button = NodePath("tutorial_panel/second_to_show/Mice_Button")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(320, 180)
@@ -1429,7 +1429,7 @@ tile_set = SubResource("TileSet_wuolb")
 format = 2
 layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, -327690, 0, 0, -262154, 0, 0, -196618, 0, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 0, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, -327689, 0, 0, -262153, 0, 0, -196617, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, -327688, 0, 0, -262152, 0, 0, -196616, 0, 0, -131080, 0, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 0, 393208, 0, 0, -327687, 0, 0, -262151, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, -327686, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, 393210, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, -327684, 0, 0, -262148, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, -327683, 0, 0, -262147, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, -393211, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -393209, 0, 0, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, -393208, 0, 0, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0)
 
-[node name="Panel" type="Panel" parent="."]
+[node name="tutorial_panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(261, 177)
 layout_mode = 0
 offset_left = 64.0
@@ -1440,81 +1440,81 @@ scale = Vector2(2, 2)
 theme = ExtResource("3_yf7ad")
 theme_type_variation = &"Panel_Tutorial"
 
-[node name="first_to_show" type="Panel" parent="Panel"]
+[node name="first_to_show" type="Panel" parent="tutorial_panel"]
 custom_minimum_size = Vector2(261, 177)
 layout_mode = 0
 offset_right = 261.0
 offset_bottom = 177.0
 theme_type_variation = &"Panel_Tutorial_1"
 
-[node name="Next_Button" type="Button" parent="Panel/first_to_show"]
+[node name="Cats_Button" type="Button" parent="tutorial_panel/first_to_show"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 0
 offset_left = 92.0
 offset_top = 151.0
 offset_right = 172.0
 offset_bottom = 168.0
-theme_type_variation = &"Button_Continue"
+theme_type_variation = &"Button_Cats"
 toggle_mode = true
 
-[node name="RatonNormal" type="AnimatedSprite2D" parent="Panel/first_to_show"]
+[node name="RatonNormal" type="AnimatedSprite2D" parent="tutorial_panel/first_to_show"]
 position = Vector2(231.5, 61)
 sprite_frames = SubResource("SpriteFrames_koq1g")
 speed_scale = 2.0
 
-[node name="RatonCorriendo" type="AnimatedSprite2D" parent="Panel/first_to_show"]
+[node name="RatonCorriendo" type="AnimatedSprite2D" parent="tutorial_panel/first_to_show"]
 position = Vector2(30, 116)
 sprite_frames = SubResource("SpriteFrames_bcd8m")
 frame_progress = 0.757429
 speed_scale = 2.0
 
-[node name="TechnoMouse" type="CharacterBody2D" parent="Panel/first_to_show"]
+[node name="TechnoMouse" type="CharacterBody2D" parent="tutorial_panel/first_to_show"]
 position = Vector2(232, 63)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("7_nwosj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/first_to_show/TechnoMouse"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial_panel/first_to_show/TechnoMouse"]
 libraries = {
 "": SubResource("AnimationLibrary_pjfqh")
 }
 
-[node name="animation_controller" type="Node2D" parent="Panel/first_to_show/TechnoMouse" node_paths=PackedStringArray("animation_player", "emisioner")]
+[node name="animation_controller" type="Node2D" parent="tutorial_panel/first_to_show/TechnoMouse" node_paths=PackedStringArray("animation_player", "emisioner")]
 script = ExtResource("18_wb3kp")
 animation_player = NodePath("../AnimationPlayer")
 emisioner = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/first_to_show/TechnoMouse"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_panel/first_to_show/TechnoMouse"]
 shape = SubResource("CircleShape2D_tyuff")
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/first_to_show/TechnoMouse"]
+[node name="Sprite2D" type="Sprite2D" parent="tutorial_panel/first_to_show/TechnoMouse"]
 position = Vector2(0, -6)
 texture = ExtResource("11_yuush")
 hframes = 4
 
-[node name="TechnoMouse2" type="CharacterBody2D" parent="Panel/first_to_show"]
+[node name="TechnoMouse2" type="CharacterBody2D" parent="tutorial_panel/first_to_show"]
 position = Vector2(31.5, 120.5)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("7_nwosj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel/first_to_show/TechnoMouse2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial_panel/first_to_show/TechnoMouse2"]
 libraries = {
 "": SubResource("AnimationLibrary_pjfqh")
 }
 
-[node name="animation_controller" type="Node2D" parent="Panel/first_to_show/TechnoMouse2" node_paths=PackedStringArray("animation_player", "emisioner")]
+[node name="animation_controller" type="Node2D" parent="tutorial_panel/first_to_show/TechnoMouse2" node_paths=PackedStringArray("animation_player", "emisioner")]
 script = ExtResource("18_wb3kp")
 animation_player = NodePath("../AnimationPlayer")
 emisioner = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/first_to_show/TechnoMouse2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial_panel/first_to_show/TechnoMouse2"]
 shape = SubResource("CircleShape2D_tyuff")
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/first_to_show/TechnoMouse2"]
+[node name="Sprite2D" type="Sprite2D" parent="tutorial_panel/first_to_show/TechnoMouse2"]
 position = Vector2(0, -6)
 texture = ExtResource("11_yuush")
 hframes = 4
 
-[node name="second_to_show" type="Panel" parent="Panel"]
+[node name="second_to_show" type="Panel" parent="tutorial_panel"]
 custom_minimum_size = Vector2(261, 177)
 layout_mode = 0
 offset_top = 210.0
@@ -1522,43 +1522,44 @@ offset_right = 261.0
 offset_bottom = 387.0
 theme_type_variation = &"Panel_Tutorial_2"
 
-[node name="Menu_Button" type="Button" parent="Panel/second_to_show"]
-custom_minimum_size = Vector2(80, 17)
-layout_mode = 0
-offset_left = 45.0
-offset_top = 151.0
-offset_right = 125.0
-offset_bottom = 168.0
-theme_type_variation = &"Button_Menu"
-toggle_mode = true
-
-[node name="Play_Button" type="Button" parent="Panel/second_to_show"]
+[node name="Menu_Button" type="Button" parent="tutorial_panel/second_to_show"]
 custom_minimum_size = Vector2(80, 17)
 layout_mode = 0
 offset_left = 136.0
 offset_top = 151.0
 offset_right = 216.0
 offset_bottom = 168.0
+theme_type_variation = &"Button_Menu"
 toggle_mode = true
 
-[node name="Cattanita" type="AnimatedSprite2D" parent="Panel/second_to_show"]
+[node name="Mice_Button" type="Button" parent="tutorial_panel/second_to_show"]
+custom_minimum_size = Vector2(80, 17)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 151.0
+offset_right = 125.0
+offset_bottom = 168.0
+theme_type_variation = &"Button_Mice"
+toggle_mode = true
+
+[node name="Cattanita" type="AnimatedSprite2D" parent="tutorial_panel/second_to_show"]
 position = Vector2(230, 73.5)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_bs8cb")
 speed_scale = 2.0
 
-[node name="Aguacate" type="AnimatedSprite2D" parent="Panel/second_to_show"]
+[node name="Aguacate" type="AnimatedSprite2D" parent="tutorial_panel/second_to_show"]
 position = Vector2(31.5, 127)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e58jt")
 speed_scale = 2.0
 
-[node name="TechnoAguacate" parent="Panel/second_to_show" instance=ExtResource("21_7fb4b")]
+[node name="TechnoAguacate" parent="tutorial_panel/second_to_show" instance=ExtResource("21_7fb4b")]
 position = Vector2(28, 115)
 collision_layer = 2
 collision_mask = 2
 
-[node name="TechnoCattanita" parent="Panel/second_to_show" instance=ExtResource("22_6dflj")]
+[node name="TechnoCattanita" parent="tutorial_panel/second_to_show" instance=ExtResource("22_6dflj")]
 position = Vector2(234, 61.5)
 collision_layer = 2
 collision_mask = 2
@@ -1585,7 +1586,7 @@ shape = SubResource("RectangleShape2D_7fcu6")
 position = Vector2(587, 183)
 shape = SubResource("RectangleShape2D_7fcu6")
 
-[connection signal="pressed" from="Panel/first_to_show/Next_Button" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="Panel/second_to_show/Menu_Button" to="." method="_on_menu_button_pressed"]
-[connection signal="pressed" from="Panel/second_to_show/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="tutorial_panel/first_to_show/Cats_Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="tutorial_panel/second_to_show/Menu_Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="tutorial_panel/second_to_show/Mice_Button" to="." method="_on_play_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

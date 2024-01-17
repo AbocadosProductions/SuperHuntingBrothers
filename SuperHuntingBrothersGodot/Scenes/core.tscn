@@ -388,7 +388,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_rejcq"]
+[sub_resource type="Theme" id="Theme_w4o15"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -973,7 +973,7 @@ offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_rejcq")
+theme = SubResource("Theme_w4o15")
 scene_manager = NodePath("../SceneManager")
 metadata/_edit_use_anchors_ = true
 
@@ -1033,6 +1033,54 @@ offset_bottom = 306.0
 scale = Vector2(4, 4)
 theme = ExtResource("22_ebh5k")
 theme_type_variation = &"Panel_Maze"
+
+[node name="Current_level" type="Panel" parent="."]
+offset_left = 214.0
+offset_top = 192.0
+offset_right = 261.0
+offset_bottom = 208.0
+scale = Vector2(2, 2)
+theme = ExtResource("22_ebh5k")
+theme_type_variation = &"Panel_2"
+
+[node name="Level" type="Label" parent="Current_level"]
+layout_mode = 0
+offset_left = 4.5
+offset_top = 4.0
+offset_right = 44.5
+offset_bottom = 12.0
+text = "Nivel:"
+
+[node name="Level2" type="Label" parent="Current_level"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 4.0
+offset_right = 71.0
+offset_bottom = 12.0
+text = "10"
+
+[node name="Current_points" type="Panel" parent="."]
+offset_left = 606.0
+offset_top = 192.0
+offset_right = 696.0
+offset_bottom = 208.0
+scale = Vector2(2, 2)
+theme = ExtResource("22_ebh5k")
+theme_type_variation = &"Panel_2"
+
+[node name="Score" type="Label" parent="Current_points"]
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 54.0
+offset_bottom = 12.0
+text = "Puntuacion:"
+
+[node name="Score2" type="Label" parent="Current_points"]
+offset_left = 54.5
+offset_top = 4.0
+offset_right = 94.5
+offset_bottom = 12.0
+text = "123456"
 
 [editable path="SceneManager"]
 [editable path="cat_cattanita"]

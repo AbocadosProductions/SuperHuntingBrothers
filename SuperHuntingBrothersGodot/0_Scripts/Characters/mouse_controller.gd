@@ -28,6 +28,8 @@ func scene_manager_signal_detected(signal_emited):
 		mouse_state_machine_signal.emit(Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
 	if signal_emited == Constants.PAUSE_MENU_SIGNAL:
 		mouse_state_machine_signal.emit(Constants.PAUSE_MENU_SIGNAL)
+	if signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL:
+		mouse_state_machine_signal.emit(Constants.MOUSE_BEGINING_SIGNAL)
 
 func set_target_in_maze_coordinates(old_coordinates : Vector2):
 	var coordinates = level_manager.set_target_in_maze_coordinates(self, old_coordinates)

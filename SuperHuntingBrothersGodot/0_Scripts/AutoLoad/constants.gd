@@ -88,6 +88,7 @@ const CAT_MOUSE_CAPTURED_SIGNAL = "mouse_captured"
 # Mouse constants
 
 const MOUSE_IDLE_SIGNAL = "idle"
+const MOUSE_BEGINING_SIGNAL = "begining"
 const MOUSE_FLEE_SIGNAL = "flee"
 const MOUSE_CAT_DETECTED_SIGNAL = "captured"
 const CAT_PREFIX = "cat"
@@ -114,15 +115,15 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 # Positions constants
 
 const POSITIONS_PER_LEVEL = {
-	"maze_1" = {"cat" = [Vector2(8, -9)],
+	"maze_1" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]},
-	"maze_2" = {"cat" = [Vector2(8, -9)],
+	"maze_2" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]},
-	"maze_3" = {"cat" = [Vector2(8, -9)],
+	"maze_3" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]},
-	"maze_4" = {"cat" = [Vector2(8, -9)],
+	"maze_4" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]}
-				}
+}
 # --------------------------------------------------------------------------- #
 
 # Directions constants

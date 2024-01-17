@@ -28,7 +28,7 @@ func return_record_time() -> int:
 	var actual_level_index = max(len(_save_data.times_per_level) - 1, 0)
 	var record = 0
 
-	if actual_level_index < len(_save_data.record_times_per_level[_save_data.difficulty]):
+	if actual_level_index < len(_save_data.record_times_per_level[_save_data.difficulty]) - 1:
 		record = _save_data.record_times_per_level[_save_data.difficulty][actual_level_index]
 
 	return record
@@ -36,6 +36,7 @@ func return_record_time() -> int:
 # RECORD POINTS SECTIONS : SET, RETURN,
 
 func set_new_record_points() -> void:
+	print(_save_data.actual_punctuation)
 	_save_data.record_punctuation[_save_data.difficulty] = _save_data.actual_punctuation
 	_save_game()
 

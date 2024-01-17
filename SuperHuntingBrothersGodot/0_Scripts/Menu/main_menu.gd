@@ -51,6 +51,7 @@ func _process(delta):
 	check_if_need_to_move_vol_panel()
 	check_if_need_to_normal_record_panel()
 	check_if_need_to_hard_record_panel()
+	
 		
 func check_if_need_to_move_vol_panel():
 	if move_vol_panel:
@@ -66,6 +67,11 @@ func check_if_need_to_move_vol_panel():
 				if vol_panel.position.x < 0 :
 					vol_panel.position.x = 0
 					move_vol_panel = false
+	
+	if show_vol_panel:
+		if Input.is_action_pressed("enter"):
+			_on_volumen_slider_focus_exited()
+			vol_button.grab_focus()
 		
 func check_if_need_to_normal_record_panel():
 	if move_normal_record_panel:

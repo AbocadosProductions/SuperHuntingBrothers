@@ -1541,12 +1541,14 @@ theme_type_variation = &"Button_Mice"
 toggle_mode = true
 
 [node name="Cattanita" type="AnimatedSprite2D" parent="tutorial_panel/second_to_show"]
+visible = false
 position = Vector2(230, 73.5)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_bs8cb")
 speed_scale = 2.0
 
 [node name="Aguacate" type="AnimatedSprite2D" parent="tutorial_panel/second_to_show"]
+visible = false
 position = Vector2(31.5, 127)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_e58jt")

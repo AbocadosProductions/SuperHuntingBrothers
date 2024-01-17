@@ -42,6 +42,12 @@ func set_new_record_points() -> void:
 func return_record_points() -> int:
 	return _save_data.record_punctuation[_save_data.difficulty]
 
+func return_record_points_normal() -> int:
+	return _save_data.record_punctuation[Constants.NORMAL_MODE]
+
+func return_record_points_hard() -> int:
+	return _save_data.record_punctuation[Constants.HARD_MODE]
+
 # RECORD LEVEL INDEX SECTIONS : SET, RETURN,
 
 func set_new_record_level_index() -> void:
@@ -50,6 +56,12 @@ func set_new_record_level_index() -> void:
 
 func return_record_level_index() -> int:
 	return _save_data.record_level[_save_data.difficulty]
+	
+func return_record_level_index_normal() -> int:
+	return _save_data.record_level[Constants.NORMAL_MODE]
+	
+func return_record_level_index_hard() -> int:
+	return _save_data.record_level[Constants.HARD_MODE]
 
 # ACTUAL TIMES SECTIONS : ADD, RETURN, RESET
 

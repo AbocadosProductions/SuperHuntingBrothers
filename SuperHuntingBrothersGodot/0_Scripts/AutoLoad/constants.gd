@@ -18,13 +18,8 @@ const SAVE_PATH: String = "res://save_data.tres"
 const HARD_MODE = "Hard"
 const NORMAL_MODE = "Normal"
 
-const HARD_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Hard"
-const NORMAL_MAZES_FOLDER_PATH = "res://Scenes/Mazes/Normal"
+const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
 
-const MAZES_PATH = {
-	HARD_MODE : HARD_MAZES_FOLDER_PATH,
-	NORMAL_MODE : NORMAL_MAZES_FOLDER_PATH
-}
 
 const MAZES_1_POSITION = Vector2 (344, 397)
 const MAZES_2_POSITION = Vector2 (672, 397)
@@ -68,9 +63,19 @@ const SCENE_MANAGER_TIME_OUT_TIME = 3
 
 const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
-const DEFAULT_TIME_PER_LEVEL = 60
-const TIME_PER_LEVEL_TO_SUSTRACT = 5
-const MINIMUM_TIME_PER_LEVEL = 5
+
+const DEFAULT_TIME_PER_LEVEL = {
+	HARD_MODE : 50,
+	NORMAL_MODE : 60
+} 
+const TIME_PER_LEVEL_TO_SUSTRACT = {
+	HARD_MODE : 5,
+	NORMAL_MODE : 3
+}
+const MINIMUM_TIME_PER_LEVEL = {
+	HARD_MODE : 10,
+	NORMAL_MODE : 10
+}
 const TRESHOLD_TIME = 15
 const TIME_MANAGER_IDLE_ANIMATION = "Idle"
 const TIME_MANAGER_THRESHOLD_ANIMATION = "Last_Seconds"
@@ -93,7 +98,10 @@ const MOUSE_FLEE_SIGNAL = "flee"
 const MOUSE_CAT_DETECTED_SIGNAL = "captured"
 const CAT_PREFIX = "cat"
 const WALL_PREFIX = "wall"
-const MAX_CAPTURE_TIME = 2.0
+const MAX_CAPTURE_TIME = {
+	HARD_MODE : 2,
+	NORMAL_MODE : 3
+	}
 const MAX_BEGINING_TIME = 2.0
 const MAX_FLEE_TIME = 1.5
 

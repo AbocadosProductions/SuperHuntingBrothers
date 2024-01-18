@@ -16,7 +16,7 @@ func Exit():
 	capture_time = 0
 
 func Update(_delta : float):
-	if capture_time < Constants.MAX_CAPTURE_TIME:
+	if capture_time < Constants.MAX_CAPTURE_TIME[cat.difficulty]:
 		capture_time += _delta
 	else:
 		Transition.emit(self, Constants.MOUSE_FLEE_SIGNAL)

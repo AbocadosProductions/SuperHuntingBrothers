@@ -16,7 +16,7 @@ func Exit():
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func Update(_delta : float):
-	if capture_time < Constants.MAX_CAPTURE_TIME:
+	if capture_time < Constants.MAX_CAPTURE_TIME[mouse.difficulty]:
 		capture_time += _delta
 	else:
 		Transition.emit(self, Constants.MOUSE_FLEE_SIGNAL)

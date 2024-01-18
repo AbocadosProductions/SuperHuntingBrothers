@@ -388,7 +388,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_lah5y"]
+[sub_resource type="Theme" id="Theme_f7a6u"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -967,13 +967,21 @@ scene_manager = NodePath("../SceneManager")
 [node name="Panel" parent="points_menu" index="0"]
 theme = SubResource("Theme_yg8j3")
 
+[node name="time_label" parent="points_menu/Panel/actual_time_label" index="0"]
+offset_top = 0.5
+offset_bottom = 8.5
+
+[node name="time_label" parent="points_menu/Panel/record_time_label" index="0"]
+offset_top = 0.5
+offset_bottom = 8.5
+
 [node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("8_s8chp")]
 z_index = 10
 offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_lah5y")
+theme = SubResource("Theme_f7a6u")
 scene_manager = NodePath("../SceneManager")
 metadata/_edit_use_anchors_ = true
 
@@ -1035,54 +1043,108 @@ theme = ExtResource("22_ebh5k")
 theme_type_variation = &"Panel_Maze"
 
 [node name="Current_level" type="Panel" parent="."]
-offset_left = 214.0
-offset_top = 192.0
-offset_right = 261.0
-offset_bottom = 208.0
-scale = Vector2(2, 2)
+offset_left = 194.0
+offset_top = 172.0
+offset_right = 240.0
+offset_bottom = 187.0
+scale = Vector2(4, 4)
 theme = ExtResource("22_ebh5k")
-theme_type_variation = &"Panel_2"
+theme_type_variation = &"Panel_Info"
 
-[node name="Level" type="Label" parent="Current_level"]
+[node name="Panel_Current_Level" type="Panel" parent="Current_level"]
 layout_mode = 0
-offset_left = 4.5
-offset_top = 4.0
-offset_right = 44.5
-offset_bottom = 12.0
-text = "Nivel:"
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Info_2"
 
-[node name="Level2" type="Label" parent="Current_level"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 4.0
-offset_right = 71.0
-offset_bottom = 12.0
-text = "10"
-
-[node name="Current_points" type="Panel" parent="."]
-offset_left = 606.0
-offset_top = 192.0
-offset_right = 696.0
-offset_bottom = 208.0
-scale = Vector2(2, 2)
-theme = ExtResource("22_ebh5k")
-theme_type_variation = &"Panel_2"
-
-[node name="Score" type="Label" parent="Current_points"]
+[node name="Current_Level" type="Label" parent="Current_level/Panel_Current_Level"]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 4.0
-offset_right = 54.0
-offset_bottom = 12.0
+offset_right = 64.0
+offset_bottom = 14.0
+text = "Nivel actual:"
+
+[node name="Current_Level_2" type="Label" parent="Current_level/Panel_Current_Level"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 4.0
+offset_right = 79.0
+offset_bottom = 14.0
+text = "10"
+horizontal_alignment = 1
+
+[node name="Record_Level" type="Label" parent="Current_level/Panel_Current_Level"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 13.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "Nivel record:"
+
+[node name="Record_Level_2" type="Label" parent="Current_level/Panel_Current_Level"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 13.0
+offset_right = 79.0
+offset_bottom = 23.0
+text = "10"
+horizontal_alignment = 1
+
+[node name="Current_points" type="Panel" parent="."]
+offset_left = 594.0
+offset_top = 172.0
+offset_right = 647.0
+offset_bottom = 187.0
+scale = Vector2(4, 4)
+theme = ExtResource("22_ebh5k")
+theme_type_variation = &"Panel_Info"
+
+[node name="Panel_Current_Points" type="Panel" parent="Current_points"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 97.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Info_2"
+
+[node name="Current_Score" type="Label" parent="Current_points/Panel_Current_Points"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 53.0
+offset_bottom = 14.0
 text = "Puntuacion:"
 
-[node name="Score2" type="Label" parent="Current_points"]
+[node name="Current_Score_2" type="Label" parent="Current_points/Panel_Current_Points"]
 layout_mode = 0
-offset_left = 54.5
+offset_left = 54.0
 offset_top = 4.0
-offset_right = 94.5
-offset_bottom = 12.0
+offset_right = 94.0
+offset_bottom = 14.0
+text = "12345600"
+horizontal_alignment = 1
+
+[node name="Record_Score" type="Label" parent="Current_points/Panel_Current_Points"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 57.0
+offset_bottom = 23.0
+text = "P. Record:"
+
+[node name="Record_Score_2" type="Label" parent="Current_points/Panel_Current_Points"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 13.0
+offset_right = 94.0
+offset_bottom = 23.0
 text = "123456"
+horizontal_alignment = 1
 
 [editable path="SceneManager"]
 [editable path="cat_cattanita"]

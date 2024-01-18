@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://0_Scripts/Menu/points_menu.gd" id="1_bi5c1"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_record_controller.gd" id="2_6xwme"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="2_am3t3"]
-[ext_resource type="Texture2D" uid="uid://cjla617kfu4yl" path="res://Sprites/UI/New_Record_VFX.png" id="4_ld0r7"]
+[ext_resource type="Texture2D" uid="uid://yiipjgeht13h" path="res://Sprites/UI/New_Record_VFX.png" id="4_ld0r7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
 atlas = ExtResource("4_ld0r7")
@@ -300,9 +300,9 @@ theme_type_variation = &"Panel_Level_Success"
 [node name="actual_time_label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 48.0
+offset_top = 47.0
 offset_right = 50.0
-offset_bottom = 56.0
+offset_bottom = 57.0
 text = "Tiempo:"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -318,9 +318,9 @@ vertical_alignment = 1
 [node name="record_time_label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 97.0
-offset_top = 48.0
+offset_top = 47.0
 offset_right = 130.0
-offset_bottom = 56.0
+offset_bottom = 57.0
 text = "Record:"
 vertical_alignment = 1
 
@@ -344,9 +344,9 @@ vertical_alignment = 1
 [node name="points_label" type="Label" parent="Panel/puntuation_label"]
 layout_mode = 0
 offset_left = 50.0
-offset_top = 3.0
+offset_top = 2.0
 offset_right = 80.0
-offset_bottom = 11.0
+offset_bottom = 12.0
 text = "000000"
 vertical_alignment = 1
 

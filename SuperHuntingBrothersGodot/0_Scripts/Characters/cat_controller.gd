@@ -26,5 +26,7 @@ func scene_manager_signal_detected(signal_emited):
 		cat_state_machine_signal.emit(Constants.SCENE_MANAGER_MICE_CAPTURED_SIGNAL)
 	elif signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_START_SIGNAL:
 		cat_state_machine_signal.emit(Constants.CAT_MANUAL_CONTROL_SIGNAL)
-	if signal_emited == Constants.PAUSE_MENU_SIGNAL:
+	elif signal_emited == Constants.PAUSE_MENU_SIGNAL:
 		cat_state_machine_signal.emit(Constants.PAUSE_MENU_SIGNAL)
+	elif signal_emited == Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL:
+		cat_state_machine_signal.emit(Constants.SCENE_MANAGER_NEW_MAZES_PREPARATION_SIGNAL)

@@ -35,6 +35,7 @@ func Enter():
 	get_controllers()
 	cat.cat_state_machine_signal.connect(on_cat_signal_detected)
 
+
 func Exit():
 	cat.cat_state_machine_signal.disconnect(on_cat_signal_detected)
 

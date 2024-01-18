@@ -36,7 +36,6 @@ func return_record_time() -> int:
 # RECORD POINTS SECTIONS : SET, RETURN,
 
 func set_new_record_points() -> void:
-	print(_save_data.actual_punctuation)
 	_save_data.record_punctuation[_save_data.difficulty] = _save_data.actual_punctuation
 	_save_game()
 

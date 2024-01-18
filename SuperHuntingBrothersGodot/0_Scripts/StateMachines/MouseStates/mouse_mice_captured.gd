@@ -16,5 +16,5 @@ func Exit():
 	mouse.mouse_state_machine_signal.disconnect(on_mouse_signal_detected)
 
 func on_mouse_signal_detected(signal_data):
-	if "idle" == signal_data:
-		Transition.emit(self, Constants.MOUSE_IDLE_SIGNAL)
+	if Constants.MOUSE_BEGINING_SIGNAL == signal_data:
+		Transition.emit(self, Constants.MOUSE_BEGINING_SIGNAL)

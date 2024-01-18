@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://bla8j2nnaafjm"]
+[gd_scene load_steps=101 format=3 uid="uid://bla8j2nnaafjm"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_ebra5"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_w1fm7"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cmyned4mwck" path="res://Sprites/Raton/Mouse_Run_Right.png" id="16_rcnr8"]
 [ext_resource type="Texture2D" uid="uid://bhoi0kd40u72y" path="res://Sprites/Raton/Mouse_Run_Up.png" id="17_p5hig"]
 [ext_resource type="Script" path="res://0_Scripts/Managers/animation_manager.gd" id="18_wb3kp"]
+[ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="19_fqjqh"]
 [ext_resource type="Texture2D" uid="uid://bmlq3u3ntutct" path="res://Sprites/Cattanita/Cattanita_Idle_Left.png" id="19_rbhkk"]
 [ext_resource type="Texture2D" uid="uid://cwy1ue0e4pqy4" path="res://Sprites/Aguacate/Aguacate_Idle_Right.png" id="20_8htkl"]
 
@@ -1133,6 +1134,10 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_tyuff"]
 radius = 4.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5enme"]
+texture = ExtResource("19_fqjqh")
+region_rect = Rect2(783, 0, 261, 177)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kh3p8"]
 atlas = ExtResource("19_rbhkk")
 region = Rect2(0, 0, 32, 32)
@@ -1519,6 +1524,7 @@ offset_top = 210.0
 offset_right = 261.0
 offset_bottom = 387.0
 theme_type_variation = &"Panel_Tutorial_2"
+theme_override_styles/panel = SubResource("StyleBoxTexture_5enme")
 
 [node name="Menu_Button" type="Button" parent="tutorial_panel/second_to_show"]
 custom_minimum_size = Vector2(80, 17)

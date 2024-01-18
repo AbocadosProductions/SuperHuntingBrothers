@@ -131,13 +131,13 @@ func show_cats():
 	var aguacate = load("res://Characters/techno_aguacate.tscn")	
 	var cattanita = load("res://Characters/techno_cattanita.tscn")	
 	var aguacate_instance =  aguacate.instantiate() 
-	aguacate_instance.position = Vector2(119, 238)
+	aguacate_instance.position = Vector2(119, 218)
 	aguacate_instance.scale = Vector2(4, 4)
 	aguacate_instance.name = "TechnoAguacate"
 	TechnoAguacate = aguacate_instance 
 	call_deferred("add_child", aguacate_instance)
 	var cattanita_instance =  cattanita.instantiate() 
-	cattanita_instance.position = Vector2(532, 132)
+	cattanita_instance.position = Vector2(532, 122)
 	cattanita_instance.scale = Vector2(4, 4)
 	cattanita_instance.name = "TechnoCattanita"
 	TechnoCattanita = cattanita_instance 

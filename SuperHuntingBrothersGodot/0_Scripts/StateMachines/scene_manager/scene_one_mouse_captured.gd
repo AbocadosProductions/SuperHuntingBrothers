@@ -10,7 +10,7 @@ func Exit():
 	scene_manager.Internal_Signal.disconnect(signal_detected)
 
 func signal_detected(signal_data):
-	if signal_data == Constants.CAT_MANUAL_CONTROL_SIGNAL:
+	if signal_data == Constants.MOUSE_FLEE_SIGNAL:
 		Transition.emit(self, Constants.SCENE_MANAGER_LEVEL_RUNNING_SIGNAL)
 
 	elif signal_data == Constants.CAT_MOUSE_CAPTURED_SIGNAL:

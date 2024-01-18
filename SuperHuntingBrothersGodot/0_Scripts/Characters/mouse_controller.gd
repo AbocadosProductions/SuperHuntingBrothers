@@ -4,16 +4,19 @@ extends CharacterBody2D
 var mouse_is_fleing : bool = false
 var last_state = ""
 var direction = "_Right"
-
+var difficulty
 
 signal mouse_state_machine_signal
 signal External_Signal
 
 @export var scene_manager : Node2D
 @export var level_manager : Node2D
+@export var data_manager : Node2D
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
+	difficulty = data_manager.get_difficulty()
+	
 
 func _physics_process(delta):
 	move_and_slide()

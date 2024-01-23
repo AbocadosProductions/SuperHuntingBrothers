@@ -422,9 +422,9 @@ toggle_mode = true
 
 [node name="retry_button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 117.0
+offset_left = 119.0
 offset_top = 127.0
-offset_right = 197.0
+offset_right = 199.0
 offset_bottom = 144.0
 theme_type_variation = &"Button_Try_Again"
 toggle_mode = true

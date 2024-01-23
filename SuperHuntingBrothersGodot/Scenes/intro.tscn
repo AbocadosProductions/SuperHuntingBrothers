@@ -1,9 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://ds4ywncvyry11"]
+[gd_scene load_steps=25 format=3 uid="uid://b5f7ufjs0negk"]
 
 [ext_resource type="Script" path="res://0_Scripts/Intro/Intro.gd" id="1_m52vy"]
 [ext_resource type="Texture2D" uid="uid://4io02db51o8o" path="res://Sprites/Intro/Logo_Big.png" id="2_ha5hq"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="4_q2ejw"]
-[ext_resource type="Texture2D" uid="uid://csce8mcltmm32" path="res://Sprites/UI/Logo_V2.png" id="5_1who8"]
+[ext_resource type="Texture2D" path="res://Sprites/UI/Logo_V2.png" id="5_1who8"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="5_n46o1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
@@ -177,6 +177,7 @@ wait_time = 4.0
 one_shot = true
 
 [node name="TimerLabel" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="TileMap" type="TileMap" parent="."]

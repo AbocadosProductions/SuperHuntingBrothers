@@ -25,7 +25,7 @@ func _process(delta):
 		if opacity >= 1:
 			show_logo = false
 			timer_logo.start()
-			logo.play("default")
+			logo.play()
 
 	if hide_logo:
 		if opacity > 0 :

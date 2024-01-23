@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=92 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=96 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://c6f5q82lyfs6l" path="res://Sprites/UI/Panel_Logo.png" id="6_andiy"]
 [ext_resource type="Texture2D" uid="uid://b7m5i6g3mg0ex" path="res://Sprites/UI/Panel_Level_Lose.png" id="6_hlbfh"]
 [ext_resource type="Texture2D" uid="uid://oelts623r581" path="res://Sprites/UI/Panel_Difficulty.png" id="6_ogphh"]
+[ext_resource type="Texture2D" uid="uid://bu4f8rgvhu66h" path="res://Sprites/UI/Panel_Info.png" id="7_6ep73"]
 [ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
 [ext_resource type="Texture2D" uid="uid://dium1an78rgfi" path="res://Sprites/UI/Panel_Intro.png" id="7_yu3dv"]
+[ext_resource type="Texture2D" uid="uid://ddvwwid3bghxt" path="res://Sprites/UI/Panel_Info_2.png" id="8_3kwf3"]
 [ext_resource type="Texture2D" uid="uid://dgd0qf6ss8ofc" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="11_6eycr"]
@@ -279,6 +281,22 @@ texture_margin_bottom = 4.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grj0u"]
 texture = ExtResource("6_ogphh")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_omt0n"]
+texture = ExtResource("7_6ep73")
+texture_margin_left = 3.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tk17j"]
+texture = ExtResource("8_3kwf3")
+texture_margin_left = 3.0
+texture_margin_top = 4.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4crn1"]
 texture = ExtResource("7_yu3dv")
 
@@ -458,6 +476,10 @@ Label/fonts/font = ExtResource("1_1bj03")
 Panel/styles/panel = SubResource("StyleBoxTexture_kcfgb")
 Panel_Difficulty/base_type = &"Panel"
 Panel_Difficulty/styles/panel = SubResource("StyleBoxTexture_grj0u")
+Panel_Info/base_type = &"Panel"
+Panel_Info/styles/panel = SubResource("StyleBoxTexture_omt0n")
+Panel_Info_2/base_type = &"Panel"
+Panel_Info_2/styles/panel = SubResource("StyleBoxTexture_tk17j")
 Panel_Intro/base_type = &"Panel"
 Panel_Intro/styles/panel = SubResource("StyleBoxTexture_4crn1")
 Panel_Level_Lose/base_type = &"Panel"

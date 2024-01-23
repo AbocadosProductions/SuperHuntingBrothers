@@ -1427,6 +1427,7 @@ menu_button = NodePath("tutorial_panel/second_to_show/Menu_Button")
 play_button = NodePath("tutorial_panel/second_to_show/Mice_Button")
 
 [node name="TileMap" type="TileMap" parent="."]
+modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(320, 180)
 tile_set = SubResource("TileSet_wuolb")
 format = 2

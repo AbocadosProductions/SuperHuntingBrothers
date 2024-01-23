@@ -20,8 +20,7 @@ var possible_mazes = []
 @export var mouse_2 : Node2D
 
 func get_maze_scenes():
-	var diff = data_manager.get_difficulty()
-	path = Constants.MAZES_PATH[diff]
+	path = Constants.MAZES_FOLDER_PATH
 	var dir = DirAccess.open(path)
 
 	if not dir:

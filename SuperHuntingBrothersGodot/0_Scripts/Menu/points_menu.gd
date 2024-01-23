@@ -26,6 +26,8 @@ var actual_time : int
 
 # Variables to control the point_scene loop
 var level_index : int
+var record_points : int
+var record_index : int
 var multiplier : float
 var multiplier_per_level_constant : float
 var points_obtained_in_this_level : float
@@ -54,6 +56,9 @@ func initialize_variables():
 	actual_time = datamanager.return_last_level_time()
 	record_time = datamanager.return_record_time()
 	level_index = datamanager.return_level_index()
+
+	record_points = datamanager.return_record_points()
+	record_index = datamanager.return_record_level_index()
 
 	# Load data from constants
 	multiplier_per_level_constant = Constants.PUNCTUATION_MULTIPLIER_PER_LEVEL
@@ -143,8 +148,8 @@ func _process(_delta):
 	elif is_moving_out_the_screen:
 		if position[0] < final_transform:
 			position[0] += moving_step
-			External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		else:
+			External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 			is_moving_out_the_screen = false
 			position[0] = initial_transform
 
@@ -154,6 +159,13 @@ func check_for_record():
 		datamanager.set_new_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)
+	
+	if updated_points > record_points:
+		datamanager.set_points(updated_points)
+		datamanager.set_new_record_points()
+		
+	if level_index > record_index:
+		datamanager.set_new_record_level_index()
 
 # LISTEN TO THE BUTTON SIGNAL AND WAITS FOR THE LOOP TO END
 func _on_next_level_button_pressed():

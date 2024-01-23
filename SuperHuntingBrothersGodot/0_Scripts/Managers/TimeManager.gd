@@ -16,11 +16,14 @@ var const_time_multiplier
 var cats_are_running = false
 var treshold_reached
 
+var difficulty
+
 signal Time_Signal
 
 func _ready():
 	scene_manager.External_Signal.connect(scene_manager_signal_detected)
 	animation_player.play(Constants.TIME_MANAGER_IDLE_ANIMATION)
+	difficulty = data_manager.get_difficulty()
 	prepare_time_level()
 	hide_childs()
 
@@ -53,10 +56,10 @@ func prepare_time_level():
 	time_label.text = format_time(time_in_level)
 
 func load_variables():
-	const_level_time = Constants.DEFAULT_TIME_PER_LEVEL
-	const_time_multiplier = Constants.TIME_PER_LEVEL_TO_SUSTRACT
+	const_level_time = Constants.DEFAULT_TIME_PER_LEVEL[difficulty]
+	const_time_multiplier = Constants.TIME_PER_LEVEL_TO_SUSTRACT[difficulty]
 	time_treshold = Constants.TRESHOLD_TIME
-	minimum_time = Constants.MINIMUM_TIME_PER_LEVEL
+	minimum_time = Constants.MINIMUM_TIME_PER_LEVEL[difficulty]
 	level_index = data_manager.return_level_index()
 	treshold_reached = false
 

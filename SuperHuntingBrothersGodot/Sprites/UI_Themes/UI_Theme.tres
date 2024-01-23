@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=90 format=3 uid="uid://dungrmp1f1lws"]
+[gd_resource type="Theme" load_steps=92 format=3 uid="uid://dungrmp1f1lws"]
 
 [ext_resource type="FontFile" uid="uid://c2w44c0auidoe" path="res://Fuente/Coolville.ttf" id="1_1bj03"]
 [ext_resource type="Texture2D" uid="uid://cnby5ry4vyp32" path="res://Sprites/UI/Panel_Menu.png" id="1_u7kp3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://oelts623r581" path="res://Sprites/UI/Panel_Difficulty.png" id="6_ogphh"]
 [ext_resource type="Texture2D" uid="uid://b4blmwm0ihdtm" path="res://Sprites/UI/Panel_Level_Success.png" id="7_oqg62"]
 [ext_resource type="Texture2D" uid="uid://cnqjofkdfc61n" path="res://Sprites/UI/Panel_Pause.png" id="7_qmqof"]
+[ext_resource type="Texture2D" uid="uid://dium1an78rgfi" path="res://Sprites/UI/Panel_Intro.png" id="7_yu3dv"]
 [ext_resource type="Texture2D" uid="uid://dgd0qf6ss8ofc" path="res://Sprites/UI/Panel_Maze.png" id="9_rgiju"]
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="10_1n380"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="11_6eycr"]
@@ -278,6 +279,9 @@ texture_margin_bottom = 4.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grj0u"]
 texture = ExtResource("6_ogphh")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4crn1"]
+texture = ExtResource("7_yu3dv")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sapj"]
 texture = ExtResource("6_hlbfh")
 texture_margin_left = 6.0
@@ -454,6 +458,8 @@ Label/fonts/font = ExtResource("1_1bj03")
 Panel/styles/panel = SubResource("StyleBoxTexture_kcfgb")
 Panel_Difficulty/base_type = &"Panel"
 Panel_Difficulty/styles/panel = SubResource("StyleBoxTexture_grj0u")
+Panel_Intro/base_type = &"Panel"
+Panel_Intro/styles/panel = SubResource("StyleBoxTexture_4crn1")
 Panel_Level_Lose/base_type = &"Panel"
 Panel_Level_Lose/styles/panel = SubResource("StyleBoxTexture_0sapj")
 Panel_Level_Success/base_type = &"Panel"

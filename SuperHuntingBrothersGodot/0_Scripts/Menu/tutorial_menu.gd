@@ -1,6 +1,7 @@
 extends Control
 
 @onready var timer : Timer = $Timer
+@onready var music_manager : Node2D = $music_manager
 
 @export var first_block : Panel
 @export var second_block : Panel
@@ -72,6 +73,7 @@ func _process(delta):
 
 func _on_menu_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = menu_button
 	func_to_call = "menu_funct"
 
@@ -80,6 +82,7 @@ func menu_funct():
 
 func _on_next_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = next_button
 	func_to_call = "next_funct"
 
@@ -92,6 +95,7 @@ func next_funct():
 
 func _on_play_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = play_button
 	func_to_call = "play_funct"
 
@@ -143,3 +147,6 @@ func show_cats():
 	TechnoCattanita = cattanita_instance 
 	call_deferred("add_child", cattanita_instance)
 	
+
+func _focus_entered():
+	music_manager.play(Constants.BUTTON_FOCUS_EFFECT)

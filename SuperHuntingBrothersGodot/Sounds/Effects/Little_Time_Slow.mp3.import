@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://db3nu2wfnuugj"
-path="res://.godot/imported/Little_Time_Slow.mp3-b3607a2098f51d5058231e7dff4939da.mp3str"
+path="res://.godot/imported/Little_Time_Slow.mp3-1c9d44ab729969be369bf09e36b5b05f.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Little_Time_Slow.mp3"
-dest_files=["res://.godot/imported/Little_Time_Slow.mp3-b3607a2098f51d5058231e7dff4939da.mp3str"]
+source_file="res://Sounds/Effects/Little_Time_Slow.mp3"
+dest_files=["res://.godot/imported/Little_Time_Slow.mp3-1c9d44ab729969be369bf09e36b5b05f.mp3str"]
 
 [params]
 

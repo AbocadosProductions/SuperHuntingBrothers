@@ -7,6 +7,7 @@ extends Control
 @export var points_label : Label
 @export var new_record_announcer : Node2D
 @export var scene_manager : Node2D
+@export var music_manager : Node2D
 
 @onready var next_level_button : Button = $Panel/next_level_button
 @onready var timer : Timer = $Timer
@@ -14,8 +15,6 @@ extends Control
 
 var func_to_call 
 var pressed_button
-
-
 
 signal External_Signal
 
@@ -170,6 +169,7 @@ func check_for_record():
 # LISTEN TO THE BUTTON SIGNAL AND WAITS FOR THE LOOP TO END
 func _on_next_level_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = next_level_button
 	func_to_call = "next_level_funct"
 
@@ -184,10 +184,11 @@ func next_level_funct():
 		datamanager.set_points(updated_points)
 		External_Signal.emit(self, Constants.POINTS_MENU_FINISHED_SIGNAL)
 
-
-
 func _on_timer_timeout():
 	pressed_button.button_pressed = false
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	call(func_to_call)
+
+func _focus_entered():
+	music_manager.play(Constants.BUTTON_FOCUS_EFFECT)

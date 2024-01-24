@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://bla8j2nnaafjm"]
+[gd_scene load_steps=102 format=3 uid="uid://bla8j2nnaafjm"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/tutorial_menu.gd" id="1_ebra5"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_w1fm7"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b3v580uuhiam4" path="res://Sprites/UI/Panel_Tutorial.png" id="19_fqjqh"]
 [ext_resource type="Texture2D" uid="uid://bmlq3u3ntutct" path="res://Sprites/Cattanita/Cattanita_Idle_Left.png" id="19_rbhkk"]
 [ext_resource type="Texture2D" uid="uid://cwy1ue0e4pqy4" path="res://Sprites/Aguacate/Aguacate_Idle_Right.png" id="20_8htkl"]
+[ext_resource type="PackedScene" uid="uid://cww7fuqfhuhoc" path="res://Managers/music_manager.tscn" id="22_yv75x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -1583,7 +1584,13 @@ shape = SubResource("RectangleShape2D_7fcu6")
 position = Vector2(587, 183)
 shape = SubResource("RectangleShape2D_7fcu6")
 
+[node name="music_manager" parent="." instance=ExtResource("22_yv75x")]
+position = Vector2(-187.367, -40.1187)
+
+[connection signal="focus_entered" from="tutorial_panel/first_to_show/Cats_Button" to="." method="_focus_entered"]
 [connection signal="pressed" from="tutorial_panel/first_to_show/Cats_Button" to="." method="_on_next_button_pressed"]
+[connection signal="focus_entered" from="tutorial_panel/second_to_show/Menu_Button" to="." method="_focus_entered"]
 [connection signal="pressed" from="tutorial_panel/second_to_show/Menu_Button" to="." method="_on_menu_button_pressed"]
+[connection signal="focus_entered" from="tutorial_panel/second_to_show/Mice_Button" to="." method="_focus_entered"]
 [connection signal="pressed" from="tutorial_panel/second_to_show/Mice_Button" to="." method="_on_play_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://w4ovjos56k6w"
-path="res://.godot/imported/Catch_1.mp3-b130fef99d4bf3d6ee60a3561aec67ea.mp3str"
+path="res://.godot/imported/Catch_1.mp3-b9d76bfd16b8721ec2d7d000fb3b48e9.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Catch_1.mp3"
-dest_files=["res://.godot/imported/Catch_1.mp3-b130fef99d4bf3d6ee60a3561aec67ea.mp3str"]
+source_file="res://Sounds/Effects/Catch_1.mp3"
+dest_files=["res://.godot/imported/Catch_1.mp3-b9d76bfd16b8721ec2d7d000fb3b48e9.mp3str"]
 
 [params]
 

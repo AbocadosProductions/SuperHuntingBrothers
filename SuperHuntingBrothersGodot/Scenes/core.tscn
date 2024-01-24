@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=3 uid="uid://c0hp1ujxpbwb5"]
+[gd_scene load_steps=173 format=3 uid="uid://c0hp1ujxpbwb5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_gkjlv"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="1_joe5b"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://nvm5a1ou8xm5" path="res://Sprites/UI/Panel_Records.png" id="21_fwr2q"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="21_m8wj4"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="22_ebh5k"]
+[ext_resource type="PackedScene" uid="uid://cww7fuqfhuhoc" path="res://Managers/music_manager.tscn" id="30_3fg8u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li1k4"]
 radius = 5.0
@@ -523,7 +524,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_5hg01"]
+[sub_resource type="Theme" id="Theme_vb03s"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -1074,13 +1075,14 @@ sources/0 = SubResource("TileSetAtlasSource_8phcu")
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(500, 350)
 
-[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu", "countdown") instance=ExtResource("1_joe5b")]
+[node name="SceneManager" parent="." node_paths=PackedStringArray("cat1_state_machine", "cat2_state_machine", "time_manager", "points_menu", "pause_menu", "countdown", "music_manager") instance=ExtResource("1_joe5b")]
 cat1_state_machine = NodePath("../cat_cattanita/StateMachine")
 cat2_state_machine = NodePath("../cat_aguacate/StateMachine")
 time_manager = NodePath("../time_manager")
 points_menu = NodePath("../points_menu")
 pause_menu = NodePath("../pause_menu")
 countdown = NodePath("../Countdown")
+music_manager = NodePath("../music_manager")
 
 [node name="mice_captured" parent="SceneManager/scene_manager_state_machine" index="3" node_paths=PackedStringArray("scene_manager")]
 scene_manager = NodePath("../..")
@@ -1127,7 +1129,7 @@ scene_manager = NodePath("../SceneManager")
 level_manager = NodePath("../level_manager")
 data_manager = NodePath("../DataManager")
 
-[node name="points_menu" parent="." node_paths=PackedStringArray("datamanager", "scene_manager") instance=ExtResource("7_iuo6b")]
+[node name="points_menu" parent="." node_paths=PackedStringArray("datamanager", "scene_manager", "music_manager") instance=ExtResource("7_iuo6b")]
 z_index = 5
 offset_left = -644.0
 offset_top = 183.0
@@ -1135,6 +1137,7 @@ offset_right = -644.0
 offset_bottom = 183.0
 datamanager = NodePath("../DataManager")
 scene_manager = NodePath("../SceneManager")
+music_manager = NodePath("../music_manager")
 
 [node name="Panel" parent="points_menu" index="0"]
 theme = SubResource("Theme_qqlth")
@@ -1147,14 +1150,15 @@ offset_bottom = 8.5
 offset_top = 0.5
 offset_bottom = 8.5
 
-[node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("8_s8chp")]
+[node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager", "music_manager") instance=ExtResource("8_s8chp")]
 z_index = 10
 offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_5hg01")
+theme = SubResource("Theme_vb03s")
 scene_manager = NodePath("../SceneManager")
+music_manager = NodePath("../music_manager")
 metadata/_edit_use_anchors_ = true
 
 [node name="cat_aguacate" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("9_141fg")]
@@ -1189,11 +1193,11 @@ tile_set = SubResource("TileSet_qw1sq")
 format = 2
 layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, -327690, 0, 0, -262154, 0, 0, -196618, 0, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 0, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, -327689, 0, 0, -262153, 0, 0, -196617, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, -327688, 0, 0, -262152, 0, 0, -196616, 0, 0, -131080, 0, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 0, 393208, 0, 0, -327687, 0, 0, -262151, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, -327686, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, 393210, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, -327684, 0, 0, -262148, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, -327683, 0, 0, -262147, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, -393211, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -393209, 0, 0, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, -393208, 0, 0, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0)
 
-[node name="Countdown" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("10_ciasn")]
-modulate = Color(1, 1, 1, 0)
+[node name="Countdown" parent="." node_paths=PackedStringArray("scene_manager", "music_manager") instance=ExtResource("10_ciasn")]
 z_index = 5
 position = Vector2(498, 351)
 scene_manager = NodePath("../SceneManager")
+music_manager = NodePath("../music_manager")
 
 [node name="Maze_1_floor" type="Panel" parent="."]
 modulate = Color(0.854902, 0.854902, 0.854902, 1)
@@ -1318,6 +1322,9 @@ offset_right = 94.0
 offset_bottom = 23.0
 text = "123456"
 horizontal_alignment = 1
+
+[node name="music_manager" parent="." instance=ExtResource("30_3fg8u")]
+position = Vector2(-443.367, -184.119)
 
 [editable path="SceneManager"]
 [editable path="cat_cattanita"]

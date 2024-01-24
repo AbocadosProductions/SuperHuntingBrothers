@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bjnj4737udkbo"
-path="res://.godot/imported/Little_Time_Fast.mp3-919352056276408de09fe7972b619b1e.mp3str"
+path="res://.godot/imported/Little_Time_Fast.mp3-18255bd5953ea403879a519ce7c7409e.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Little_Time_Fast.mp3"
-dest_files=["res://.godot/imported/Little_Time_Fast.mp3-919352056276408de09fe7972b619b1e.mp3str"]
+source_file="res://Sounds/Effects/Little_Time_Fast.mp3"
+dest_files=["res://.godot/imported/Little_Time_Fast.mp3-18255bd5953ea403879a519ce7c7409e.mp3str"]
 
 [params]
 

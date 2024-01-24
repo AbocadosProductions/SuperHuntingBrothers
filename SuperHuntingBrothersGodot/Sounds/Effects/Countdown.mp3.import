@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://8v6x0qmdehnl"
-path="res://.godot/imported/Countdown.mp3-307ee6afa686929f741636a577257ddc.mp3str"
+path="res://.godot/imported/Countdown.mp3-ac81be94e5067afd71195a9198100e45.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Countdown.mp3"
-dest_files=["res://.godot/imported/Countdown.mp3-307ee6afa686929f741636a577257ddc.mp3str"]
+source_file="res://Sounds/Effects/Countdown.mp3"
+dest_files=["res://.godot/imported/Countdown.mp3-ac81be94e5067afd71195a9198100e45.mp3str"]
 
 [params]
 

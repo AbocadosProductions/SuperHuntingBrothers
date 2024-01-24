@@ -191,11 +191,17 @@ const CELL_SIZE = 16
 # Music controller constants
 
 const MINIMUM_DB_VALUE = 25
-const EFFECT_MUSIC = "res://Audios/prueba.wav"
+
+const BUTTON_FOCUS_EFFECT = "res://Sounds/Effects/Button_Focus.mp3"
+const BUTTON_PRESSED_EFFECT = "res://Sounds/Effects/Button_Pressed.mp3"
+const PAUSE_EFFECT = "res://Sounds/Effects/Pause.mp3"
+const PLAY_EFFECT = "res://Sounds/Effects/Play.mp3"
+const COUNTDOWN_EFFECT = "res://Sounds/Effects/Countdown.mp3"
+const NEW_RECORD_EFFECT = "res://Sounds/Effects/New_Record.mp3"
 const AUDIO_BUS = "Master"
 const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
-const MUSIC_SIGNALS = [EFFECT_MUSIC]
-const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
+const MUSIC_SIGNALS = []
+const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT, PLAY_EFFECT, COUNTDOWN_EFFECT]
 
 # --------------------------------------------------------------------------- #
 
@@ -213,5 +219,4 @@ const DIFFICULTY_TEXTS = {
 	NORMAL_MODE : "-Tiempo Maximo de Nivel: 90 s\n\n-Reduccion de tiempo por Nivel: 3 s\n\n-Tiempo para capturar los dos ratones: 3 s",
 	HARD_MODE : "-Tiempo Maximo de Nivel: 60 s\n\n-Reduccion de tiempo por Nivel: 5 s\n\n-Tiempo para capturar los dos ratones: 2 s"
 }
-
 # --------------------------------------------------------------------------- #

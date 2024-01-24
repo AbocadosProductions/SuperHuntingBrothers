@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dvy0sfqkq11ai"
-path="res://.godot/imported/Button_Pressed.mp3-8ce6c41fff3e5bc0fd2fcb6506c05d4c.mp3str"
+path="res://.godot/imported/Button_Pressed.mp3-f18f625680a4deb2c094b7b2d553d338.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Button_Pressed.mp3"
-dest_files=["res://.godot/imported/Button_Pressed.mp3-8ce6c41fff3e5bc0fd2fcb6506c05d4c.mp3str"]
+source_file="res://Sounds/Effects/Button_Pressed.mp3"
+dest_files=["res://.godot/imported/Button_Pressed.mp3-f18f625680a4deb2c094b7b2d553d338.mp3str"]
 
 [params]
 

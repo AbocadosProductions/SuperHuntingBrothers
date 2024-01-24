@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b2y0p2ejqfjgu"]
+[gd_scene load_steps=48 format=3 uid="uid://b2y0p2ejqfjgu"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/lose_menu.gd" id="1_d4mky"]
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="2_0r01c"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_punctuation_record.gd" id="2_v544t"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/new_level_record.gd" id="3_lqvoi"]
 [ext_resource type="Texture2D" uid="uid://yiipjgeht13h" path="res://Sprites/UI/New_Record_VFX.png" id="5_w3vax"]
+[ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="7_7itmx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5ihc"]
 atlas = ExtResource("5_w3vax")
@@ -275,6 +276,34 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
+resource_name = "Background"
+texture = ExtResource("7_7itmx")
+texture_region_size = Vector2i(32, 32)
+0:0/animation_columns = 16
+0:0/animation_speed = 10.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5gth6"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_8phcu")
+
 [node name="lose_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -287,7 +316,7 @@ script = ExtResource("1_d4mky")
 [node name="DataManager" parent="." instance=ExtResource("2_0r01c")]
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(229, 144)
+custom_minimum_size = Vector2(218, 152)
 layout_mode = 0
 offset_left = 98.0
 offset_top = 37.0
@@ -300,11 +329,11 @@ theme_type_variation = &"Panel_Level_Lose"
 [node name="actual_punctuation" type="Label" parent="Panel"]
 custom_minimum_size = Vector2(62, 16)
 layout_mode = 2
-offset_left = 14.0
-offset_top = 48.0
-offset_right = 76.0
-offset_bottom = 64.0
-text = "Puntuacion:"
+offset_left = 16.0
+offset_top = 63.0
+offset_right = 78.0
+offset_bottom = 79.0
+text = "Actual:"
 horizontal_alignment = 1
 vertical_alignment = 1
 text_direction = 1
@@ -312,30 +341,30 @@ text_direction = 1
 [node name="punctuation_label" type="Label" parent="Panel/actual_punctuation"]
 custom_minimum_size = Vector2(30, 11)
 layout_mode = 0
-offset_left = 56.0
+offset_left = 48.0
 offset_top = 3.0
-offset_right = 86.0
+offset_right = 78.0
 offset_bottom = 14.0
-text = "2500"
+text = "250033"
 vertical_alignment = 1
 
 [node name="record_punctuation_label" type="Label" parent="Panel"]
 custom_minimum_size = Vector2(62, 16)
 layout_mode = 0
-offset_left = 129.0
-offset_top = 48.0
-offset_right = 191.0
-offset_bottom = 64.0
-text = "P. Record:"
+offset_left = 17.0
+offset_top = 95.0
+offset_right = 79.0
+offset_bottom = 111.0
+text = "Record:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="punctuation_label" type="Label" parent="Panel/record_punctuation_label"]
 custom_minimum_size = Vector2(30, 11)
 layout_mode = 0
-offset_left = 54.0
+offset_left = 48.0
 offset_top = 3.0
-offset_right = 84.0
+offset_right = 78.0
 offset_bottom = 14.0
 text = "2500"
 vertical_alignment = 1
@@ -343,20 +372,20 @@ vertical_alignment = 1
 [node name="actual_level" type="Label" parent="Panel"]
 custom_minimum_size = Vector2(80, 16)
 layout_mode = 0
-offset_left = 13.0
-offset_top = 86.0
-offset_right = 93.0
-offset_bottom = 102.0
-text = "Nivel Alcanzado:"
+offset_left = 124.0
+offset_top = 63.0
+offset_right = 204.0
+offset_bottom = 79.0
+text = "Actual:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="punctuation_label" type="Label" parent="Panel/actual_level"]
 custom_minimum_size = Vector2(30, 11)
 layout_mode = 0
-offset_left = 78.0
+offset_left = 57.0
 offset_top = 3.0
-offset_right = 108.0
+offset_right = 87.0
 offset_bottom = 14.0
 text = "1"
 vertical_alignment = 1
@@ -364,44 +393,44 @@ vertical_alignment = 1
 [node name="record_level_label" type="Label" parent="Panel"]
 custom_minimum_size = Vector2(70, 16)
 layout_mode = 0
-offset_left = 133.0
-offset_top = 86.0
-offset_right = 203.0
-offset_bottom = 102.0
-text = "n. record:"
+offset_left = 129.0
+offset_top = 95.0
+offset_right = 199.0
+offset_bottom = 111.0
+text = "Record:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="punctuation_label" type="Label" parent="Panel/record_level_label"]
 custom_minimum_size = Vector2(30, 11)
 layout_mode = 0
-offset_left = 58.0
-offset_top = 2.5
-offset_right = 88.0
-offset_bottom = 13.5
+offset_left = 52.0
+offset_top = 3.0
+offset_right = 82.0
+offset_bottom = 14.0
 text = "1"
 vertical_alignment = 1
 
 [node name="main_menu_button" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 31.0
-offset_top = 113.5
+offset_top = 127.0
 offset_right = 111.0
-offset_bottom = 130.5
+offset_bottom = 144.0
 theme_type_variation = &"Button_Menu"
 toggle_mode = true
 
 [node name="retry_button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 117.0
-offset_top = 114.0
-offset_right = 197.0
-offset_bottom = 131.0
+offset_left = 119.0
+offset_top = 127.0
+offset_right = 199.0
+offset_bottom = 144.0
 theme_type_variation = &"Button_Try_Again"
 toggle_mode = true
 
 [node name="new_punctuation_record" type="Node2D" parent="Panel" node_paths=PackedStringArray("lose_menu")]
-position = Vector2(226, -18.5)
+position = Vector2(114.5, 28.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_v544t")
 lose_menu = NodePath("../..")
@@ -419,7 +448,7 @@ sprite_frames = SubResource("SpriteFrames_l33e1")
 speed_scale = 4.0
 
 [node name="new_level_record" type="Node2D" parent="Panel" node_paths=PackedStringArray("lose_menu")]
-position = Vector2(226, 56.5)
+position = Vector2(222.5, 65.5)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_lqvoi")
 lose_menu = NodePath("../..")
@@ -439,6 +468,14 @@ speed_scale = 4.0
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color(0.8, 0.8, 0.8, 1)
+z_index = -5
+position = Vector2(318, 176)
+tile_set = SubResource("TileSet_5gth6")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327691, 0, 0, -262155, 0, 0, -196619, 0, 0, -131083, 0, 0, -65547, 0, 0, -11, 0, 0, 65525, 0, 0, 131061, 0, 0, 196597, 0, 0, 262133, 0, 0, 327669, 0, 0, 393205, 0, 0, -327690, 0, 0, -262154, 0, 0, -196618, 0, 0, -131082, 0, 0, -65546, 0, 0, -10, 0, 0, 65526, 0, 0, 131062, 0, 0, 196598, 0, 0, 262134, 0, 0, 327670, 0, 0, 393206, 0, 0, -327689, 0, 0, -262153, 0, 0, -196617, 0, 0, -131081, 0, 0, -65545, 0, 0, -9, 0, 0, 65527, 0, 0, 131063, 0, 0, 196599, 0, 0, 262135, 0, 0, 327671, 0, 0, 393207, 0, 0, -327688, 0, 0, -262152, 0, 0, -196616, 0, 0, -131080, 0, 0, -65544, 0, 0, -8, 0, 0, 65528, 0, 0, 131064, 0, 0, 196600, 0, 0, 262136, 0, 0, 327672, 0, 0, 393208, 0, 0, -327687, 0, 0, -262151, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, 65529, 0, 0, 131065, 0, 0, 196601, 0, 0, 262137, 0, 0, 327673, 0, 0, 393209, 0, 0, -327686, 0, 0, -262150, 0, 0, -196614, 0, 0, -131078, 0, 0, -65542, 0, 0, -6, 0, 0, 65530, 0, 0, 131066, 0, 0, 196602, 0, 0, 262138, 0, 0, 327674, 0, 0, 393210, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067, 0, 0, 196603, 0, 0, 262139, 0, 0, 327675, 0, 0, 393211, 0, 0, -327684, 0, 0, -262148, 0, 0, -196612, 0, 0, -131076, 0, 0, -65540, 0, 0, -4, 0, 0, 65532, 0, 0, 131068, 0, 0, 196604, 0, 0, 262140, 0, 0, 327676, 0, 0, 393212, 0, 0, -327683, 0, 0, -262147, 0, 0, -196611, 0, 0, -131075, 0, 0, -65539, 0, 0, -3, 0, 0, 65533, 0, 0, 131069, 0, 0, 196605, 0, 0, 262141, 0, 0, 327677, 0, 0, 393213, 0, 0, -327682, 0, 0, -262146, 0, 0, -196610, 0, 0, -131074, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 131070, 0, 0, 196606, 0, 0, 262142, 0, 0, 327678, 0, 0, 393214, 0, 0, -327681, 0, 0, -262145, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0, 65535, 0, 0, 131071, 0, 0, 196607, 0, 0, 262143, 0, 0, 327679, 0, 0, 393215, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, -393215, 0, 0, -327679, 0, 0, -262143, 0, 0, -196607, 0, 0, -131071, 0, 0, -65535, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 0, 0, 327683, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, -393211, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, -393210, 0, 0, -327674, 0, 0, -262138, 0, 0, -196602, 0, 0, -131066, 0, 0, -65530, 0, 0, 6, 0, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, -393209, 0, 0, -327673, 0, 0, -262137, 0, 0, -196601, 0, 0, -131065, 0, 0, -65529, 0, 0, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, -393208, 0, 0, -327672, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0)
 
 [connection signal="pressed" from="Panel/main_menu_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/retry_button" to="." method="_on_retry_button_pressed"]

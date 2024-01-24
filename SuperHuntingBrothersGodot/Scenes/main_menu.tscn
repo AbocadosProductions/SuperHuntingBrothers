@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3sbcml1kparx"]
+[gd_scene load_steps=17 format=3 uid="uid://c3sbcml1kparx"]
 
 [ext_resource type="Script" path="res://0_Scripts/Menu/main_menu.gd" id="1_odwai"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="2_chsbi"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://0_Scripts/Menu/normal_panel_data.gd" id="9_m6puc"]
 [ext_resource type="Script" path="res://0_Scripts/Menu/hard_panel_data.gd" id="10_1e0em"]
 [ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="10_84r8m"]
+[ext_resource type="PackedScene" uid="uid://cww7fuqfhuhoc" path="res://Managers/music_manager.tscn" id="12_33vx0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -425,16 +426,29 @@ one_shot = true
 
 [node name="DataManager" parent="." instance=ExtResource("10_84r8m")]
 
+[node name="music_manager" parent="." instance=ExtResource("12_33vx0")]
+position = Vector2(-187.367, -40.1187)
+
+[connection signal="focus_entered" from="normal_menu/Menu/VBoxContainer/play_button" to="." method="_focus_entered"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="focus_entered" from="normal_menu/Menu/VBoxContainer/tutorial" to="." method="_focus_entered"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="focus_entered" from="normal_menu/Menu/VBoxContainer/volumen" to="." method="_focus_entered"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/volumen" to="." method="_on_volumen_pressed"]
 [connection signal="focus_exited" from="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider" to="." method="_on_volumen_slider_focus_exited"]
 [connection signal="value_changed" from="normal_menu/Menu/VBoxContainer/volumen/Panel_Volumen/volumen_slider" to="." method="_on_volumen_slider_value_changed"]
+[connection signal="focus_entered" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_focus_entered"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="focus_entered" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_focus_entered"]
 [connection signal="pressed" from="normal_menu/Menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="focus_entered" from="credits_menu/credits_menu_panel/back_to_menu_button" to="." method="_focus_entered"]
 [connection signal="pressed" from="credits_menu/credits_menu_panel/back_to_menu_button" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="focus_entered" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/normal_mode" to="." method="_focus_entered"]
 [connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/normal_mode" to="." method="_on_normal_mode_pressed"]
+[connection signal="focus_entered" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/hard_mode" to="." method="_focus_entered"]
 [connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/HBoxContainer/hard_mode" to="." method="_on_hard_mode_pressed"]
+[connection signal="focus_entered" from="difficulty_menu/difficulty_menu_panel/back_menu" to="." method="_focus_entered"]
 [connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/back_menu" to="." method="_on_back_menu_pressed"]
+[connection signal="focus_entered" from="difficulty_menu/difficulty_menu_panel/start_game_button" to="." method="_focus_entered"]
 [connection signal="pressed" from="difficulty_menu/difficulty_menu_panel/start_game_button" to="." method="_on_start_game_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

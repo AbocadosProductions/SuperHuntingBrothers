@@ -65,16 +65,16 @@ const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 
 const DEFAULT_TIME_PER_LEVEL = {
-	HARD_MODE : 50,
-	NORMAL_MODE : 60
+	HARD_MODE : 30,
+	NORMAL_MODE : 40
 } 
 const TIME_PER_LEVEL_TO_SUSTRACT = {
 	HARD_MODE : 5,
 	NORMAL_MODE : 3
 }
 const MINIMUM_TIME_PER_LEVEL = {
-	HARD_MODE : 10,
-	NORMAL_MODE : 10
+	HARD_MODE : 15,
+	NORMAL_MODE : 15
 }
 const TRESHOLD_TIME = 15
 const TIME_MANAGER_IDLE_ANIMATION = "Idle"
@@ -124,15 +124,20 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 
 const POSITIONS_PER_LEVEL = {
 	"maze_1" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-119, -86)]},
+				"mouse" = [Vector2(-120, -71), Vector2(-24, -135), Vector2(103, -135),
+						   Vector2(72, 87), Vector2(-25, 86), Vector2(-120, 56)]},
 	"maze_2" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-119, -86)]},
+				"mouse" = [Vector2(-120, -72), Vector2(7, -136), Vector2(105, -104),
+						   Vector2(104, 88), Vector2(-26, 88), Vector2(-120, 25)]},
 	"maze_3" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-119, -86)]},
+				"mouse" = [Vector2(-120, -72), Vector2(8, -104), Vector2(39, -41),
+						   Vector2(103, 71), Vector2(-25, 88), Vector2(-120, -9)]},
 	"maze_4" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-119, -86)]},
+				"mouse" = [Vector2(-120, -105), Vector2(39, -103), Vector2(103, -24),
+						   Vector2(41, 88), Vector2(-120, 88), Vector2(-88, -40)]},
 	"maze_5" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-119, -86)]}
+				"mouse" = [Vector2(-120, -73), Vector2(-8, -136), Vector2(104, -40),
+						   Vector2(102, 57), Vector2(-40, 56), Vector2(-120, 25)]}
 }
 # --------------------------------------------------------------------------- #
 
@@ -193,11 +198,29 @@ const CELL_SIZE = 16
 # Music controller constants
 
 const MINIMUM_DB_VALUE = 25
-const EFFECT_MUSIC = "res://Audios/prueba.wav"
+
+const BUTTON_FOCUS_EFFECT = "res://Sounds/Effects/Button_Focus.mp3"
+const BUTTON_PRESSED_EFFECT = "res://Sounds/Effects/Button_Pressed.mp3"
+const PAUSE_EFFECT = "res://Sounds/Effects/Pause.mp3"
+const PLAY_EFFECT = "res://Sounds/Effects/Play.mp3"
+const THRESHOLD_EFFECT = "res://Sounds/Effects/Little_Time_Slow.mp3"
+const COUNTDOWN_EFFECT = "res://Sounds/Effects/Countdown.mp3"
+const NEW_RECORD_EFFECT = "res://Sounds/Effects/New_Record.mp3"
+const SCORE_UPDATE_EFFECT = "res://Sounds/Effects/Score.mp3"
+const ALARM_EFFECT = "res://Sounds/Effects/Alarm_Clock.mp3"
+const GAME_MUSIC = "res://Sounds/Music/Game.mp3"
+const GAME_MUSIC_slow = "res://Sounds/Music/Game_Slow.mp3"
+const MENU_MUSIC = "res://Sounds/Music/Menu.wav"
+const LOSE_MENU_MUSIC = "res://Sounds/Music/Lose_menu.wav"
+const INTRO_MENU_EFFECT = "res://Sounds/Effects/Failure_Menu.mp3"
+const LOGO_EFFECT = "res://Sounds/Effects/Logo_Sonido.wav"
+const CATCH_EFFECT = "res://Sounds/Effects/Catch_1.mp3"
+const FLEE_EFFECT = "res://Sounds/Effects/Flee.mp3"
 const AUDIO_BUS = "Master"
-const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
-const MUSIC_SIGNALS = [EFFECT_MUSIC]
-const EFFECT_SIGNALS = [BACKGROUND_MUSIC]
+const MUSIC_SIGNALS = [GAME_MUSIC, MENU_MUSIC, LOSE_MENU_MUSIC]
+const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT, PLAY_EFFECT, COUNTDOWN_EFFECT,
+						NEW_RECORD_EFFECT, SCORE_UPDATE_EFFECT, THRESHOLD_EFFECT, ALARM_EFFECT, INTRO_MENU_EFFECT,
+						CATCH_EFFECT, FLEE_EFFECT, LOGO_EFFECT]
 
 # --------------------------------------------------------------------------- #
 
@@ -212,8 +235,7 @@ const ANIMATION_COUNTDOWN = "Countdown"
 
 const DEFAULT_TEXT = "Por favor, selecciona una difficultad"
 const DIFFICULTY_TEXTS = {
-	NORMAL_MODE : "-Tiempo Maximo de Nivel: 90 s\n\n-Reduccion de tiempo por Nivel: 3 s\n\n-Tiempo para capturar los dos ratones: 3 s",
-	HARD_MODE : "-Tiempo Maximo de Nivel: 60 s\n\n-Reduccion de tiempo por Nivel: 5 s\n\n-Tiempo para capturar los dos ratones: 2 s"
+	NORMAL_MODE : "-Tiempo Maximo de Nivel: 40 s\n\n-Reduccion de tiempo por Nivel: 3 s\n\n-Tiempo para capturar los dos ratones: 3 s",
+	HARD_MODE : "-Tiempo Maximo de Nivel: 30 s\n\n-Reduccion de tiempo por Nivel: 5 s\n\n-Tiempo para capturar los dos ratones: 2 s"
 }
-
 # --------------------------------------------------------------------------- #

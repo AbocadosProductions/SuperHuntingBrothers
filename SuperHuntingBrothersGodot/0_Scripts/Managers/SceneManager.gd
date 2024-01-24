@@ -6,6 +6,7 @@ extends Node2D
 @export var points_menu : Control
 @export var pause_menu : Control
 @export var countdown : Sprite2D
+@export var music_manager : Node2D
 
 signal Internal_Signal
 signal External_Signal
@@ -25,3 +26,6 @@ func _ready():
 
 func scene_manager_state_controller(_emisioner, signal_detected):
 	Internal_Signal.emit(signal_detected)
+
+func play(music_to_play : String):
+	music_manager.play(music_to_play)

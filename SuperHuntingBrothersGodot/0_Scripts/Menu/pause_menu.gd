@@ -14,6 +14,7 @@ var pressed_button
 @onready var volumen_slider : HSlider = $Panel/volumen_slider
 
 @export var scene_manager : Node2D
+@export var music_manager : Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,11 +28,13 @@ func _input(event):
 
 func _on_back_to_menu_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = back_button
 	func_to_call = "quit_funct"
 
 func _on_continue_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = continue_button
 	func_to_call = "continue_funct"
 
@@ -74,3 +77,5 @@ func set_volume_bar():
 		value = (value + Constants.MINIMUM_DB_VALUE) / Constants.MINIMUM_DB_VALUE * 100
 	volumen_slider.set_value_no_signal(value)
 
+func _focus_entered():
+	music_manager.play(Constants.BUTTON_FOCUS_EFFECT)

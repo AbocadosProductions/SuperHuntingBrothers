@@ -7,6 +7,7 @@ extends Control
 @export var points_label : Label
 @export var new_record_announcer : Node2D
 @export var scene_manager : Node2D
+@export var music_manager : Node2D
 
 @onready var next_level_button : Button = $Panel/next_level_button
 @onready var timer : Timer = $Timer
@@ -14,8 +15,6 @@ extends Control
 
 var func_to_call 
 var pressed_button
-
-
 
 signal External_Signal
 
@@ -142,6 +141,7 @@ func _process(_delta):
 		if position[0] < showing_transform:
 			position[0] += moving_step
 		else:
+			music_manager.play(Constants.SCORE_UPDATE_EFFECT)
 			is_showing_points = true
 			is_moving_to_the_screen = false
 
@@ -156,6 +156,7 @@ func _process(_delta):
 # CONTROLS THE RECORD SPRITES AND THE RECORD LABEL WHEN POINTS FINISH TO BE UPDATED
 func check_for_record():
 	if actual_time > record_time or record_time == 0:
+		music_manager.play(Constants.NEW_RECORD_EFFECT)
 		datamanager.set_new_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)
@@ -163,6 +164,7 @@ func check_for_record():
 # LISTEN TO THE BUTTON SIGNAL AND WAITS FOR THE LOOP TO END
 func _on_next_level_button_pressed():
 	start_timer()
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	pressed_button = next_level_button
 	func_to_call = "next_level_funct"
 
@@ -177,10 +179,11 @@ func next_level_funct():
 		datamanager.set_points(updated_points)
 		External_Signal.emit(self, Constants.POINTS_MENU_FINISHED_SIGNAL)
 
-
-
 func _on_timer_timeout():
 	pressed_button.button_pressed = false
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	call(func_to_call)
+
+func _focus_entered():
+	music_manager.play(Constants.BUTTON_FOCUS_EFFECT)

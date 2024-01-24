@@ -3,6 +3,7 @@ extends Control
 @onready var normal_menu : Node2D = $normal_menu
 @onready var credits_menu : Node2D = $credits_menu
 @onready var timer : Timer = $Timer
+@onready var music_manager : Node2D = $music_manager
 
 @onready var cred_button : Button = $normal_menu/Menu/VBoxContainer/credits_button
 @onready var play_button : Button = $normal_menu/Menu/VBoxContainer/play_button
@@ -40,6 +41,7 @@ var pressed_button
 
 
 func _ready():
+	music_manager.play(Constants.MENU_MUSIC)
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	vol_slider.focus_mode = Control.FOCUS_NONE
@@ -103,6 +105,7 @@ func check_if_need_to_hard_record_panel():
 					move_hard_record_panel = false
 
 func _on_play_button_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = play_button
 	func_to_call = "play_funct"
@@ -114,19 +117,23 @@ func _on_volumen_slider_value_changed(_value):
 	AudioServer.set_bus_volume_db(audio_bus, value)
 
 func _on_credits_button_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = cred_button
 	func_to_call = "credits_funct"
 
 func _on_quit_button_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = quit_button
 	func_to_call = "quit_funct"
 
 func _on_back_to_menu_button_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = back_button
 	func_to_call = "back_funct"
+
 
 func start_timer():
 	timer.start()
@@ -159,22 +166,26 @@ func back_funct():
 	normal_menu.focus()
 
 func _on_normal_mode_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = normal_button
 	func_to_call = "normal_funct"
 
 func _on_hard_mode_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = hard_button
 	func_to_call = "hard_funct"
 
 func _on_back_menu_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = back_difficulty_button
 	func_to_call = "back_menu_funct"
 
 
 func _on_tutorial_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = tutorial_button
 	func_to_call = "tutorial_funct"
@@ -223,6 +234,7 @@ func back_menu_funct():
 	show_hard_record_panel = false
 
 func _on_start_game_button_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = start_game_button
 	func_to_call = "start_game_funct"
@@ -232,6 +244,7 @@ func start_game_funct():
 
 
 func _on_volumen_pressed():
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = vol_button
 	func_to_call = "vol_funct"
@@ -246,4 +259,6 @@ func _on_volumen_slider_focus_exited():
 	show_vol_panel = false
 	move_vol_panel = true
 	vol_slider.focus_mode = Control.FOCUS_NONE
-	
+
+func _focus_entered():
+	music_manager.play(Constants.BUTTON_FOCUS_EFFECT)

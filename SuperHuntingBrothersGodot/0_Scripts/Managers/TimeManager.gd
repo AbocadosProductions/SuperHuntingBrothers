@@ -3,6 +3,7 @@ extends Node2D
 @export var time_label : Label
 @export var scene_manager : Node2D
 @export var data_manager : Node2D
+@export var music_manager : Node2D
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -17,6 +18,7 @@ var cats_are_running = false
 var treshold_reached
 
 var difficulty
+var time_is_running = true
 
 signal Time_Signal
 
@@ -26,7 +28,7 @@ func _ready():
 	difficulty = data_manager.get_difficulty()
 	prepare_time_level()
 	hide_childs()
-
+	time_is_running = true
 
 func show_childs():
 	sprite.visible = true
@@ -69,14 +71,17 @@ func _process(delta):
 		time_in_level -= delta
 		time_label.text = format_time(time_in_level)
 		check_for_treshold()
-	elif time_in_level <= 0:
+	elif time_in_level <= 0 and time_is_running:
+		time_is_running = false
 		time_label.text = "0.0"
+		music_manager.play(Constants.ALARM_EFFECT)
 		Time_Signal.emit(self, Constants.TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL)
 		animation_player.play(Constants.TIME_MANAGER_TIME_OUT_ANIMATION)
 
 func check_for_treshold():
 	if time_in_level < time_treshold and not treshold_reached:
 		Time_Signal.emit(self, Constants.TIME_MANAGER_TRESHOLD_REACHED_SIGNAL)
+		music_manager.play(Constants.THRESHOLD_EFFECT)
 		treshold_reached = true
 		animation_player.play(Constants.TIME_MANAGER_THRESHOLD_ANIMATION)
 

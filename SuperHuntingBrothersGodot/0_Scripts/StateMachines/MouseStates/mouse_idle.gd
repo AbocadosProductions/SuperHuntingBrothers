@@ -1,6 +1,6 @@
 extends State
 
-const speed = 0.0
+const speed = 50.0
 const accel = 10.0
 var actual_target 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=3 uid="uid://c0hp1ujxpbwb5"]
+[gd_scene load_steps=173 format=3 uid="uid://c0hp1ujxpbwb5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wrtriir6fy0" path="res://Characters/mouse.tscn" id="1_gkjlv"]
 [ext_resource type="PackedScene" uid="uid://bo78ejselsj43" path="res://Managers/scene_manager.tscn" id="1_joe5b"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://nvm5a1ou8xm5" path="res://Sprites/UI/Panel_Records.png" id="21_fwr2q"]
 [ext_resource type="Texture2D" uid="uid://blysxg7p8d2wl" path="res://Sprites/UI/Alarm_Clock.png" id="21_m8wj4"]
 [ext_resource type="Theme" uid="uid://dungrmp1f1lws" path="res://Sprites/UI_Themes/UI_Theme.tres" id="22_ebh5k"]
+[ext_resource type="Script" path="res://0_Scripts/Managers/LabelManager.gd" id="30_c6rns"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_li1k4"]
 radius = 5.0
@@ -523,7 +524,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_5hg01"]
+[sub_resource type="Theme" id="Theme_mf7gh"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -1140,12 +1141,10 @@ scene_manager = NodePath("../SceneManager")
 theme = SubResource("Theme_qqlth")
 
 [node name="time_label" parent="points_menu/Panel/actual_time_label" index="0"]
-offset_top = 0.5
-offset_bottom = 8.5
+offset_bottom = 10.0
 
 [node name="time_label" parent="points_menu/Panel/record_time_label" index="0"]
-offset_top = 0.5
-offset_bottom = 8.5
+offset_bottom = 10.0
 
 [node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager") instance=ExtResource("8_s8chp")]
 z_index = 10
@@ -1153,7 +1152,7 @@ offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_5hg01")
+theme = SubResource("Theme_mf7gh")
 scene_manager = NodePath("../SceneManager")
 metadata/_edit_use_anchors_ = true
 
@@ -1241,7 +1240,7 @@ offset_right = 64.0
 offset_bottom = 14.0
 text = "Nivel actual:"
 
-[node name="Current_Level_2" type="Label" parent="Current_level/Panel_Current_Level"]
+[node name="Current_Level_data" type="Label" parent="Current_level/Panel_Current_Level"]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 4.0
@@ -1258,7 +1257,7 @@ offset_right = 64.0
 offset_bottom = 23.0
 text = "Nivel record:"
 
-[node name="Record_Level_2" type="Label" parent="Current_level/Panel_Current_Level"]
+[node name="Record_Level_data" type="Label" parent="Current_level/Panel_Current_Level"]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 13.0
@@ -1293,7 +1292,7 @@ offset_right = 53.0
 offset_bottom = 14.0
 text = "Puntuacion:"
 
-[node name="Current_Score_2" type="Label" parent="Current_points/Panel_Current_Points"]
+[node name="Current_Score_data" type="Label" parent="Current_points/Panel_Current_Points"]
 layout_mode = 0
 offset_left = 54.0
 offset_top = 4.0
@@ -1310,7 +1309,7 @@ offset_right = 57.0
 offset_bottom = 23.0
 text = "P. Record:"
 
-[node name="Record_Score_2" type="Label" parent="Current_points/Panel_Current_Points"]
+[node name="Record_Score_data" type="Label" parent="Current_points/Panel_Current_Points"]
 layout_mode = 0
 offset_left = 54.0
 offset_top = 13.0
@@ -1318,6 +1317,15 @@ offset_right = 94.0
 offset_bottom = 23.0
 text = "123456"
 horizontal_alignment = 1
+
+[node name="LabelManager" type="Node2D" parent="." node_paths=PackedStringArray("data_manager", "scene_manager", "current_score_label", "record_score_label", "current_level_label", "record_level_label")]
+script = ExtResource("30_c6rns")
+data_manager = NodePath("../DataManager")
+scene_manager = NodePath("../SceneManager")
+current_score_label = NodePath("../Current_points/Panel_Current_Points/Current_Score_data")
+record_score_label = NodePath("../Current_points/Panel_Current_Points/Record_Score_data")
+current_level_label = NodePath("../Current_level/Panel_Current_Level/Current_Level_data")
+record_level_label = NodePath("../Current_level/Panel_Current_Level/Record_Level_data")
 
 [editable path="SceneManager"]
 [editable path="cat_cattanita"]

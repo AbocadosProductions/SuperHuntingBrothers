@@ -202,14 +202,20 @@ const THRESHOLD_EFFECT = "res://Sounds/Effects/Little_Time_Slow.mp3"
 const COUNTDOWN_EFFECT = "res://Sounds/Effects/Countdown.mp3"
 const NEW_RECORD_EFFECT = "res://Sounds/Effects/New_Record.mp3"
 const SCORE_UPDATE_EFFECT = "res://Sounds/Effects/Score.mp3"
-const ALARM_EFFECT = "res://Sounds/Effects/Score.mp3"
+const ALARM_EFFECT = "res://Sounds/Effects/Alarm_Clock.mp3"
 const GAME_MUSIC = "res://Sounds/Music/Game.mp3"
 const GAME_MUSIC_slow = "res://Sounds/Music/Game_Slow.mp3"
 const MENU_MUSIC = "res://Sounds/Music/Menu.wav"
+const LOSE_MENU_MUSIC = "res://Sounds/Music/Lose_menu.wav"
+const INTRO_MENU_EFFECT = "res://Sounds/Effects/Failure_Menu.mp3"
+const LOGO_EFFECT = "res://Sounds/Effects/Logo_Sonido.wav"
+const CATCH_EFFECT = "res://Sounds/Effects/Catch_1.mp3"
+const FLEE_EFFECT = "res://Sounds/Effects/Flee.mp3"
 const AUDIO_BUS = "Master"
-const MUSIC_SIGNALS = [GAME_MUSIC, MENU_MUSIC]
+const MUSIC_SIGNALS = [GAME_MUSIC, MENU_MUSIC, LOSE_MENU_MUSIC]
 const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT, PLAY_EFFECT, COUNTDOWN_EFFECT,
-						NEW_RECORD_EFFECT, SCORE_UPDATE_EFFECT, THRESHOLD_EFFECT]
+						NEW_RECORD_EFFECT, SCORE_UPDATE_EFFECT, THRESHOLD_EFFECT, ALARM_EFFECT, INTRO_MENU_EFFECT,
+						CATCH_EFFECT, FLEE_EFFECT, LOGO_EFFECT]
 
 # --------------------------------------------------------------------------- #
 

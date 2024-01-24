@@ -4,6 +4,7 @@ extends Node2D
 @onready var reminder : Panel = $reminder
 @onready var timer_logo : Timer = $TimerLogo
 @onready var timer_label : Timer = $TimerLabel
+@onready var music_manager : Node2D = $music_manager
 
 var show_logo = false
 var hide_logo = false
@@ -25,6 +26,7 @@ func _process(delta):
 		if opacity >= 1:
 			show_logo = false
 			timer_logo.start()
+			music_manager.play(Constants.LOGO_EFFECT)
 			logo.play()
 
 	if hide_logo:
@@ -43,6 +45,7 @@ func _process(delta):
 			opacity += 0.01
 			reminder.modulate = Color(1, 1, 1, opacity)
 		if opacity >= 1:
+			music_manager.play(Constants.INTRO_MENU_EFFECT)
 			show_remminder = false
 			timer_label.start()
 	

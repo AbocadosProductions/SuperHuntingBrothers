@@ -28,7 +28,7 @@ var pressed_button
 signal External_Signal
 
 func _ready():
-	music_manager.play(Constants.MENU_MUSIC)
+	music_manager.play(Constants.LOSE_MENU_MUSIC)
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 

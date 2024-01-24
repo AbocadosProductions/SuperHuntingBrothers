@@ -10,6 +10,7 @@ var actual_target
 
 
 func Enter():
+	mouse.play(Constants.FLEE_EFFECT)
 	wander()
 	mouse.mouse_state_machine_signal.connect(on_mouse_signal_detected)
 	mouse.External_Signal.emit(Constants.ANIMATION_RELEASE)

@@ -129,7 +129,7 @@ func _on_quit_button_pressed():
 	func_to_call = "quit_funct"
 
 func _on_back_to_menu_button_pressed():
-	music_manager.play(Constants.COUNTDOWN_EFFECT)
+	music_manager.play(Constants.BUTTON_PRESSED_EFFECT)
 	start_timer()
 	pressed_button = back_button
 	func_to_call = "back_funct"

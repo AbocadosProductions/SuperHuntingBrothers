@@ -33,6 +33,7 @@ func start_timer():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	music_manager.play(Constants.MENU_MUSIC)
 	next_button.grab_focus()
 	menu_button.set_visible(false)
 	play_button.set_visible(false)

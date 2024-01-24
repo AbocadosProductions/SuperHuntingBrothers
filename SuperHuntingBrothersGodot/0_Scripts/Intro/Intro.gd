@@ -14,6 +14,7 @@ var opacity = 0.01
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	logo.visible = false
 	reminder.visible = false
 

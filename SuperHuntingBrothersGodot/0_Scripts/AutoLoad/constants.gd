@@ -65,16 +65,16 @@ const TIME_MANAGER_NEW_MAZES_TIMEOUT_SIGNAL = "timeout"
 const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 
 const DEFAULT_TIME_PER_LEVEL = {
-	HARD_MODE : 50,
-	NORMAL_MODE : 20
+	HARD_MODE : 30,
+	NORMAL_MODE : 40
 } 
 const TIME_PER_LEVEL_TO_SUSTRACT = {
 	HARD_MODE : 5,
 	NORMAL_MODE : 3
 }
 const MINIMUM_TIME_PER_LEVEL = {
-	HARD_MODE : 10,
-	NORMAL_MODE : 10
+	HARD_MODE : 15,
+	NORMAL_MODE : 15
 }
 const TRESHOLD_TIME = 15
 const TIME_MANAGER_IDLE_ANIMATION = "Idle"
@@ -235,7 +235,7 @@ const ANIMATION_COUNTDOWN = "Countdown"
 
 const DEFAULT_TEXT = "Por favor, selecciona una difficultad"
 const DIFFICULTY_TEXTS = {
-	NORMAL_MODE : "-Tiempo Maximo de Nivel: 90 s\n\n-Reduccion de tiempo por Nivel: 3 s\n\n-Tiempo para capturar los dos ratones: 3 s",
-	HARD_MODE : "-Tiempo Maximo de Nivel: 60 s\n\n-Reduccion de tiempo por Nivel: 5 s\n\n-Tiempo para capturar los dos ratones: 2 s"
+	NORMAL_MODE : "-Tiempo Maximo de Nivel: 40 s\n\n-Reduccion de tiempo por Nivel: 3 s\n\n-Tiempo para capturar los dos ratones: 3 s",
+	HARD_MODE : "-Tiempo Maximo de Nivel: 30 s\n\n-Reduccion de tiempo por Nivel: 5 s\n\n-Tiempo para capturar los dos ratones: 2 s"
 }
 # --------------------------------------------------------------------------- #

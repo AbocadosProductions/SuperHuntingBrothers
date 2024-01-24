@@ -249,19 +249,3 @@ func _on_volumen_slider_focus_exited():
 	show_vol_panel = false
 	move_vol_panel = true
 	vol_slider.focus_mode = Control.FOCUS_NONE
-
-
-func _on_play_button_focus_entered():
-	effects.play()
-
-func _on_tutorial_focus_entered():
-	effects.play()
-
-func _on_volumen_focus_entered():
-	effects.play()
-
-func _on_credits_button_focus_entered():
-	effects.play()
-
-func _on_quit_button_focus_entered():
-	effects.play()

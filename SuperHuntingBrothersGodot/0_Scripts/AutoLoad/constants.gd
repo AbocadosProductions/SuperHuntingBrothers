@@ -130,6 +130,8 @@ const POSITIONS_PER_LEVEL = {
 	"maze_3" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]},
 	"maze_4" = { "cat" = [Vector2(8, -9)],
+				"mouse" = [Vector2(-119, -86)]},
+	"maze_5" = { "cat" = [Vector2(8, -9)],
 				"mouse" = [Vector2(-119, -86)]}
 }
 # --------------------------------------------------------------------------- #

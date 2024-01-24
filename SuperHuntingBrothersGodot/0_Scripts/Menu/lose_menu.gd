@@ -1,7 +1,7 @@
 extends Control
 
 @onready var actual_punctuation_label : Label = $Panel/actual_punctuation/punctuation_label
-@onready var record_punctuation_label : Label = $Panel/record_level_label/punctuation_label
+@onready var record_punctuation_label : Label = $Panel/record_punctuation_label/punctuation_label
 @onready var actual_level_label : Label = $Panel/actual_level/punctuation_label
 @onready var record_level_label : Label = $Panel/record_level_label/punctuation_label
 
@@ -13,6 +13,8 @@ extends Control
 @onready var timer : Timer = $Timer
 @onready var array = [main_menu_button, retry_button]
 
+var new_record_points = false
+var new_record_level = false
 
 var updated_points
 var record_points
@@ -29,7 +31,7 @@ func _ready():
 		child.focus_mode = Control.FOCUS_ALL
 
 	main_menu_button.grab_focus()
-	
+
 	# Load data from data manager
 	updated_points = data_manager.return_points()
 	record_points = data_manager.return_record_points()
@@ -37,11 +39,13 @@ func _ready():
 	record_index = data_manager.return_record_level_index()
 
 	if updated_points > record_points:
-		External_Signal.emit(self, Constants.END_MENU_POINTS_RECORD_SIGNAL)
+
 		data_manager.set_new_record_points()
+		new_record_points = true
 	if level_index > record_index:
-		External_Signal.emit(self, Constants.END_MENU_LEVEL_RECORD_SIGNAL)
+
 		data_manager.set_new_record_level_index()
+		new_record_level = true
 	
 	
 	actual_punctuation_label.text = str(updated_points)
@@ -81,3 +85,12 @@ func _on_timer_timeout():
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	call(func_to_call)
+
+
+func _on_update_timer_timeout():
+	if new_record_points:
+		record_punctuation_label.text = str(updated_points)
+		External_Signal.emit(self, Constants.END_MENU_POINTS_RECORD_SIGNAL)
+	if new_record_level:
+		External_Signal.emit(self, Constants.END_MENU_LEVEL_RECORD_SIGNAL)
+		record_level_label.text = str(level_index)

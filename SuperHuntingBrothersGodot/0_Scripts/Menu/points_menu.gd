@@ -155,17 +155,10 @@ func _process(_delta):
 
 # CONTROLS THE RECORD SPRITES AND THE RECORD LABEL WHEN POINTS FINISH TO BE UPDATED
 func check_for_record():
-	if actual_time < record_time or record_time == 0:
+	if actual_time > record_time or record_time == 0:
 		datamanager.set_new_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)
-	
-	if updated_points > record_points:
-		datamanager.set_points(updated_points)
-		datamanager.set_new_record_points()
-		
-	if level_index > record_index:
-		datamanager.set_new_record_level_index()
 
 # LISTEN TO THE BUTTON SIGNAL AND WAITS FOR THE LOOP TO END
 func _on_next_level_button_pressed():

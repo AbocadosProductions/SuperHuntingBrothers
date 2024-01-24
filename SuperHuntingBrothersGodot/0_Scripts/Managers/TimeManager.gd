@@ -3,6 +3,7 @@ extends Node2D
 @export var time_label : Label
 @export var scene_manager : Node2D
 @export var data_manager : Node2D
+@export var music_manager : Node2D
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
@@ -77,6 +78,7 @@ func _process(delta):
 func check_for_treshold():
 	if time_in_level < time_treshold and not treshold_reached:
 		Time_Signal.emit(self, Constants.TIME_MANAGER_TRESHOLD_REACHED_SIGNAL)
+		music_manager.play(Constants.THRESHOLD_EFFECT)
 		treshold_reached = true
 		animation_player.play(Constants.TIME_MANAGER_THRESHOLD_ANIMATION)
 

@@ -4,9 +4,6 @@ extends Node2D
 @export var effect_player : AudioStreamPlayer2D
 
 func play_effect(track: String):
-	if effect_player.is_playing():
-		await effect_player.is_playing() == false
-	
 	effect_player.stream = load(track)
 	effect_player.play()
 

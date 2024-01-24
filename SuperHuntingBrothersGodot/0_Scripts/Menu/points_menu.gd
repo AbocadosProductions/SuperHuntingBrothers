@@ -141,6 +141,7 @@ func _process(_delta):
 		if position[0] < showing_transform:
 			position[0] += moving_step
 		else:
+			music_manager.play(Constants.SCORE_UPDATE_EFFECT)
 			is_showing_points = true
 			is_moving_to_the_screen = false
 
@@ -155,6 +156,7 @@ func _process(_delta):
 # CONTROLS THE RECORD SPRITES AND THE RECORD LABEL WHEN POINTS FINISH TO BE UPDATED
 func check_for_record():
 	if actual_time > record_time or record_time == 0:
+		music_manager.play(Constants.NEW_RECORD_EFFECT)
 		datamanager.set_new_record_time()
 		External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 		record_time_label.text = format_time(actual_time)

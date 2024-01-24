@@ -525,7 +525,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_h0r6n"]
+[sub_resource type="Theme" id="Theme_4il4t"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -1155,7 +1155,7 @@ offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_h0r6n")
+theme = SubResource("Theme_4il4t")
 scene_manager = NodePath("../SceneManager")
 music_manager = NodePath("../music_manager")
 metadata/_edit_use_anchors_ = true
@@ -1172,11 +1172,12 @@ type_of_control = "arrows"
 [node name="game_paused" parent="cat_aguacate/StateMachine" index="3" node_paths=PackedStringArray("cat")]
 cat = NodePath("../..")
 
-[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager") instance=ExtResource("3_cyum3")]
+[node name="time_manager" parent="." node_paths=PackedStringArray("scene_manager", "data_manager", "music_manager") instance=ExtResource("3_cyum3")]
 z_index = 4
 position = Vector2(468, 207)
 scene_manager = NodePath("../SceneManager")
 data_manager = NodePath("../DataManager")
+music_manager = NodePath("../music_manager")
 
 [node name="Sprite2D" parent="time_manager" index="0"]
 position = Vector2(53.3333, 45)

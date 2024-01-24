@@ -66,7 +66,7 @@ const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 
 const DEFAULT_TIME_PER_LEVEL = {
 	HARD_MODE : 50,
-	NORMAL_MODE : 60
+	NORMAL_MODE : 20
 } 
 const TIME_PER_LEVEL_TO_SUSTRACT = {
 	HARD_MODE : 5,
@@ -198,12 +198,18 @@ const BUTTON_FOCUS_EFFECT = "res://Sounds/Effects/Button_Focus.mp3"
 const BUTTON_PRESSED_EFFECT = "res://Sounds/Effects/Button_Pressed.mp3"
 const PAUSE_EFFECT = "res://Sounds/Effects/Pause.mp3"
 const PLAY_EFFECT = "res://Sounds/Effects/Play.mp3"
+const THRESHOLD_EFFECT = "res://Sounds/Effects/Little_Time_Slow.mp3"
 const COUNTDOWN_EFFECT = "res://Sounds/Effects/Countdown.mp3"
 const NEW_RECORD_EFFECT = "res://Sounds/Effects/New_Record.mp3"
+const SCORE_UPDATE_EFFECT = "res://Sounds/Effects/Score.mp3"
+const ALARM_EFFECT = "res://Sounds/Effects/Score.mp3"
+const GAME_MUSIC = "res://Sounds/Music/Game.mp3"
+const GAME_MUSIC_slow = "res://Sounds/Music/Game_Slow.mp3"
+const MENU_MUSIC = "res://Sounds/Music/Menu.wav"
 const AUDIO_BUS = "Master"
-const BACKGROUND_MUSIC = "res://Audios/elevator.wav"
-const MUSIC_SIGNALS = []
-const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT, PLAY_EFFECT, COUNTDOWN_EFFECT]
+const MUSIC_SIGNALS = [GAME_MUSIC, MENU_MUSIC]
+const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT, PLAY_EFFECT, COUNTDOWN_EFFECT,
+						NEW_RECORD_EFFECT, SCORE_UPDATE_EFFECT, THRESHOLD_EFFECT]
 
 # --------------------------------------------------------------------------- #
 

@@ -41,8 +41,10 @@ var pressed_button
 
 
 func _ready():
+	music_manager.play(Constants.MENU_MUSIC)
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
+
 	vol_slider.focus_mode = Control.FOCUS_NONE
 	normal_menu.focus()
 	start_game_button.focus_mode = Control.FOCUS_NONE

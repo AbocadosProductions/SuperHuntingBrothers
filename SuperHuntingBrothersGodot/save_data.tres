@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://bvek3n0ord85b"]
+
+[ext_resource type="Script" path="res://0_Scripts/Resources/SaveSystem.gd" id="1_psbjf"]
+
+[resource]
+script = ExtResource("1_psbjf")
+record_times_per_level = {
+"Hard": [],
+"Normal": [2, 21]
+}
+times_per_level = []
+actual_punctuation = 0
+record_punctuation = {
+"Hard": 0,
+"Normal": 9999999999999
+}
+record_level = {
+"Hard": 0,
+"Normal": 1
+}
+difficulty = "Normal"

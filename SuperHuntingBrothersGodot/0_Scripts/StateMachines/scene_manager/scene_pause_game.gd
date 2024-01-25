@@ -13,5 +13,5 @@ func Exit():
 
 func signal_detected(signal_data):
 	if signal_data == Constants.PAUSE_MENU_SIGNAL:
-		Transition.emit(self, Constants.SCENE_MANAGER_LEVEL_RUNNING_SIGNAL)
+		Transition.emit(self, scene_manager.last_state)
 		scene_manager.play(Constants.PLAY_EFFECT)

@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" path="res://0_Scripts/Managers/music_manager.gd" id="1_7mqcs"]
 
-[node name="music_manager" type="Node2D" node_paths=PackedStringArray("music_player", "effect_player")]
+[node name="music_manager" type="Node2D" node_paths=PackedStringArray("music_player", "effect_player", "effect_background_player")]
 script = ExtResource("1_7mqcs")
 music_player = NodePath("music")
 effect_player = NodePath("effects")
+effect_background_player = NodePath("effects_background")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 
 [node name="effects" type="AudioStreamPlayer2D" parent="."]
+
+[node name="effects_background" type="AudioStreamPlayer2D" parent="."]

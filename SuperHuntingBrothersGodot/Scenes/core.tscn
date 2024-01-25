@@ -525,7 +525,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_3kdvd"]
+[sub_resource type="Theme" id="Theme_kuth7"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -1145,21 +1145,11 @@ music_manager = NodePath("../music_manager")
 [node name="Panel" parent="points_menu" index="0"]
 theme = SubResource("Theme_qqlth")
 
-[node name="actual_time_label" parent="points_menu/Panel" index="0"]
-offset_left = 23.5
-offset_right = 53.5
-
 [node name="time_label" parent="points_menu/Panel/actual_time_label" index="0"]
 offset_bottom = 10.0
-text = "05s"
-
-[node name="record_time_label" parent="points_menu/Panel" index="1"]
-offset_left = 99.5
-offset_right = 132.5
 
 [node name="time_label" parent="points_menu/Panel/record_time_label" index="0"]
 offset_bottom = 10.0
-text = "05s"
 
 [node name="pause_menu" parent="." node_paths=PackedStringArray("scene_manager", "music_manager") instance=ExtResource("8_s8chp")]
 z_index = 10
@@ -1167,7 +1157,7 @@ offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_3kdvd")
+theme = SubResource("Theme_kuth7")
 scene_manager = NodePath("../SceneManager")
 music_manager = NodePath("../music_manager")
 metadata/_edit_use_anchors_ = true

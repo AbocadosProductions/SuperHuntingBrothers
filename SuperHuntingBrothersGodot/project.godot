@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="SuperHuntingBrothersGodot"
+run/main_scene="res://Scenes/intro.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/UI/Icon.png"
+config/windows_native_icon="res://Sprites/UI/Icon.ico"
 
 [autoload]
 

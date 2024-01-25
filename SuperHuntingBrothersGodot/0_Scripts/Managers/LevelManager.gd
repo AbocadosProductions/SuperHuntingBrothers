@@ -27,6 +27,8 @@ func get_maze_scenes():
 		return
 	
 	for file in dir.get_files():
+		if file.ends_with(Constants.REMAP_SUFFIX):
+			file = file.trim_suffix(Constants.REMAP_SUFFIX)
 		if file.ends_with(Constants.MAZE_FILE_TERMINATION):
 			maze_scenes.append(file.split(".")[0])
 

@@ -13,10 +13,16 @@ func _ready():
 
 func points_menu_signal_detected(_emisioner, signal_emited):
 	if signal_emited == Constants.NEW_RECORD_SIGNAL:
-		new_record = !new_record
+		new_record = true
 		for child in get_children():
 			child.set_visible(new_record)
 		play_anim()
+		
+func turn_off_record():
+	new_record = false
+	for child in get_children():
+		child.set_visible(new_record)
+
 
 func play_anim():
 	for child in get_children():

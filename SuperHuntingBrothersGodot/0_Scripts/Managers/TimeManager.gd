@@ -56,6 +56,7 @@ func prepare_time_level():
 	if time_in_level < minimum_time:
 		time_in_level = minimum_time
 	time_label.text = format_time(time_in_level)
+	animation_player.play(Constants.TIME_MANAGER_IDLE_ANIMATION)
 
 func load_variables():
 	const_level_time = Constants.DEFAULT_TIME_PER_LEVEL[difficulty]

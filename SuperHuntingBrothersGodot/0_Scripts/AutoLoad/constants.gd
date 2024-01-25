@@ -9,7 +9,7 @@ const TUTORIAL_MENU: String = "res://Scenes/animated_tutorial.tscn"
 
 # Save System constants
 
-const SAVE_PATH: String = "res://save_data.tres"
+const SAVE_PATH: String = "user://save_data.tres"
 
 # --------------------------------------------------------------------------- #
 

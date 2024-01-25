@@ -12,6 +12,7 @@ extends Control
 @onready var next_level_button : Button = $Panel/next_level_button
 @onready var timer : Timer = $Timer
 @onready var array = [next_level_button]
+@onready var new_record : Node2D = $new_record
 
 var func_to_call 
 var pressed_button
@@ -178,6 +179,7 @@ func next_level_funct():
 		is_moving_out_the_screen = true
 		datamanager.set_points(updated_points)
 		External_Signal.emit(self, Constants.POINTS_MENU_FINISHED_SIGNAL)
+		new_record.turn_off_record()
 
 func _on_timer_timeout():
 	pressed_button.button_pressed = false

@@ -17,6 +17,12 @@ func points_menu_signal_detected(_emisioner, signal_emited):
 		for child in get_children():
 			child.set_visible(new_record)
 		play_anim()
+		
+func turn_off_record():
+	new_record = false
+	for child in get_children():
+		child.set_visible(new_record)
+
 
 func play_anim():
 	for child in get_children():

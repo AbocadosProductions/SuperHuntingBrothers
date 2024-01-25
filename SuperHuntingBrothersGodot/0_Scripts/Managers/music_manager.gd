@@ -2,10 +2,15 @@ extends Node2D
 
 @export var music_player : AudioStreamPlayer2D
 @export var effect_player : AudioStreamPlayer2D
+@export var effect_background_player : AudioStreamPlayer2D
 
 func play_effect(track: String):
 	effect_player.stream = load(track)
 	effect_player.play()
+
+func play_effect_background(track: String):
+	effect_background_player.stream = load(track)
+	effect_background_player.play()
 
 func play_music(track: String):
 	music_player.stream = load(track)
@@ -15,4 +20,6 @@ func play(audio_to_play: String):
 	if audio_to_play in Constants.MUSIC_SIGNALS:
 		play_music(audio_to_play)
 	elif audio_to_play in Constants.EFFECT_SIGNALS:
+		play_effect(audio_to_play)
+	elif audio_to_play in Constants.EFFECT_BACKGROUND_SIGNALS:
 		play_effect(audio_to_play)

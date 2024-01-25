@@ -299,9 +299,9 @@ theme_type_variation = &"Panel_Level_Success"
 
 [node name="actual_time_label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 20.0
+offset_left = 24.0
 offset_top = 47.0
-offset_right = 50.0
+offset_right = 54.0
 offset_bottom = 57.0
 text = "Tiempo:"
 horizontal_alignment = 1
@@ -312,14 +312,14 @@ layout_mode = 0
 offset_left = 30.5
 offset_right = 86.5
 offset_bottom = 8.0
-text = "00:00:00"
+text = "05s"
 vertical_alignment = 1
 
 [node name="record_time_label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 97.0
+offset_left = 100.0
 offset_top = 47.0
-offset_right = 130.0
+offset_right = 133.0
 offset_bottom = 57.0
 text = "Record:"
 vertical_alignment = 1
@@ -329,7 +329,7 @@ layout_mode = 0
 offset_left = 34.0
 offset_right = 90.0
 offset_bottom = 8.0
-text = "00:00:00"
+text = "05s"
 vertical_alignment = 1
 
 [node name="puntuation_label" type="Label" parent="Panel"]

@@ -2,6 +2,7 @@ extends Control
 
 @onready var timer : Timer = $Timer
 @onready var music_manager : Node2D = $music_manager
+@onready var data_manager : Node2D = $DataManager
 
 @export var first_block : Panel
 @export var second_block : Panel
@@ -33,7 +34,8 @@ func start_timer():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	music_manager.play(Constants.MENU_MUSIC)
+	
+	music_manager.play(Constants.MENU_MUSIC, data_manager.get_music_time())
 	next_button.grab_focus()
 	menu_button.set_visible(false)
 	play_button.set_visible(false)

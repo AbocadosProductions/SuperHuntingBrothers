@@ -18,6 +18,7 @@ const path = Constants.SAVE_PATH
 	Constants.NORMAL_MODE : 0
 }
 @export var difficulty : String
+@export var last_second_played : int = 0
 
 # This function will save the resource save_system in the given path.
 func write_savedata() -> void:

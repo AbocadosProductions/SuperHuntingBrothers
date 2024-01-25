@@ -525,7 +525,7 @@ Panel_Tutorial_1/styles/panel = SubResource("StyleBoxTexture_dgeqc")
 Panel_Tutorial_2/base_type = &"Panel"
 Panel_Tutorial_2/styles/panel = SubResource("StyleBoxTexture_kqk0a")
 
-[sub_resource type="Theme" id="Theme_cln3r"]
+[sub_resource type="Theme" id="Theme_qyj6d"]
 resource_local_to_scene = true
 default_font = ExtResource("7_d7aks")
 default_font_size = 10
@@ -1157,7 +1157,7 @@ offset_left = 163.0
 offset_top = 177.0
 offset_right = 163.0
 offset_bottom = 177.0
-theme = SubResource("Theme_cln3r")
+theme = SubResource("Theme_qyj6d")
 scene_manager = NodePath("../SceneManager")
 music_manager = NodePath("../music_manager")
 metadata/_edit_use_anchors_ = true

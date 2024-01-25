@@ -104,6 +104,7 @@ func _save_game() -> void:
 	_save_data.write_savedata()
 	
 func reset_data_from_run() -> void:
+	_save_data.last_second_played = 0
 	_save_data.times_per_level = []
 	_save_data.actual_punctuation = 0
 	_save_game()
@@ -115,5 +116,14 @@ func get_difficulty() -> String:
 
 func set_difficulty(difficulty : String) -> void:
 	_save_data.difficulty = difficulty
+	_save_data.write_savedata()
+	
+# MUSIC SECTION
+
+func get_music_time() -> int:
+	return _save_data.last_second_played
+
+func set_music_time(seconds : int) -> void:
+	_save_data.last_second_played = seconds
 	_save_data.write_savedata()
 

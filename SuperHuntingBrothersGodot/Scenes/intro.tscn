@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5f7ufjs0negk"]
+[gd_scene load_steps=27 format=3 uid="uid://b5f7ufjs0negk"]
 
 [ext_resource type="Script" path="res://0_Scripts/Intro/Intro.gd" id="1_m52vy"]
 [ext_resource type="Texture2D" uid="uid://4io02db51o8o" path="res://Sprites/Intro/Logo_Big.png" id="2_ha5hq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://csce8mcltmm32" path="res://Sprites/UI/Logo_V2.png" id="5_1who8"]
 [ext_resource type="Texture2D" uid="uid://csmt2lcgpqoms" path="res://Sprites/UI/Background.png" id="5_n46o1"]
 [ext_resource type="PackedScene" uid="uid://cww7fuqfhuhoc" path="res://Managers/music_manager.tscn" id="6_pvary"]
+[ext_resource type="PackedScene" uid="uid://71bjg4c24nlo" path="res://Managers/data_manager.tscn" id="7_xnvk1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8phcu"]
 resource_name = "Background"
@@ -208,6 +209,8 @@ sprite_frames = SubResource("SpriteFrames_qas5o")
 
 [node name="music_manager" parent="." instance=ExtResource("6_pvary")]
 position = Vector2(-138.079, 59.6776)
+
+[node name="DataManager" parent="." instance=ExtResource("7_xnvk1")]
 
 [connection signal="timeout" from="TimerInicio" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerLogo" to="." method="_on_timer_logo_timeout"]

@@ -5,7 +5,7 @@ extends Node2D
 @onready var timer_logo : Timer = $TimerLogo
 @onready var timer_label : Timer = $TimerLabel
 @onready var music_manager : Node2D = $music_manager
-
+@onready var data_manager : Node2D = $DataManager
 var show_logo = false
 var hide_logo = false
 var show_remminder = false
@@ -29,6 +29,7 @@ func _process(_delta):
 			timer_logo.start()
 			music_manager.play(Constants.LOGO_EFFECT)
 			logo.play()
+			data_manager.reset_data_from_run()
 
 	if hide_logo:
 		if opacity > 0 :

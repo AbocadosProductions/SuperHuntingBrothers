@@ -49,6 +49,10 @@ func scene_manager_signal_detected(signal_emited):
 		visibility = !visibility
 		self.set_visible(visibility)
 		continue_button.grab_focus()
+		if visibility == true:
+			music_manager.pause()
+		else:
+			music_manager.continue_playing()
 
 func continue_funct():
 	External_Signal.emit(self, Constants.PAUSE_MENU_SIGNAL)

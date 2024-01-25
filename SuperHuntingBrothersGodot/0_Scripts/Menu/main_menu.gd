@@ -41,7 +41,7 @@ var pressed_button
 
 
 func _ready():
-	music_manager.play(Constants.MENU_MUSIC)
+	music_manager.play(Constants.MENU_MUSIC, data_manager.get_music_time())
 	for child in array:
 		child.focus_mode = Control.FOCUS_ALL
 	vol_slider.focus_mode = Control.FOCUS_NONE
@@ -191,6 +191,7 @@ func _on_tutorial_pressed():
 	func_to_call = "tutorial_funct"
 
 func tutorial_funct():
+	data_manager.set_music_time(music_manager.get_music_time())
 	get_tree().change_scene_to_file(Constants.TUTORIAL_MENU)
 
 func normal_funct():

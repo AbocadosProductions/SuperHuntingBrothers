@@ -106,7 +106,6 @@ func _save_game() -> void:
 func reset_data_from_run() -> void:
 	_save_data.times_per_level = []
 	_save_data.actual_punctuation = 0
-	_save_data.difficulty = ""
 	_save_game()
 	
 # DIFICULTY SECTION

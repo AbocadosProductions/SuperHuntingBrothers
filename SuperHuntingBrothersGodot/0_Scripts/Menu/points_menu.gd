@@ -150,7 +150,6 @@ func _process(_delta):
 		if position[0] < final_transform:
 			position[0] += moving_step
 		else:
-			External_Signal.emit(self, Constants.NEW_RECORD_SIGNAL)
 			is_moving_out_the_screen = false
 			position[0] = initial_transform
 

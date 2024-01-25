@@ -11,6 +11,8 @@ extends Node2D
 signal Internal_Signal
 signal External_Signal
 
+var last_state = ""
+
 func _ready():
 	for child in cat1_state_machine.get_children():
 		if child is State:

@@ -49,7 +49,7 @@ func _ready():
 	start_game_button.focus_mode = Control.FOCUS_NONE
 	data_manager.reset_data_from_run()
 	
-func _process(delta):
+func _process(_delta):
 	check_if_need_to_move_vol_panel()
 	check_if_need_to_normal_record_panel()
 	check_if_need_to_hard_record_panel()

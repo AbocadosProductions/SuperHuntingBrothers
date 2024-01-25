@@ -66,7 +66,7 @@ const TIME_MANAGER_TRESHOLD_REACHED_SIGNAL = "treshold_reached"
 
 const DEFAULT_TIME_PER_LEVEL = {
 	HARD_MODE : 30,
-	NORMAL_MODE : 40
+	NORMAL_MODE : 4
 } 
 const TIME_PER_LEVEL_TO_SUSTRACT = {
 	HARD_MODE : 5,
@@ -217,9 +217,10 @@ const LOGO_EFFECT = "res://Sounds/Effects/Logo_Sonido.wav"
 const CATCH_EFFECT = "res://Sounds/Effects/Catch_1.mp3"
 const FLEE_EFFECT = "res://Sounds/Effects/Flee.mp3"
 const AUDIO_BUS = "Master"
+const AUDIO_BUS_BACK = "Background"
 const MUSIC_SIGNALS = [GAME_MUSIC, MENU_MUSIC, LOSE_MENU_MUSIC]
 const EFFECT_SIGNALS = [BUTTON_FOCUS_EFFECT, BUTTON_PRESSED_EFFECT, PAUSE_EFFECT,
-						PLAY_EFFECT, COUNTDOWN_EFFECT, SCORE_UPDATE_EFFECT, 
+						PLAY_EFFECT, COUNTDOWN_EFFECT, SCORE_UPDATE_EFFECT, CATCH_EFFECT, 
 						ALARM_EFFECT, INTRO_MENU_EFFECT, FLEE_EFFECT, LOGO_EFFECT]
 const EFFECT_BACKGROUND_SIGNALS = [THRESHOLD_EFFECT, NEW_RECORD_EFFECT]
 # --------------------------------------------------------------------------- #

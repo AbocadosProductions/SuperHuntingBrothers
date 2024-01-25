@@ -22,4 +22,4 @@ func play(audio_to_play: String):
 	elif audio_to_play in Constants.EFFECT_SIGNALS:
 		play_effect(audio_to_play)
 	elif audio_to_play in Constants.EFFECT_BACKGROUND_SIGNALS:
-		play_effect(audio_to_play)
+		play_effect_background(audio_to_play)

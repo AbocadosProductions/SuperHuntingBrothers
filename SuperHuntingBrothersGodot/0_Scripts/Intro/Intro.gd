@@ -19,7 +19,7 @@ func _ready():
 	reminder.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if show_logo:
 		if opacity < 1:
 			opacity += 0.01

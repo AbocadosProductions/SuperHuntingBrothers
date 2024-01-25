@@ -15,3 +15,4 @@ func Update(_delta):
 	time_passed_in_state += _delta
 	if time_passed_in_state > preparation_time:
 		Transition.emit(self, Constants.SCENE_MANAGER_SHOW_POINTS_SIGNAL)
+		scene_manager.pause_music()

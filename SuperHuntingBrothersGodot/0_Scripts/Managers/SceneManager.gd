@@ -29,3 +29,9 @@ func scene_manager_state_controller(_emisioner, signal_detected):
 
 func play(music_to_play : String):
 	music_manager.play(music_to_play)
+
+func pause_music():
+	music_manager.pause()
+
+func continue_music():
+	music_manager.continue_playing()

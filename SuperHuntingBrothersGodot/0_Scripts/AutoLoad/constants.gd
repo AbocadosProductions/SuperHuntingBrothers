@@ -19,7 +19,7 @@ const HARD_MODE = "Hard"
 const NORMAL_MODE = "Normal"
 
 const MAZES_FOLDER_PATH = "res://Scenes/Mazes"
-
+const REMAP_SUFFIX = ".remap"
 
 const MAZES_1_POSITION = Vector2 (344, 397)
 const MAZES_2_POSITION = Vector2 (672, 397)

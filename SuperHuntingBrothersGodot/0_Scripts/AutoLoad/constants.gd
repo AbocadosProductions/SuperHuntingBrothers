@@ -123,20 +123,20 @@ const END_MENU_POINTS_RECORD_SIGNAL = "new_points_record"
 # Positions constants
 
 const POSITIONS_PER_LEVEL = {
-	"maze_1" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-120, -71), Vector2(-24, -135), Vector2(103, -135),
+	"maze_1" = { "mouse" = [Vector2(8, -9)],
+				"cat" = [Vector2(-120, -71), Vector2(-24, -135), Vector2(103, -135),
 						   Vector2(72, 87), Vector2(-25, 86), Vector2(-120, 56)]},
-	"maze_2" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-120, -72), Vector2(7, -136), Vector2(105, -104),
+	"maze_2" = { "mouse" = [Vector2(8, -9)],
+				"cat" = [Vector2(-120, -72), Vector2(7, -136), Vector2(105, -104),
 						   Vector2(104, 88), Vector2(-26, 88), Vector2(-120, 25)]},
-	"maze_3" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-120, -72), Vector2(8, -104), Vector2(39, -41),
+	"maze_3" = { "mouse" = [Vector2(8, -9)],
+				"cat" = [Vector2(-120, -72), Vector2(8, -104), Vector2(39, -41),
 						   Vector2(103, 71), Vector2(-25, 88), Vector2(-120, -9)]},
-	"maze_4" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-120, -105), Vector2(39, -103), Vector2(103, -24),
+	"maze_4" = { "mouse" = [Vector2(8, -9)],
+				"cat" = [Vector2(-120, -105), Vector2(39, -103), Vector2(103, -24),
 						   Vector2(41, 88), Vector2(-120, 88), Vector2(-88, -40)]},
-	"maze_5" = { "cat" = [Vector2(8, -9)],
-				"mouse" = [Vector2(-120, -73), Vector2(-8, -136), Vector2(104, -40),
+	"maze_5" = { "mouse" = [Vector2(8, -9)],
+				"cat" = [Vector2(-120, -73), Vector2(-8, -136), Vector2(104, -40),
 						   Vector2(102, 57), Vector2(-40, 56), Vector2(-120, 25)]}
 }
 # --------------------------------------------------------------------------- #
